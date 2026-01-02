@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanna Sridharan - AI/ML Technology Leader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- View Toggle -->
+    <div id="view-toggle" class="view-toggle">
+        <button class="toggle-btn active" data-view="portfolio">📱 Portfolio</button>
+        <button class="toggle-btn" data-view="resume">📄 Resume</button>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Portfolio View -->
+    <div id="portfolio-view" class="view-container active">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">Prasanna Sridharan</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#impact">Impact</a>
+                    <a href="#leadership">Leadership</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">AI/ML Technology Leader</h1>
+                    <p class="hero-subtitle">Driving $100M+ AI transformations for Fortune 500 companies</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$100M+</div>
+                            <div class="stat-label">Pipeline Generated</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Content Views</div>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <button onclick="switchToResume()" class="btn btn-secondary">📄 View Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p class="lead">Accomplished technology leader with 25 years of experience driving AI/ML, data analytics, and cloud transformations for Fortune 500 companies.</p>
+                    <p>I specialize in designing and delivering complex AI/ML solutions with deep expertise in AWS cloud platforms, modern data architecture, and data governance. My approach combines strategic vision with hands-on technical execution, partnering with C-suite executives to align AI initiatives with business objectives.</p>
+                    <p>Throughout my career, I've built and mentored high-performing teams while driving innovation, revenue growth, and operational excellence. My expertise spans Enterprise Architecture, AI Solution Design, Technical Product Strategy, and Executive Leadership.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Amazon Web Services</h3>
+                            <p class="role-title">Principal Architect – Data & AI/ML | Apr 2019 – Present | Atlanta, GA</p>
+                            <ul class="experience-list">
+                                <li>Led multiple large-scale GTM initiatives, including 1-to-many customer speaking sessions, executive briefings, and hands-on workshops, enabling customers to adopt new capabilities across Amazon Bedrock, SageMaker, Amazon Q, and AgentCore</li>
+                                <li>Generated $100M+ in qualified pipeline by driving technical GTM motions and solution-led workshops, with 40% of opportunities progressing to active launches, accelerating customer AI and GenAI journeys</li>
+                                <li>Architected and implemented large-scale AI/ML platforms integrating data lakes, advanced analytics, and machine learning operations (MLOps)</li>
+                                <li>Established comprehensive enterprise-wide data strategy, data governance and security frameworks for Fortune 500 companies, ensuring responsible AI development and deployment</li>
+                            </ul>
+                            <div class="achievement">Generated $100M+ in qualified pipeline with 40% progressing to active launches</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>JP Morgan Chase</h3>
+                            <p class="role-title">Data & ML Architect | Sep 2016 – Apr 2019 | Jersey City, NJ</p>
+                            <ul class="experience-list">
+                                <li>Architected and led the transformation of enterprise Risk & Finance data & ML platform, enabling real-time analytics and ML-driven insights for C-suite decision making</li>
+                                <li>Led the modernization from legacy systems (Informatica/Sybase) to a cloud-based scalable Big Data architecture using Hadoop ecosystem</li>
+                            </ul>
+                            <div class="achievement">Improved processing efficiency by 40% and reduced operational costs by $2M</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Credit Suisse</h3>
+                            <p class="role-title">Data & ML Architect | Aug 2012 – Sep 2016 | New York, NY</p>
+                            <ul class="experience-list">
+                                <li>Led the architectural transformation of Private Banking data & ML platform, implementing real-time data processing and ML-driven predictive analytics for wealth management</li>
+                                <li>Architected ML pipeline, delivering automated client insights, portfolio recommendations, and risk analytics</li>
+                            </ul>
+                            <div class="achievement">Achieved 90% improved response time for analytics</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Cognizant Technology Solutions</h3>
+                            <p class="role-title">Solution Architect | Feb 2007 – Jul 2012 | New York, NY & Chicago, IL</p>
+                            <p>Client: JP Morgan Chase & Northern Trust</p>
+                            <ul class="experience-list">
+                                <li>Solutions Architect specializing in enterprise data & ML platforms, implementing automated financial analytics and risk management solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Accenture</h3>
+                            <p class="role-title">Senior Software Engineer | Apr 2004 – Jan 2007 | Houston, TX</p>
+                            <p>Client: Exxon Mobil</p>
+                            <ul class="experience-list">
+                                <li>Led enterprise application modernization at ExxonMobil</li>
+                            </ul>
+                            <div class="achievement">Improved system reliability and cut costs by $1M annually</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Cognizant Technology Solutions</h3>
+                            <p class="role-title">Programmer Analyst | Aug 2000 – Mar 2004 | Melville, NY</p>
+                            <p>Client: First Data Merchant System</p>
+                            <ul class="experience-list">
+                                <li>Architected and delivered SCRS (Sales Commission Reporting System), an enterprise platform that automated sales compensation management and analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Key Projects & Solutions</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">🚀</div>
+                        <h3>FloTorch</h3>
+                        <p class="project-type">Open Source GenAI Accelerator</p>
+                        <p>Published GenAI accelerator designed to optimize Retrieval-Augmented Generation (RAG) workloads in AWS Marketplace, advancing AI toolsets in the cloud ecosystem.</p>
+                        <div class="project-tags">
+                            <span class="tag">GenAI</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">AWS Marketplace</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">🔍</div>
+                        <h3>OptiX AI</h3>
+                        <p class="project-type">Athena Query Analyzer</p>
+                        <p>Enterprise-grade application that helps organizations detect, analyze, and optimize inefficient queries, deployed across multiple enterprise customers.</p>
+                        <div class="project-tags">
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Enterprise</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">⚡</div>
+                        <h3>Atomix</h3>
+                        <p class="project-type">OneClick Data Framework</p>
+                        <p>One-click cloud data framework that streamlines and accelerates enterprise data platform development. Finalist in 2022 Gartner Eye on Innovation Award.</p>
+                        <div class="project-tags">
+                            <span class="tag">Data Platform</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Award Winner</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">💡</div>
+                        <h3>Bedrock Sizer & Pricing AI Assistant</h3>
+                        <p class="project-type">Customer Enablement Tool</p>
+                        <p>Significantly reduced turnaround time for customer RPM/TPM requests. Serving 2,000+ SAs with 9,000+ conversations, accelerating customer AI adoption.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Assistant</span>
+                            <span class="tag">Bedrock</span>
+                            <span class="tag">Scale</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">🤖</div>
+                        <h3>DevGenius</h3>
+                        <p class="project-type">AI Solution Architect</p>
+                        <p>AI-powered solution architect that transforms conversational inputs or whiteboard drawings into fully automated AWS architectures with IaC. Reduces architecture time by 80%.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI Hackathon</span>
+                            <span class="tag">Runner-up 2024</span>
+                            <span class="tag">IaC</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon">🔎</div>
+                        <h3>MetaSurfer</h3>
+                        <p class="project-type">Metadata Management Platform</p>
+                        <p>AI-powered platform that streamlines data curation. Automated metadata processing for 10K+ datasets, improved search accuracy by 95%, reduced discovery time by 75%.</p>
+                        <div class="project-tags">
+                            <span class="tag">Winner 2023</span>
+                            <span class="tag">Data Discovery</span>
+                            <span class="tag">AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Business Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-number">$100M+</div>
+                        <div class="impact-label">Qualified Pipeline Generated</div>
+                        <p>Through technical GTM motions and solution-led workshops</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number">40%</div>
+                        <div class="impact-label">Conversion to Active Launches</div>
+                        <p>Opportunities progressing from pipeline to production</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number">80%</div>
+                        <div class="impact-label">Time Reduction</div>
+                        <p>Solution architecture time saved with DevGenius</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number">95%</div>
+                        <div class="impact-label">Search Accuracy</div>
+                        <p>Improved data discovery with MetaSurfer</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number">75%</div>
+                        <div class="impact-label">Discovery Time Saved</div>
+                        <p>Reduced data discovery time through automation</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number">10K+</div>
+                        <div class="impact-label">Datasets Automated</div>
+                        <p>Metadata processing at scale</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="section">
+            <div class="container">
+                <h2 class="section-title">Leadership & Thought Leadership</h2>
+                <div class="leadership-content">
+                    <div class="leadership-category">
+                        <h3>🎤 Speaking & Content</h3>
+                        <ul>
+                            <li><strong>25+ public talks</strong> and 100+ internal AWS forums</li>
+                            <li>Key sessions at <strong>AWS re:Invent</strong> and multiple <strong>AWS Summits</strong></li>
+                            <li>Notable talks: "Build production-ready AI solutions with Claude in Amazon Bedrock", "Mastering AI Agents: Building Production-Ready Applications"</li>
+                            <li><strong>30+ technical videos</strong> on AWS AI & Data platforms</li>
+                            <li><strong>50,000+ views</strong> across speaking engagements, blogs, and videos</li>
+                        </ul>
+                    </div>
+                    <div class="leadership-category">
+                        <h3>✍️ Published Works</h3>
+                        <ul>
+                            <li>AWS Architecture Blog contributor with technical articles on:
+                                <ul>
+                                    <li>"Benchmarking Amazon Nova and GPT-4o models with FloTorch"</li>
+                                    <li>"Deploy DeepSeek-R1 distilled models on Amazon SageMaker"</li>
+                                    <li>"Building Intelligent AI Agents with AWS Strands"</li>
+                                    <li>"Enterprise Data Marketplace" and "Data Mesh Architecture Patterns"</li>
+                                </ul>
+                            </li>
+                            <li>8-video series on Amazon Bedrock AgentCore</li>
+                        </ul>
+                    </div>
+                    <div class="leadership-category">
+                        <h3>👥 Mentorship & Talent</h3>
+                        <ul>
+                            <li><strong>Chair of Data & AI Technical Field Committee</strong></li>
+                            <li>Mentoring <strong>50+ professionals</strong></li>
+                            <li>Contributed to <strong>30+ hiring pods</strong></li>
+                            <li>Conducted <strong>150+ interviews</strong> for AWS talent acquisition</li>
+                        </ul>
+                    </div>
+                    <div class="leadership-category">
+                        <h3>🏆 Awards & Recognition</h3>
+                        <ul>
+                            <li><strong>2024 AWS Legend Award</strong> - One of 60 exceptional builders from 130,000 across Sales, Marketing, and Global Services</li>
+                            <li><strong>Runner-up 2024 AI Hackathon</strong> - DevGenius solution</li>
+                            <li><strong>Winner 2023 AI Hackathon</strong> - MetaSurfer platform</li>
+                            <li><strong>Finalist 2022 Gartner Eye on Innovation Award</strong> - Atomix framework</li>
+                            <li><strong>2022 Customer Obsession LP Award</strong></li>
+                            <li><strong>2021 Bias for Action LP Award</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <h3>🎓 Education</h3>
+                        <div class="education-item">
+                            <h4>Masters in Computer Applications</h4>
+                            <p>Bharathidasan University, Trichy, India | April 2003</p>
+                        </div>
+                        <div class="education-item">
+                            <h4>Bachelors in Physics (Gold Medalist)</h4>
+                            <p>University of Madras, Chennai, India | April 2000</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <h3>📜 AWS Certifications</h3>
+                        <div class="cert-list">
+                            <span class="cert-badge">AWS Certified AI Practitioner</span>
+                            <span class="cert-badge">AWS Solutions Architect – Associate</span>
+                            <span class="cert-badge">AWS Developer – Associate</span>
+                            <span class="cert-badge">AWS Data Analytics – Specialty</span>
+                            <span class="cert-badge">AWS Big Data – Specialty</span>
+                            <span class="cert-badge">AWS Cloud Practitioner</span>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <h3>🏅 Other Certifications</h3>
+                        <div class="cert-list">
+                            <span class="cert-badge">Informatica Certified Developer</span>
+                            <span class="cert-badge">Informatica Data Quality Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Core Competency</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Solution Architecture</span>
+                            <span class="skill-tag">Data Architecture</span>
+                            <span class="skill-tag">AI/ML Architecture</span>
+                            <span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>AWS Cloud Services</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">Glue</span>
+                            <span class="skill-tag">EMR</span>
+                            <span class="skill-tag">Athena</span>
+                            <span class="skill-tag">Lake Formation</span>
+                            <span class="skill-tag">DataZone</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">DynamoDB</span>
+                            <span class="skill-tag">Redshift</span>
+                            <span class="skill-tag">Kinesis</span>
+                            <span class="skill-tag">QuickSight</span>
+                            <span class="skill-tag">Step Functions</span>
+                            <span class="skill-tag">CloudFormation</span>
+                            <span class="skill-tag">Terraform</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>GenAI & LLMs</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Amazon Nova</span>
+                            <span class="skill-tag">Anthropic Claude</span>
+                            <span class="skill-tag">Cohere</span>
+                            <span class="skill-tag">Meta Llama</span>
+                            <span class="skill-tag">Mistral AI</span>
+                            <span class="skill-tag">Stability AI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>GenAI Applications</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SageMaker</span>
+                            <span class="skill-tag">Amazon Bedrock</span>
+                            <span class="skill-tag">Amazon Q</span>
+                            <span class="skill-tag">Bedrock AgentCore</span>
+                            <span class="skill-tag">OpenSearch</span>
+                            <span class="skill-tag">Kendra</span>
+                            <span class="skill-tag">Bedrock Knowledge Base</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Big Data & Programming</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Spark</span>
+                            <span class="skill-tag">Hive</span>
+                            <span class="skill-tag">Impala</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Shell Scripting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-intro">I'm always interested in discussing AI/ML transformations, enterprise architecture, and strategic technology initiatives.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:prasan80@gmail.com" class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">prasan80@gmail.com</div>
+                        </a>
+                        <a href="http://www.linkedin.com/in/prasan80" target="_blank" class="contact-card">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">Connect with me</div>
+                        </a>
+                        <a href="https://github.com/praven80" target="_blank" class="contact-card">
+                            <div class="contact-icon">💻</div>
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">View my work</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Prasanna Sridharan. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Resume View -->
+    <div id="resume-view" class="view-container resume-page">
+        <div class="resume-container">
+            <!-- Header -->
+            <header class="resume-header">
+                <div class="action-buttons">
+                    <button onclick="printResume()" class="btn-print">Print / Save PDF</button>
+                </div>
+                <h1>Prasanna Sridharan</h1>
+                <p class="title">AI/ML Technology Leader | Enterprise Architect | AWS Expert</p>
+                <div class="contact-info">
+                    <span>Email: prasan80@gmail.com</span>
+                    <span>LinkedIn: linkedin.com/in/prasan80</span>
+                    <span>GitHub: github.com/praven80</span>
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="resume-section">
+                <h2>Professional Summary</h2>
+                <p>Accomplished technology leader with <strong>25 years of experience</strong> driving <strong>$100M+ AI/ML, data analytics, and cloud transformations</strong> for Fortune 500 companies. Expert in AWS cloud platforms, modern data architecture, and data governance with proven ability to build high-performing teams and deliver measurable business outcomes.</p>
+            </section>
+
+            <!-- Key Achievements -->
+            <section class="resume-section">
+                <h2>Key Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-content">
+                            <strong>2024 AWS Legend Award</strong>
+                            <p>One of 60 exceptional builders from 130,000 across Sales, Marketing, and Global Services</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-content">
+                            <strong>$100M+ Pipeline Generated</strong>
+                            <p>Through technical GTM motions with 40% conversion to active launches</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-content">
+                            <strong>50,000+ Content Views</strong>
+                            <p>25+ public talks, 30+ videos, multiple AWS Architecture Blog articles</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-content">
+                            <strong>AI Hackathon Winner</strong>
+                            <p>2023 Winner (MetaSurfer), 2024 Runner-up (DevGenius)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="resume-section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Amazon Web Services</h3>
+                    <p class="resume-role">Principal Architect – Data & AI/ML | Apr 2019 – Present | Atlanta, GA</p>
+                    <ul>
+                        <li>Generated <strong>$100M+ pipeline</strong> with <strong>40% conversion</strong> through GTM initiatives and customer workshops</li>
+                        <li>Architected large-scale AI/ML platforms with data lakes, analytics, and MLOps for Fortune 500 companies</li>
+                        <li>Delivered 25+ public talks at AWS re:Invent and Summits; published multiple AWS Architecture Blog articles</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>JP Morgan Chase</h3>
+                    <p class="resume-role">Data & ML Architect | Sep 2016 – Apr 2019 | Jersey City, NJ</p>
+                    <ul>
+                        <li>Architected enterprise Risk & Finance ML platform enabling real-time C-suite analytics</li>
+                        <li>Modernized from legacy to cloud Big Data architecture: <strong>40% efficiency gain, $2M cost savings</strong></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Credit Suisse</h3>
+                    <p class="resume-role">Data & ML Architect | Aug 2012 – Sep 2016 | New York, NY</p>
+                    <ul>
+                        <li>Led Private Banking ML platform transformation with predictive analytics for wealth management</li>
+                        <li>Delivered automated client insights and portfolio recommendations with <strong>90% faster response time</strong></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Cognizant Technology Solutions</h3>
+                    <p class="resume-role">Solution Architect | Feb 2007 – Jul 2012 | New York, NY & Chicago, IL</p>
+                    <ul>
+                        <li>Implemented enterprise data & ML platforms for <strong>JP Morgan Chase</strong> and <strong>Northern Trust</strong></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Accenture</h3>
+                    <p class="resume-role">Senior Software Engineer | Apr 2004 – Jan 2007 | Houston, TX</p>
+                    <ul>
+                        <li>Led <strong>ExxonMobil</strong> application modernization, <strong>reducing costs by $1M annually</strong></li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Cognizant Technology Solutions</h3>
+                    <p class="resume-role">Programmer Analyst | Aug 2000 – Mar 2004 | Melville, NY</p>
+                    <ul>
+                        <li>Architected and delivered SCRS (Sales Commission Reporting System) for <strong>First Data Merchant System</strong>, an enterprise platform that automated sales compensation management and analytics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="resume-section">
+                <h2>Enterprise Solutions & Innovation</h2>
+                <div class="projects-compact">
+                    <div class="project-compact">
+                        <h4>FloTorch</h4>
+                        <p>Open source GenAI accelerator for RAG workloads published in AWS Marketplace</p>
+                    </div>
+                    <div class="project-compact">
+                        <h4>Bedrock Sizer & Pricing AI Assistant</h4>
+                        <p>Serving 2,000+ SAs with 9,000+ conversations, accelerating customer AI adoption</p>
+                    </div>
+                    <div class="project-compact">
+                        <h4>OptiX AI</h4>
+                        <p>Athena Query Analyzer deployed across multiple enterprise customers</p>
+                    </div>
+                    <div class="project-compact">
+                        <h4>DevGenius</h4>
+                        <p>AI-powered solution architect reducing architecture time by 80%</p>
+                    </div>
+                    <div class="project-compact">
+                        <h4>Atomix</h4>
+                        <p>OneClick data framework - Finalist in 2022 Gartner Eye on Innovation Award</p>
+                    </div>
+                    <div class="project-compact">
+                        <h4>MetaSurfer</h4>
+                        <p>AI metadata platform: 95% search accuracy, 75% faster discovery, 10K+ datasets</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thought Leadership -->
+            <section class="resume-section">
+                <h2>Thought Leadership & Community Impact</h2>
+                <div class="two-column">
+                    <div>
+                        <h4>Speaking & Content</h4>
+                        <ul>
+                            <li><strong>25+ public talks</strong>, 100+ AWS forums</li>
+                            <li>AWS re:Invent, AWS Summits speaker</li>
+                            <li><strong>30+ videos</strong>, <strong>50K+ views</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Leadership</h4>
+                        <ul>
+                            <li><strong>Chair</strong> of Data & AI Committee</li>
+                            <li>Mentoring <strong>50+ professionals</strong></li>
+                            <li><strong>150+ interviews</strong> conducted</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Certifications -->
+            <section class="resume-section">
+                <h2>Education & Certifications</h2>
+                <div class="resume-education">
+                    <div>
+                        <h4>Education</h4>
+                        <p><strong>Masters in Computer Applications</strong> - Bharathidasan University, India (2003)</p>
+                        <p><strong>Bachelors in Physics (Gold Medalist)</strong> - University of Madras, India (2000)</p>
+                    </div>
+                    <div>
+                        <h4>Certifications</h4>
+                        <p>AWS Certified: AI Practitioner • Solutions Architect • Developer • Data Analytics Specialty • Big Data Specialty • Cloud Practitioner</p>
+                        <p>Informatica Certified Developer • Data Quality Specialist</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="resume-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-compact">
+                    <div class="skill-group">
+                        <h4>Core Competency</h4>
+                        <p>Solution Architecture • Data Architecture • AI/ML Architecture • Analytics • Business Intelligence</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>AWS Cloud Services</h4>
+                        <p>S3 • Glue • EMR • Athena • Lake Formation • DataZone • Lambda • DynamoDB • Redshift • Kinesis • QuickSight • Step Functions • CloudFormation • Terraform</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>GenAI & LLMs</h4>
+                        <p>Amazon Nova • Anthropic Claude • Cohere • Meta Llama • Mistral AI • Stability AI • SageMaker • Bedrock • Amazon Q • AgentCore</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Vector Databases & Big Data</h4>
+                        <p>OpenSearch • Kendra • Bedrock Knowledge Base • Hadoop • Spark • Hive • Impala • Python • Shell Scripting</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards -->
+            <section class="resume-section">
+                <h2>Awards & Recognition</h2>
+                <div class="awards-list">
+                    <span class="award-badge">2024 AWS Legend Award</span>
+                    <span class="award-badge">2024 AI Hackathon Runner-up</span>
+                    <span class="award-badge">2023 AI Hackathon Winner</span>
+                    <span class="award-badge">2022 Gartner Eye on Innovation Finalist</span>
+                    <span class="award-badge">2022 Customer Obsession LP Award</span>
+                    <span class="award-badge">2021 Bias for Action LP Award</span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
