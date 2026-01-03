@@ -154,20 +154,20 @@ const projectsData = [
         link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link'
     },
     {
-        icon: '⚡',
-        title: 'Atomix',
-        type: 'OneClick Data Framework',
-        description: 'One-click cloud data framework that streamlines and accelerates enterprise data platform development. Finalist in 2022 Gartner Eye on Innovation Award.',
-        tags: ['Data Platform', 'Automation', 'Award Winner'],
-        link: 'https://www.youtube.com/watch?v=xWIcPhimOaw'
-    },
-    {
         icon: '🤖',
         title: 'DevGenius',
         type: 'AI Solution Architect',
         description: 'AI-powered solution architect that transforms conversational inputs or whiteboard drawings into fully automated AWS architectures with IaC. Reduces architecture time by 80%.',
         tags: ['AI Hackathon', 'Runner-up 2024', 'IaC'],
         link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder'
+    },
+    {
+        icon: '⚡',
+        title: 'Atomix',
+        type: 'OneClick Data Framework',
+        description: 'One-click cloud data framework that streamlines and accelerates enterprise data platform development. Finalist in 2022 Gartner Eye on Innovation Award.',
+        tags: ['Data Platform', 'Automation', 'Award Winner'],
+        link: 'https://www.youtube.com/watch?v=xWIcPhimOaw'
     },
     {
         icon: '💡',
