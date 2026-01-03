@@ -149,23 +149,23 @@ const projectsData = [
         icon: '🔍',
         title: 'OptiX AI',
         type: 'Athena Query Analyzer',
-        description: 'AI-powered enterprise-grade application that helps organizations detect, analyze, and optimize inefficient queries, deployed across multiple enterprise customers.',
-        tags: ['Analytics', 'Optimization', 'Enterprise'],
+        description: 'AI-powered Athena Query Analyzer deployed across multiple enterprise customers. Detects and optimizes inefficient queries with visual analytics including execution trends, data scanned, cost breakdowns, query volume, and performance-cost comparisons.',
+        tags: ['Query Analytics', 'Query Optimization', 'Cost Reduction'],
         link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link'
     },
     {
         icon: '🤖',
         title: 'DevGenius',
         type: 'AI Solution Architect',
-        description: 'AI-powered solution architect that transforms conversational inputs or whiteboard drawings into fully automated AWS architectures with IaC. Reduces architecture time by 80%.',
-        tags: ['AI Hackathon', 'Runner-up 2024', 'IaC'],
+        description: 'AI-powered solution architect transforming conversational inputs or whiteboard drawings into production-ready AWS solutions with full architecture diagrams, complete cost analysis, IaC deployment code, and comprehensive documentation. Reduces architecture time by 80%.',
+        tags: ['AI Architect', 'Solution Automation', 'Cost Prediction'],
         link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder'
     },
     {
         icon: '⚡',
         title: 'Atomix',
         type: 'OneClick Data Framework',
-        description: 'One-click cloud data framework that streamlines and accelerates enterprise data platform development. Finalist in 2022 Gartner Eye on Innovation Award.',
+        description: 'Low-code/no-code data platform with marketplace experience for one-click data ingestion, data quality, transformations, and data sharing to multiple accounts enabling data mesh architecture. Complete end-to-end automation to create enterprise data platforms on cloud within minutes. Finalist in 2022 Gartner Eye on Innovation Award.',
         tags: ['Data Platform', 'Automation', 'Award Winner'],
         link: 'https://www.youtube.com/watch?v=xWIcPhimOaw'
     },
