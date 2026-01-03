@@ -46,7 +46,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -411,6 +411,18 @@ body:not([data-theme]) .moon-icon {
     color: var(--text-primary);
 }
 
+.project-card h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.project-card h3 a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .project-type {
     color: var(--primary-color);
     font-weight: 600;
@@ -484,7 +496,7 @@ body:not([data-theme]) .moon-icon {
 /* Leadership Section */
 .leadership-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -515,6 +527,72 @@ body:not([data-theme]) .moon-icon {
 .leadership-category ul ul {
     margin-left: 1.5rem;
     margin-top: 0.5rem;
+}
+
+.leadership-category a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.leadership-category a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Published Works Grid Layout */
+.published-works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.published-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.published-section ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.published-section li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.published-section li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.compact-list li {
+    margin-bottom: 0.4rem;
+}
+
+.published-section:first-child {
+    grid-column: 1 / -1;
+}
+
+@media screen and (max-width: 1024px) {
+    .published-works-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .published-section:first-child {
+        grid-column: 1;
+    }
 }
 
 /* Skills Section */
@@ -1235,5 +1313,127 @@ footer p {
     
     .nav-brand {
         font-size: 1rem;
+    }
+}
+
+/* Projects Pagination */
+.projects-pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pagination-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.pagination-btn:disabled {
+    background-color: var(--bg-alt);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination-info {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+/* Workshops Section */
+.workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.workshop-card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.workshop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.workshop-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.workshop-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.workshop-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.workshop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.workshop-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.workshop-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.workshop-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .workshops-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pagination-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .projects-pagination-controls {
+        gap: 1rem;
     }
 }

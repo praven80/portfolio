@@ -29,7 +29,8 @@
                 <div class="nav-links">
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
+                    <a href="#projects">Initiatives</a>
+                    <a href="#workshops">Workshops</a>
                     <a href="#impact">Impact</a>
                     <a href="#leadership">Leadership</a>
                     <a href="#education">Education</a>
@@ -44,14 +45,14 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">AI/ML Technology Leader</h1>
-                    <p class="hero-subtitle">Driving $100M+ AI transformations for Fortune 500 companies</p>
+                    <p class="hero-subtitle">Driving $300M+ AI transformations for Fortune 500 companies</p>
                     <div class="hero-stats">
                         <div class="stat">
                             <div class="stat-number">25</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-number">$100M+</div>
+                            <div class="stat-number">$300M+</div>
                             <div class="stat-label">Pipeline Generated</div>
                         </div>
                         <div class="stat">
@@ -91,11 +92,11 @@
                             <p class="role-title">Principal Architect – Data & AI/ML | Apr 2019 – Present | Atlanta, GA</p>
                             <ul class="experience-list">
                                 <li>Led multiple large-scale GTM initiatives, including 1-to-many customer speaking sessions, executive briefings, and hands-on workshops, enabling customers to adopt new capabilities across Amazon Bedrock, SageMaker, Amazon Q, and AgentCore</li>
-                                <li>Generated $100M+ in qualified pipeline by driving technical GTM motions and solution-led workshops, with 40% of opportunities progressing to active launches, accelerating customer AI and GenAI journeys</li>
+                                <li>Generated $300M+ in qualified pipeline by driving technical GTM motions and solution-led workshops, with 40% of opportunities progressing to active launches, accelerating customer AI and GenAI journeys</li>
                                 <li>Architected and implemented large-scale AI/ML platforms integrating data lakes, advanced analytics, and machine learning operations (MLOps)</li>
                                 <li>Established comprehensive enterprise-wide data strategy, data governance and security frameworks for Fortune 500 companies, ensuring responsible AI development and deployment</li>
                             </ul>
-                            <div class="achievement">Generated $100M+ in qualified pipeline with 40% progressing to active launches</div>
+                            <div class="achievement">Generated $300M+ in qualified pipeline with 40% progressing to active launches</div>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -116,8 +117,8 @@
                             <h3>Credit Suisse</h3>
                             <p class="role-title">Data & ML Architect | Aug 2012 – Sep 2016 | New York, NY</p>
                             <ul class="experience-list">
-                                <li>Led the architectural transformation of Private Banking data & ML platform, implementing real-time data processing and ML-driven predictive analytics for wealth management</li>
-                                <li>Architected ML pipeline, delivering automated client insights, portfolio recommendations, and risk analytics</li>
+                                <li>Led the architectural transformation of Private Banking data platform, implementing real-time data processing and predictive analytics for wealth management</li>
+                                <li>Architected data pipeline, delivering automated client insights, portfolio recommendations, and risk analytics</li>
                             </ul>
                             <div class="achievement">Achieved 90% improved response time for analytics</div>
                         </div>
@@ -163,85 +164,88 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Key Projects & Solutions</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">🚀</div>
-                        <h3>FloTorch</h3>
-                        <p class="project-type">Open Source GenAI Accelerator</p>
-                        <p>Published GenAI accelerator designed to optimize Retrieval-Augmented Generation (RAG) workloads in AWS Marketplace, advancing AI toolsets in the cloud ecosystem.</p>
-                        <div class="project-tags">
-                            <span class="tag">GenAI</span>
+                <h2 class="section-title">Key Initiatives & Solutions</h2>
+                <div class="projects-grid" id="projects-container">
+                    <!-- Projects will be rendered here by JavaScript -->
+                </div>
+                <div class="projects-pagination-controls">
+                    <!-- Pagination controls will be rendered here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Workshops Section -->
+        <section id="workshops" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Workshops</h2>
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <div class="workshop-icon">🎓</div>
+                        <h3>Advanced RAG Applications Workshop</h3>
+                        <p>Explores advanced Retrieval-Augmented Generation (RAG) techniques to improve accuracy, relevance, and trustworthiness of AI-generated responses using Amazon Bedrock and Amazon SageMaker.</p>
+                        <div class="workshop-tags">
                             <span class="tag">RAG</span>
-                            <span class="tag">AWS Marketplace</span>
+                            <span class="tag">Amazon Bedrock</span>
+                            <span class="tag">SageMaker</span>
+                        </div>
+                        <div class="workshop-links">
+                            <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/3eea55bb-a79a-4eef-99b9-a4528da71381/en-US" target="_blank" class="workshop-link">Workshop →</a>
+                            <a href="https://github.com/aws-samples/sample-advanced-rag-using-bedrock-and-sagemaker" target="_blank" class="workshop-link">Code →</a>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon">🔍</div>
-                        <h3>OptiX AI</h3>
-                        <p class="project-type">Athena Query Analyzer</p>
-                        <p>Enterprise-grade application that helps organizations detect, analyze, and optimize inefficient queries, deployed across multiple enterprise customers.</p>
-                        <div class="project-tags">
-                            <span class="tag">Analytics</span>
-                            <span class="tag">Optimization</span>
+                    <div class="workshop-card">
+                        <div class="workshop-icon">🤖</div>
+                        <h3>Building Effective AI Agents on Amazon Web Services</h3>
+                        <p>Dive into the world of AI agents, learning how to leverage AWS services to build AI systems that can act independently, make decisions, and complete complex tasks with minimal human intervention.</p>
+                        <div class="workshop-tags">
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Hands-on</span>
+                        </div>
+                        <div class="workshop-links">
+                            <a href="https://catalog.workshops.aws/building-effective-ai-agents-on-aws/en-US" target="_blank" class="workshop-link">Workshop →</a>
+                            <a href="https://github.com/aws-samples/generative-ai-on-amazon-sagemaker" target="_blank" class="workshop-link">Code →</a>
+                        </div>
+                    </div>
+                    <div class="workshop-card">
+                        <div class="workshop-icon">🚀</div>
+                        <h3>Getting started with Bedrock AgentCore</h3>
+                        <p>Build a Customer Support Agent that demonstrates the full spectrum of AgentCore capabilities - from basic conversational AI to enterprise-grade deployment with memory, security, and observability.</p>
+                        <div class="workshop-tags">
+                            <span class="tag">AgentCore</span>
+                            <span class="tag">Customer Support</span>
                             <span class="tag">Enterprise</span>
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-icon">⚡</div>
-                        <h3>Atomix</h3>
-                        <p class="project-type">OneClick Data Framework</p>
-                        <p>One-click cloud data framework that streamlines and accelerates enterprise data platform development. Finalist in 2022 Gartner Eye on Innovation Award.</p>
-                        <div class="project-tags">
-                            <span class="tag">Data Platform</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Award Winner</span>
+                        <div class="workshop-links">
+                            <a href="https://catalog.workshops.aws/agentcore-getting-started/en-US" target="_blank" class="workshop-link">Workshop →</a>
+                            <a href="https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/09-AgentCore-E2E" target="_blank" class="workshop-link">Code →</a>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon">💡</div>
-                        <h3>Bedrock Sizer & Pricing AI Assistant</h3>
-                        <p class="project-type">Customer Enablement Tool</p>
-                        <p>Significantly reduced turnaround time for customer RPM/TPM requests. Serving 2,000+ SAs with 9,000+ conversations, accelerating customer AI adoption.</p>
-                        <div class="project-tags">
-                            <span class="tag">AI Assistant</span>
-                            <span class="tag">Bedrock</span>
-                            <span class="tag">Scale</span>
+                    <div class="workshop-card">
+                        <div class="workshop-icon">🏗️</div>
+                        <h3>Building production-ready apps with Amazon Bedrock and Claude</h3>
+                        <p>Learn to build enterprise-grade AI applications using Amazon Bedrock and Anthropic's Claude model. Covers everything from prompt engineering fundamentals to production deployment and cost optimization.</p>
+                        <div class="workshop-tags">
+                            <span class="tag">Claude</span>
+                            <span class="tag">Production</span>
+                            <span class="tag">Enterprise</span>
                         </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-icon">🤖</div>
-                        <h3>DevGenius</h3>
-                        <p class="project-type">AI Solution Architect</p>
-                        <p>AI-powered solution architect that transforms conversational inputs or whiteboard drawings into fully automated AWS architectures with IaC. Reduces architecture time by 80%.</p>
-                        <div class="project-tags">
-                            <span class="tag">AI Hackathon</span>
-                            <span class="tag">Runner-up 2024</span>
-                            <span class="tag">IaC</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-icon">🔎</div>
-                        <h3>MetaSurfer</h3>
-                        <p class="project-type">Metadata Management Platform</p>
-                        <p>AI-powered platform that streamlines data curation. Automated metadata processing for 10K+ datasets, improved search accuracy by 95%, reduced discovery time by 75%.</p>
-                        <div class="project-tags">
-                            <span class="tag">Winner 2023</span>
-                            <span class="tag">Data Discovery</span>
-                            <span class="tag">AI</span>
+                        <div class="workshop-links">
+                            <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/f60045ff-da70-49ca-83fd-57212eab0846/en-US" target="_blank" class="workshop-link">Workshop →</a>
+                            <a href="https://github.com/aws-samples/sample-aiml-solution-labs/tree/main/labs/build-production-ready-ai-solutions-with-claude" target="_blank" class="workshop-link">Code →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Impact Section -->
         <section id="impact" class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Business Impact</h2>
                 <div class="impact-grid">
                     <div class="impact-card">
-                        <div class="impact-number">$100M+</div>
+                        <div class="impact-number">$300M+</div>
                         <div class="impact-label">Qualified Pipeline Generated</div>
                         <p>Through technical GTM motions and solution-led workshops</p>
                     </div>
@@ -277,7 +281,7 @@
         <!-- Leadership Section -->
         <section id="leadership" class="section">
             <div class="container">
-                <h2 class="section-title">Leadership & Thought Leadership</h2>
+                <h2 class="section-title">Thought Leadership</h2>
                 <div class="leadership-content">
                     <div class="leadership-category">
                         <h3>🎤 Speaking & Content</h3>
@@ -492,7 +496,7 @@
             <!-- Summary -->
             <section class="resume-section">
                 <h2>Professional Summary</h2>
-                <p>Accomplished technology leader with <strong>25 years of experience</strong> driving <strong>$100M+ AI/ML, data analytics, and cloud transformations</strong> for Fortune 500 companies. Expert in AWS cloud platforms, modern data architecture, and data governance with proven ability to build high-performing teams and deliver measurable business outcomes.</p>
+                <p>Accomplished technology leader with <strong>25 years of experience</strong> driving <strong>$300M+ AI/ML, data analytics, and cloud transformations</strong> for Fortune 500 companies. Expert in AWS cloud platforms, modern data architecture, and data governance with proven ability to build high-performing teams and deliver measurable business outcomes.</p>
             </section>
 
             <!-- Key Achievements -->
@@ -507,7 +511,7 @@
                     </div>
                     <div class="achievement-item">
                         <div class="achievement-content">
-                            <strong>$100M+ Pipeline Generated</strong>
+                            <strong>$300M+ Pipeline Generated</strong>
                             <p>Through technical GTM motions with 40% conversion to active launches</p>
                         </div>
                     </div>
@@ -534,7 +538,7 @@
                     <h3>Amazon Web Services</h3>
                     <p class="resume-role">Principal Architect – Data & AI/ML | Apr 2019 – Present | Atlanta, GA</p>
                     <ul>
-                        <li>Generated <strong>$100M+ pipeline</strong> with <strong>40% conversion</strong> through GTM initiatives and customer workshops</li>
+                        <li>Generated <strong>$300M+ pipeline</strong> with <strong>40% conversion</strong> through GTM initiatives and customer workshops</li>
                         <li>Architected large-scale AI/ML platforms with data lakes, analytics, and MLOps for Fortune 500 companies</li>
                         <li>Delivered 25+ public talks at AWS re:Invent and Summits; published multiple AWS Architecture Blog articles</li>
                     </ul>
@@ -553,7 +557,7 @@
                     <h3>Credit Suisse</h3>
                     <p class="resume-role">Data & ML Architect | Aug 2012 – Sep 2016 | New York, NY</p>
                     <ul>
-                        <li>Led Private Banking ML platform transformation with predictive analytics for wealth management</li>
+                        <li>Led Private Banking data platform transformation with predictive analytics for wealth management</li>
                         <li>Delivered automated client insights and portfolio recommendations with <strong>90% faster response time</strong></li>
                     </ul>
                 </div>
@@ -589,7 +593,7 @@
                 <div class="projects-compact">
                     <div class="project-compact">
                         <h4>FloTorch</h4>
-                        <p>Open source GenAI accelerator for RAG workloads published in AWS Marketplace</p>
+                        <p>Contributed to open source GenAI accelerator for RAG workloads in AWS Marketplace</p>
                     </div>
                     <div class="project-compact">
                         <h4>Bedrock Sizer & Pricing AI Assistant</h4>
