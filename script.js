@@ -149,7 +149,7 @@ const projectsData = [
         icon: '🔍',
         title: 'OptiX AI',
         type: 'Athena Query Analyzer',
-        description: 'AI-powered Athena Query Analyzer deployed across multiple enterprise customers. Detects and optimizes inefficient queries with visual analytics including execution trends, data scanned, cost breakdowns, query volume, and performance-cost comparisons.',
+        description: 'AI-powered Athena Query Analyzer deployed across multiple enterprise customers. Detects and optimizes inefficient queries with visual analytics including execution trends, data scanned, cost breakdowns, query volume, and performance-cost comparisons. Reduces query costs by up to 70% and improves execution performance by 3x.',
         tags: ['Query Analytics', 'Query Optimization', 'Cost Reduction'],
         link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link'
     },
@@ -157,7 +157,7 @@ const projectsData = [
         icon: '🤖',
         title: 'DevGenius',
         type: 'AI Solution Architect',
-        description: 'AI-powered solution architect transforming conversational inputs or whiteboard drawings into production-ready AWS solutions with full architecture diagrams, complete cost analysis, IaC deployment code, and comprehensive documentation. Reduces architecture time by 80%.',
+        description: 'AI-powered solution architect transforming conversational inputs or whiteboard drawings into production-ready AWS solutions with full architecture diagrams, complete cost analysis, IaC deployment code, and comprehensive documentation. Enables interactive refinement and single-click deployment to AWS accounts. Reduces architecture time by 80%.',
         tags: ['AI Architect', 'Solution Automation', 'Cost Prediction'],
         link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder'
     },
@@ -171,19 +171,52 @@ const projectsData = [
     },
     {
         icon: '💡',
-        title: 'Bedrock Sizer & Pricing AI Assistant',
-        type: 'Customer Enablement Tool',
-        description: 'Significantly reduced turnaround time for customer RPM/TPM requests. Serving 2,000+ SAs with 9,000+ conversations, accelerating customer AI adoption.',
-        tags: ['AI Assistant', 'Bedrock', 'Scale'],
+        title: 'Bedrock Sizing & Pricing AI',
+        type: 'Capacity & Cost Planning Tool',
+        description: 'Interactive tool for Amazon Bedrock capacity and cost estimation through conversational guidance. Includes calculator for all model types with technical details for capacity requests. Serving 3,000+ SAs across multiple customers with 20,000+ conversations, ensuring optimal planning to avoid throttling and maintain 24/7 availability.',
+        tags: ['Capacity Planning', 'Cost Estimation', 'AI Scaling'],
         link: ''
     },
     {
         icon: '🚀',
         title: 'FloTorch',
         type: 'Open Source GenAI Accelerator',
-        description: 'Contributed to FloTorch, a GenAI accelerator designed to optimize Retrieval-Augmented Generation (RAG) workloads in AWS Marketplace, advancing AI toolsets in the cloud ecosystem.',
-        tags: ['GenAI', 'RAG', 'AWS Marketplace'],
+        description: 'Contributed to open-source tool for rapid prototyping and optimization of RAG workloads. Enables systematic experimentation with hyperparameters, embedding models, and vector databases for cost, latency, and performance tuning. Saves weeks of development time while ensuring full data sovereignty.',
+        tags: ['RAG Optimization', 'Experimentation', 'Performance Tuning'],
         link: 'https://aws.amazon.com/marketplace/pp/prodview-z5zcvloh7l3ky?applicationId=AWS-Marketplace-Console&ref_=beagle&sr=0-1'
+    },
+    {
+        icon: '🛒',
+        title: 'Market Basket Analysis AI',
+        type: 'Customer & Profitability Analytics',
+        description: 'AI-powered solution analyzing customer purchasing behavior and product associations to drive strategic decision-making. Enables precise profitability analysis and provides actionable insights for marketing and inventory optimization. Deployed at a top pet food company, empowering CEO-level insights on margins, directly influencing strategy.',
+        tags: ['Customer Analytics', 'Profitability Analysis', 'Decision Support'],
+        link: 'https://github.com/praven80/market_basket_analysis_ai'
+    },
+    // Additional projects from user's list
+    {
+        icon: '🎙️',
+        title: 'DocTalk',
+        type: 'AI Podcast & Video Generator',
+        description: 'AI-powered app transforming documents and articles into engaging audio/video podcasts where two speakers discuss content as a conversational story. Makes lengthy, dense material easily consumable for educational content, business updates, and reports. Reduces content consumption time by 70% while improving comprehension and retention.',
+        tags: ['Podcast Generation', 'Audio/Video Content', 'Learning Acceleration'],
+        link: 'https://github.com/praven80/podcast_and_videocast_generator_ai'
+    },
+    {
+        icon: '📹',
+        title: 'Screen & Cam Capture AI',
+        type: 'AI-Powered Visual Collaboration',
+        description: 'AI-powered application simplifying collaboration through screen recording and webcam capture. Enables showcasing work, asking questions, and receiving actionable insights with real-time visual feedback. Combines visuals with AI-driven understanding to enhance communication and productivity. Reduces feedback cycles by 65%.',
+        tags: ['Screen Capture', 'Webcam Recording', 'Visual Feedback'],
+        link: 'https://github.com/praven80/screen_and_camera_capture_ai'
+    },
+    {
+        icon: '🎯',
+        title: 'Ground Truth Generator',
+        type: 'Ground Truth Data Generation',
+        description: 'AI-powered application for generating, managing, and evaluating high-quality ground truth data to test and improve GenAI applications. Generates large volumes of Q&A pairs from documents or knowledge bases in minutes with review and approve workflows. Generated 100 Q&A pairs in under 5 minutes. Supports RAGAS and Bedrock evaluation.',
+        tags: ['Q&A Generation', 'Data Validation', 'Model Evaluation'],
+        link: 'https://github.com/praven80/ground_truth_generator_ai'
     },
     {
         icon: '🔎',
@@ -192,39 +225,6 @@ const projectsData = [
         description: 'AI-powered platform that streamlines data curation. Automated metadata processing for 10K+ datasets, improved search accuracy by 95%, reduced discovery time by 75%.',
         tags: ['Winner 2023', 'Data Discovery', 'AI'],
         link: ''
-    },
-    // Additional projects from user's list
-    {
-        icon: '🎙️',
-        title: 'DocTalk - Podcast and Videocast Generator',
-        type: 'Content Generation',
-        description: 'Transforms documents and web articles into engaging podcast-style conversations using Amazon Bedrock and Amazon Polly. Supports both audio and video output formats with AI-generated visuals.',
-        tags: ['GenAI', 'Amazon Bedrock', 'Amazon Polly'],
-        link: 'https://github.com/praven80/podcast_and_videocast_generator_ai'
-    },
-    {
-        icon: '📹',
-        title: 'Screen And Camera Capture AI',
-        type: 'Video Analysis',
-        description: 'A Streamlit-based application for recording screen and camera footage with real-time video analysis powered by Amazon Bedrock.',
-        tags: ['Video Analysis', 'Amazon Bedrock', 'Streamlit'],
-        link: 'https://github.com/praven80/screen_and_camera_capture_ai'
-    },
-    {
-        icon: '🎯',
-        title: 'Ground Truth Generator',
-        type: 'Data Generation',
-        description: 'A comprehensive GenAI application for generating and managing ground truth data using Amazon Bedrock models. Facilitates creation, management, and evaluation of Q&A pairs for training and testing language models.',
-        tags: ['GenAI', 'Amazon Bedrock', 'Training Data'],
-        link: 'https://github.com/praven80/ground_truth_generator_ai'
-    },
-    {
-        icon: '🛒',
-        title: 'Market Basket Analysis AI',
-        type: 'Analytics Platform',
-        description: 'A serverless application that converts natural language questions into SQL queries for market basket analysis, built with AWS CDK, Streamlit, and various AWS services.',
-        tags: ['NLP', 'SQL', 'AWS CDK'],
-        link: 'https://github.com/praven80/market_basket_analysis_ai'
     },
     {
         icon: '👥',
@@ -365,7 +365,7 @@ const projectsData = [
 ];
 
 // Pagination settings
-const PROJECTS_PER_PAGE = 6;
+const PROJECTS_PER_PAGE = 9;
 let currentProjectPage = 1;
 
 // Render projects
@@ -382,8 +382,7 @@ function renderProjects() {
     
     container.innerHTML = projectsToShow.map(project => `
         <div class="project-card">
-            <div class="project-icon">${project.icon}</div>
-            <h3>${project.link ? `<a href="${project.link}" target="_blank">${project.title}</a>` : project.title}</h3>
+            <h3><span class="project-icon">${project.icon}</span>${project.link ? `<a href="${project.link}" target="_blank">${project.title}</a>` : project.title}</h3>
             <p class="project-type">${project.type}</p>
             <p>${project.description}</p>
             <div class="project-tags">
