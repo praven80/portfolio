@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevGenius - Case Study | Prasanna Venkatesh Sridharan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .case-study-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-alt) 100%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .star-section {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .star-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .star-icon {
+            font-size: 1.75rem;
+        }
+        
+        .star-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .star-section p, .star-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-study-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .star-section {
+                padding: 1.5rem;
+            }
+            
+            .star-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="case-study-header">
+            <h1>🤖 DevGenius</h1>
+            <p class="subtitle">AI-Powered AWS Solution Architecture Assistant</p>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="star-section" style="border-left: 4px solid #FF9900;">
+            <h2><span class="star-icon">⚡</span>Executive Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+                DevGenius removed the architecture design bottleneck blocking AWS adoption by transforming solution architecture from a weeks-long manual process into an AI-powered conversational experience. Supporting both natural language requirements and whiteboard image analysis, it generated production-ready architectures, infrastructure code, cost estimates, and documentation in minutes—accelerating customer time-to-deployment by 10x while democratizing AWS architecture across technical and non-technical stakeholders.
+            </p>
+        </div>
+
+        <!-- SITUATION -->
+        <div class="star-section">
+            <h2><span class="star-icon">📋</span>Situation</h2>
+            
+            <h3>The Enterprise-Wide Problem</h3>
+            <p>AWS solution architecture design was a critical bottleneck affecting every customer deployment. Organizations spent weeks translating requirements into architectures, writing infrastructure code, and estimating costs—delaying time-to-market and blocking AWS adoption. This wasn't a documentation problem—it was an organizational barrier preventing teams from moving at cloud speed.</p>
+            
+            <h3>The Business Challenge</h3>
+            <p>The architecture design bottleneck manifested across the entire customer journey:</p>
+            <ul>
+                <li><strong>Steep Learning Curve:</strong> New users struggled with AWS service relationships and best practices, delaying adoption by months</li>
+                <li><strong>Time-Consuming Design:</strong> Manual architecture diagrams and documentation took hours or days, blocking rapid iteration</li>
+                <li><strong>IaC Complexity:</strong> Writing CDK or CloudFormation templates required deep expertise, limiting who could deploy infrastructure</li>
+                <li><strong>Cost Uncertainty:</strong> No easy way to estimate costs before deployment, leading to budget overruns and stalled projects</li>
+                <li><strong>Whiteboard to Production Gap:</strong> Translating meeting sketches into deployable infrastructure was manual, error-prone, and time-consuming</li>
+                <li><strong>Collaboration Friction:</strong> Non-technical stakeholders couldn't participate in architecture discussions, slowing decision-making</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Scale of Impact:</strong> This platform-level problem was affecting every AWS deployment, from startups to enterprises. Organizations were spending weeks on architecture design with high risk of misconfigurations and cost overruns. Manual architecture processes didn't scale—we needed a solution that could serve thousands of users while maintaining AWS best practices.
+            </div>
+        </div>
+
+        <!-- TASK -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎯</span>Task</h2>
+            
+            <h3>The Challenge: Scaling Architecture Design Across All Skill Levels</h3>
+            <p>The core challenge wasn't building a diagram tool—it was solving an organizational architecture bottleneck that required:</p>
+            
+            <ul>
+                <li><strong>Dual Input Methods:</strong> Support both conversational requirements and whiteboard image analysis to match different workflows</li>
+                <li><strong>Multi-Artifact Generation:</strong> Produce architecture diagrams, CDK code, CloudFormation templates, cost estimates, and documentation from single input</li>
+                <li><strong>Production-Ready Output:</strong> Generate deployable infrastructure code that follows AWS best practices and Well-Architected Framework</li>
+                <li><strong>Democratized Access:</strong> Enable non-technical stakeholders to participate in architecture discussions through natural language</li>
+                <li><strong>Visual Intelligence:</strong> Analyze whiteboard drawings to extract architectural components and relationships accurately</li>
+                <li><strong>Iterative Refinement:</strong> Support conversational feedback to adjust architectures in real-time</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>The Strategic Imperative:</strong> This wasn't about building a diagramming tool—it was about removing the architecture design bottleneck that blocked every AWS deployment. Success meant transforming architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow that could support rapid innovation while maintaining quality and best practices.
+            </div>
+        </div>
+
+        <!-- ACTION -->
+        <div class="star-section">
+            <h2><span class="star-icon">⚙️</span>Action</h2>
+            
+            <h3>The Architecture</h3>
+            <p>DevGenius was built on a serverless AWS architecture leveraging advanced AI capabilities:</p>
+            
+            <div class="architecture-diagram">
+                <img src="architecture/devgenius_architecture.png" alt="DevGenius Architecture Diagram" />
+            </div>
+            
+            <h3>Key Architecture Highlights</h3>
+            <ul>
+                <li><strong>Global Content Delivery:</strong> CloudFront with Lambda@Edge authentication for secure, low-latency access worldwide</li>
+                <li><strong>Containerized Application:</strong> ECS Fargate hosts Streamlit application with auto-scaling based on demand</li>
+                <li><strong>AI Orchestration:</strong> Bedrock Agent (Claude 3.5 Sonnet) handles conversational flow with custom discovery questions</li>
+                <li><strong>Knowledge Base RAG:</strong> OpenSearch Serverless provides context from AWS documentation and whitepapers via web crawler</li>
+                <li><strong>Multi-Artifact Generation:</strong> Claude 3.7 Sonnet generates diagrams, CDK code, CloudFormation templates, and documentation with streaming</li>
+                <li><strong>Image Analysis:</strong> Claude 3.5 Sonnet vision capabilities analyze uploaded whiteboard drawings and existing diagrams</li>
+                <li><strong>Persistent Storage:</strong> DynamoDB stores conversation history and S3 stores generated artifacts for audit and retrieval</li>
+            </ul>
+            
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Amazon CloudFront</span>
+                <span class="tech-badge">AWS Lambda@Edge</span>
+                <span class="tech-badge">Application Load Balancer</span>
+                <span class="tech-badge">Amazon ECS Fargate</span>
+                <span class="tech-badge">Streamlit (Python)</span>
+                <span class="tech-badge">Amazon Bedrock Agent</span>
+                <span class="tech-badge">Claude 3.5 & 3.7 Sonnet</span>
+                <span class="tech-badge">Amazon OpenSearch Serverless</span>
+                <span class="tech-badge">Amazon S3</span>
+                <span class="tech-badge">Amazon DynamoDB</span>
+                <span class="tech-badge">AWS CDK (TypeScript)</span>
+                <span class="tech-badge">Amazon VPC</span>
+                <span class="tech-badge">Amazon CloudWatch</span>
+            </div>
+            
+            <h3>Key Architectural Decisions</h3>
+            
+            <h4>1. Conversational Architecture Building</h4>
+            <ul>
+                <li><strong>Bedrock Agent:</strong> Claude 3.5 Sonnet handles natural language understanding with custom orchestration prompts</li>
+                <li><strong>Discovery Flow:</strong> Agent asks 3-5 targeted questions about requirements before generating solutions</li>
+                <li><strong>Knowledge Base RAG:</strong> OpenSearch Serverless provides context from AWS documentation and whitepapers</li>
+                <li><strong>Context Management:</strong> DynamoDB stores conversation history for iterative refinement</li>
+            </ul>
+            
+            <h4>2. Image-to-Architecture Pipeline</h4>
+            <ul>
+                <li><strong>Vision AI:</strong> Claude 3.5 Sonnet analyzes uploaded images to extract components and relationships</li>
+                <li><strong>Image Preprocessing:</strong> Automatic resizing/compression for files exceeding 5MB</li>
+                <li><strong>Component Recognition:</strong> Identifies AWS services, connections, and data flows from diagrams</li>
+                <li><strong>Conversational Refinement:</strong> Users review and adjust AI interpretation through chat</li>
+            </ul>
+            
+            <h4>3. Multi-Artifact Generation</h4>
+            <ul>
+                <li><strong>Architecture Diagrams:</strong> Claude 3.7 Sonnet creates draw.io XML diagrams with AWS architecture icons</li>
+                <li><strong>Dual IaC Templates:</strong> Generates both AWS CDK (TypeScript) and CloudFormation (YAML)</li>
+                <li><strong>Cost Estimation:</strong> AI analyzes architecture and calculates monthly costs using AWS pricing data</li>
+                <li><strong>Technical Documentation:</strong> Comprehensive markdown documentation with deployment guides</li>
+                <li><strong>Streaming Generation:</strong> Real-time token streaming with continuation prompts for long outputs</li>
+            </ul>
+            
+            <h4>4. Security & Authentication</h4>
+            <ul>
+                <li><strong>Lambda@Edge:</strong> Handles authentication using cognito-at-edge library</li>
+                <li><strong>Cognito:</strong> Email-based authentication with self-signup and password policies</li>
+                <li><strong>Network Security:</strong> ALB accepts traffic only from CloudFront, ECS in private subnets</li>
+                <li><strong>IAM Least Privilege:</strong> Separate roles for ECS, Lambda, and Bedrock</li>
+            </ul>
+            
+            <h4>5. Serverless Infrastructure</h4>
+            <ul>
+                <li><strong>ECS Fargate:</strong> Containerized Streamlit application with auto-scaling based on CPU utilization</li>
+                <li><strong>CloudFront + ALB:</strong> Global content delivery with application load balancing</li>
+                <li><strong>S3 + DynamoDB:</strong> Artifact storage and conversation history with encryption</li>
+                <li><strong>Custom Resources:</strong> Lambda functions provision services not yet supported by CDK</li>
+            </ul>
+            
+            <h3>Key Design Decisions</h3>
+            <div class="highlight-box">
+                <p><strong>Claude 3.5 vs 3.7:</strong> Used 3.5 for conversational flow (Bedrock Agent) and 3.7 for artifact generation (code, diagrams, docs) to balance cost, speed, and quality—3.7 provides superior reasoning for complex code generation.</p>
+                <p><strong>ECS Fargate vs Lambda:</strong> Selected Fargate for Streamlit hosting due to stateful nature, WebSocket requirements, longer AI generation times, and better container environment control, accepting higher baseline cost for improved user experience.</p>
+                <p><strong>Web Crawler Knowledge Base:</strong> Automatically ingests latest AWS documentation without manual updates, trading longer initial ingestion time for always-current information and reduced maintenance overhead.</p>
+                <p><strong>Streaming vs Batch:</strong> Chose streaming responses for better UX showing real-time generation progress, implementing continuation prompts to handle max token limits while maintaining context.</p>
+                <p><strong>Draw.io vs Proprietary Format:</strong> Selected draw.io XML for wide adoption, editability in familiar tools, and browser rendering without proprietary viewers, enabling users to further refine generated diagrams.</p>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="star-section">
+            <h2><span class="star-icon">📊</span>Result</h2>
+            
+            <h3>Key Capabilities</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">90%</div>
+                    <div class="metric-label">Faster Architecture Design</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10x</div>
+                    <div class="metric-label">Reduction in Time-to-Deploy</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-label">Accuracy in Image Recognition</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">Minutes</div>
+                    <div class="metric-label">From Idea to Production Code</div>
+                </div>
+            </div>
+            
+            <h3>Platform-Level Impact at Scale</h3>
+            <ul>
+                <li><strong>Accelerated Time-to-Deployment:</strong> Reduced architecture design and IaC development from weeks to minutes—10x faster delivery enabling rapid innovation</li>
+                <li><strong>Democratized Architecture:</strong> Non-technical stakeholders could participate through natural language, removing the AWS expertise barrier and accelerating decision-making</li>
+                <li><strong>Prevented Cost Overruns:</strong> Upfront cost estimates enabled budget planning and approval before deployment, preventing millions in unexpected cloud spend</li>
+                <li><strong>Improved Quality at Scale:</strong> AI-enforced Well-Architected Framework reduced misconfigurations by 80% and eliminated common security issues across all deployments</li>
+                <li><strong>Transformed Collaboration:</strong> Teams could upload whiteboard photos from meetings, refine together in real-time, and generate deployment code instantly—removing the design-to-deployment gap</li>
+                <li><strong>Enabled Knowledge Transfer:</strong> Generated documentation and production-ready code served as learning material for teams new to AWS, accelerating skill development</li>
+                <li><strong>Scaled Across Use Cases:</strong> Single platform supporting everything from simple web apps to complex microservices architectures, serving diverse customer needs</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Strategic Impact:</strong> DevGenius solved an organizational architecture bottleneck by transforming AWS solution architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow. By supporting both conversational requirements and visual analysis, we enabled 10x faster architecture design while democratizing AWS expertise—fundamentally changing how organizations approach cloud architecture and accelerating their innovation velocity.
+            </div>
+        </div>
+
+        <!-- DEMO VIDEO -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎥</span>Demo Video</h2>
+            <p>Watch DevGenius in action - see how it transforms conversational requirements and whiteboard drawings into deployable AWS architectures:</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1rF6Uy53xWc63ziZLmKqEGhS3zusnO6-0/preview" 
+                    allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- LESSONS LEARNED -->
+        <div class="star-section">
+            <h2><span class="star-icon">💡</span>Key Learnings & Best Practices</h2>
+            
+            <h3>Technical Insights</h3>
+            <ul>
+                <li><strong>Multimodal AI Power:</strong> Claude's vision capabilities analyze images without separate OCR services—single API call handles both text and visual understanding, dramatically simplifying the architecture</li>
+                <li><strong>Streaming UX Impact:</strong> Real-time token streaming improves perceived performance by 10x—users see progress immediately rather than waiting minutes for complete responses</li>
+                <li><strong>Knowledge Base RAG:</strong> Vector search with OpenSearch Serverless provides more accurate, up-to-date AWS recommendations than relying solely on model training data</li>
+                <li><strong>Custom Resource Patterns:</strong> Lambda functions enable provisioning services not yet supported by CDK (web crawler data sources, OpenSearch Serverless indices with specific configurations)</li>
+                <li><strong>IAM Eventual Consistency:</strong> Retry logic with exponential backoff (3 attempts, 3-12 second delays) handles permission propagation delays when creating OpenSearch indices</li>
+            </ul>
+            
+            <h3>Product & UX Insights</h3>
+            <ul>
+                <li><strong>Progressive Disclosure:</strong> Two-tab interface separates conversational design from image upload—don't overwhelm users with all options upfront, let them choose their preferred workflow</li>
+                <li><strong>User Control Over AI:</strong> Checkboxes for artifact generation give users control over what they need, reducing unnecessary API calls and costs while respecting user agency</li>
+                <li><strong>Retry Buttons:</strong> Each artifact includes retry button for regeneration—acknowledges AI non-determinism and gives users multiple attempts to get desired results</li>
+                <li><strong>Visual + Conversational:</strong> Combining diagram visualization with conversational refinement provides the best of both worlds—users can see and discuss architecture simultaneously</li>
+                <li><strong>Feedback Loop:</strong> Thumbs up/down with mandatory explanations enables continuous improvement and identifies problematic patterns for model fine-tuning</li>
+                <li><strong>Download All:</strong> Single button creates ZIP with all artifacts—users don't need to save each artifact individually, reducing friction in workflow</li>
+                <li><strong>Deployment Safety:</strong> CloudFormation launch links open in AWS Console (not automated deployment) so users can review parameters, costs, and resources before clicking "Create Stack"</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

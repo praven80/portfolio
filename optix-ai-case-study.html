@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiX AI - Case Study | Prasanna Venkatesh Sridharan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .case-study-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-alt) 100%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .star-section {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .star-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .star-icon {
+            font-size: 1.75rem;
+        }
+        
+        .star-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .star-section p, .star-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-study-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .star-section {
+                padding: 1.5rem;
+            }
+            
+            .star-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="case-study-header">
+            <h1>🔍 OptiX AI – Athena Query Analyzer</h1>
+            <p class="subtitle">Performance & Cost Optimization Solution</p>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="star-section" style="border-left: 4px solid #FF9900;">
+            <h2><span class="star-icon">⚡</span>Executive Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+                OptiX AI solved an enterprise-wide Athena cost crisis by transforming query optimization from a manual, reactive process into an automated, AI-powered platform. Processing millions of queries across multiple AWS accounts, it reduced query costs by 70%, improved performance by 3x, and saved customers over $2M annually—while freeing data engineering teams from manual optimization work and enabling proactive cost management at scale.
+            </p>
+        </div>
+
+        <!-- SITUATION -->
+        <div class="star-section">
+            <h2><span class="star-icon">📋</span>Situation</h2>
+            
+            <h3>The Enterprise-Wide Problem</h3>
+            <p>Enterprise customers running thousands of Athena queries daily faced an organizational cost crisis: unoptimized queries were driving unpredictable cloud costs into the millions, while data engineering teams spent countless hours manually identifying and fixing problematic queries. This wasn't a query problem—it was a platform-level cost management problem affecting every analytics workload at scale.</p>
+            
+            <h3>The Business Challenge</h3>
+            <p>The query optimization crisis manifested across the entire data organization:</p>
+            <ul>
+                <li><strong>Cost Explosion:</strong> Unoptimized queries scanning unnecessary data, leading to unpredictable costs reaching millions annually</li>
+                <li><strong>Performance Issues:</strong> Slow queries impacting business-critical analytics and blocking decision-making</li>
+                <li><strong>No Visibility:</strong> No centralized way to identify problematic queries across multiple AWS accounts</li>
+                <li><strong>Manual Bottleneck:</strong> Data engineers spending hours manually analyzing and rewriting SQL for each issue</li>
+                <li><strong>Reactive Firefighting:</strong> Teams only discovering cost issues after monthly bills arrived, too late to prevent waste</li>
+                <li><strong>Governance Gaps:</strong> Unable to enforce best practices or track improvements across teams</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Scale of Impact:</strong> This platform-level problem was affecting every analytics workload, blocking data-driven decision-making, and wasting millions in cloud spend. Manual query optimization didn't scale—we needed a solution that could analyze millions of queries automatically while providing actionable recommendations.
+            </div>
+        </div>
+
+        <!-- TASK -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎯</span>Task</h2>
+            
+            <h3>The Challenge: Scaling Query Optimization Across Millions of Queries</h3>
+            <p>The core challenge wasn't building an analyzer—it was solving an organizational cost management problem that required:</p>
+            
+            <ul>
+                <li><strong>Multi-Account Scale:</strong> Process millions of query records across multiple AWS accounts without impacting production workloads</li>
+                <li><strong>Dual Optimization Approach:</strong> Provide both automated best-practice recommendations and AI-powered deep analysis for different optimization needs</li>
+                <li><strong>Real-Time Analytics:</strong> Near real-time insights while handling high-velocity data ingestion from continuous query execution</li>
+                <li><strong>Actionable Intelligence:</strong> Not just identify problems—provide specific, implementable solutions with expected cost savings</li>
+                <li><strong>Self-Service at Scale:</strong> Enable data engineers and analysts to optimize queries without deep AWS expertise</li>
+                <li><strong>Proactive Cost Management:</strong> Shift from reactive firefighting to proactive cost optimization and governance</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>The Strategic Imperative:</strong> This wasn't about building a monitoring tool—it was about transforming query optimization from a manual, reactive bottleneck into an automated, proactive process that could support enterprise analytics at scale. Success meant preventing millions in cost waste while freeing data engineering teams to focus on strategic work instead of manual SQL optimization.
+            </div>
+        </div>
+
+        <!-- ACTION -->
+        <div class="star-section">
+            <h2><span class="star-icon">⚙️</span>Action</h2>
+            
+            <h3>The Architecture</h3>
+            <p>OptiX AI was built on a modern, serverless AWS architecture designed for scale, performance, and cost-efficiency:</p>
+            
+            <div class="architecture-diagram">
+                <img src="architecture/optix_ai_architecture.png" alt="OptiX AI Architecture Diagram" />
+            </div>
+            
+            <h3>Key Architecture Highlights</h3>
+            <ul>
+                <li><strong>Global Content Delivery:</strong> CloudFront serves React application from S3 with low-latency access worldwide</li>
+                <li><strong>Credential Management:</strong> Lambda assumes IAM roles to provide temporary AWS credentials to frontend for direct service access (STS-based, per-user scoped, short-lived, read-only analytics permissions)</li>
+                <li><strong>Direct AWS Integration:</strong> React app uses temporary credentials to call Glue, Athena, and Bedrock directly, reducing latency</li>
+                <li><strong>Dual Optimization Engine:</strong> Automated best-practice recommendations plus optional AI-powered analysis using Amazon Bedrock (Claude)</li>
+                <li><strong>Activity Tracking:</strong> DynamoDB logs user activities and optimization results for analytics and audit trails</li>
+                <li><strong>Metadata Discovery:</strong> Real-time schema fetching from Glue Data Catalog for database and table information</li>
+            </ul>
+            
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Amazon CloudFront</span>
+                <span class="tech-badge">Amazon S3</span>
+                <span class="tech-badge">Amazon API Gateway</span>
+                <span class="tech-badge">AWS Lambda</span>
+                <span class="tech-badge">AWS IAM</span>
+                <span class="tech-badge">AWS Glue</span>
+                <span class="tech-badge">Amazon Athena</span>
+                <span class="tech-badge">Amazon Bedrock (Claude)</span>
+                <span class="tech-badge">Amazon DynamoDB</span>
+                <span class="tech-badge">React 18</span>
+                <span class="tech-badge">Node.js 18</span>
+                <span class="tech-badge">AWS CDK (TypeScript)</span>
+            </div>
+            
+            <h3>Key Architectural Decisions</h3>
+            
+            <h4>1. Serverless Frontend Delivery</h4>
+            <ul>
+                <li><strong>CloudFront + S3:</strong> Global content delivery with low latency, automatic scaling, and cost-effective static hosting for React application</li>
+                <li><strong>Edge Caching:</strong> Reduced load times for users worldwide through CloudFront's edge locations</li>
+                <li><strong>Secure Access:</strong> Origin Access Identity (OAI) ensures S3 bucket is only accessible through CloudFront</li>
+            </ul>
+            
+            <h4>2. Credential Management & Security</h4>
+            <ul>
+                <li><strong>Temporary Credentials:</strong> Lambda assumes IAM roles to provide short-lived AWS credentials to React frontend</li>
+                <li><strong>Least Privilege Access:</strong> Scoped IAM permissions ensure users only access authorized Athena workgroups and Glue databases</li>
+                <li><strong>API Gateway Integration:</strong> Centralized authentication and authorization layer for all backend operations</li>
+            </ul>
+            
+            <h4>3. Direct AWS Service Integration</h4>
+            <ul>
+                <li><strong>Client-Side AWS SDK:</strong> React app uses temporary credentials (obtained via Lambda/STS) to directly call Glue, Athena, and Bedrock, reducing latency and backend complexity</li>
+                <li><strong>Schema Discovery:</strong> Real-time metadata fetching from Glue Data Catalog for database and table schemas</li>
+                <li><strong>Query Execution:</strong> Direct Athena API calls for fetching query history and execution details</li>
+            </ul>
+            
+            <h4>4. Dual Optimization Approaches</h4>
+            <ul>
+                <li><strong>Best Practices Engine:</strong> Automated analysis based on Athena best practices (partitioning, file formats, compression, data types)</li>
+                <li><strong>AI-Powered Optimization:</strong> Optional Bedrock integration for context-aware query analysis and intelligent recommendations</li>
+                <li><strong>User Choice:</strong> Users select approach based on needs—quick fixes or deep analysis with detailed explanations</li>
+            </ul>
+            
+            <h4>5. Activity Tracking & Analytics</h4>
+            <ul>
+                <li><strong>Usage Logging:</strong> Asynchronous capture of user activities and optimization patterns</li>
+                <li><strong>Performance Metrics:</strong> Track optimization success rates and cost savings over time</li>
+                <li><strong>Audit Trails:</strong> Complete history of query optimizations for compliance and analysis</li>
+            </ul>
+            
+            <h4>6. Natural Language Query Generation</h4>
+            <ul>
+                <li><strong>NL to SQL:</strong> Users describe queries in plain English, and Bedrock (Claude) generates optimized SQL queries</li>
+                <li><strong>Schema-Aware:</strong> AI understands database schemas from Glue to generate contextually accurate queries</li>
+                <li><strong>Multiple Options:</strong> Generates 3-4 query variations with different optimization approaches</li>
+            </ul>
+            
+            <h4>7. Pre-built Query Templates</h4>
+            <ul>
+                <li><strong>Template Library:</strong> Curated collection of optimized query patterns for common use cases</li>
+                <li><strong>Categorized:</strong> Organized by complexity and use case (aggregations, joins, partitioning, window functions)</li>
+                <li><strong>Customizable:</strong> Users can adapt templates to their specific schemas and requirements</li>
+            </ul>
+            
+            <h3>Trade-offs & Design Decisions</h3>
+            <div class="highlight-box">
+                <p><strong>Dual Optimization Strategy:</strong> Both automated and AI-powered approaches serve different user needs efficiently.</p>
+                <p><strong>Direct AWS SDK vs Backend Proxy:</strong> Chose client-side AWS SDK calls with temporary credentials for lower latency and reduced backend complexity, accepting the trade-off of exposing AWS service calls in browser (mitigated by scoped IAM permissions).</p>
+                <p><strong>CloudFront vs Application Load Balancer:</strong> Selected CloudFront for global edge caching and CDN capabilities over ALB, optimizing for static content delivery and worldwide performance.</p>
+                <p><strong>DynamoDB vs RDS:</strong> Implemented DynamoDB for activity logging due to serverless scaling, pay-per-use pricing, and millisecond latency, accepting eventual consistency for non-critical audit logs.</p>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="star-section">
+            <h2><span class="star-icon">📊</span>Result</h2>
+            
+            <h3>Business Outcomes</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">70%</div>
+                    <div class="metric-label">Query Cost Reduction</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3x</div>
+                    <div class="metric-label">Performance Improvement</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">85%</div>
+                    <div class="metric-label">Faster Optimization Time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$2M+</div>
+                    <div class="metric-label">Annual Savings (per customer)</div>
+                </div>
+            </div>
+            
+            <h3>Platform-Level Impact at Scale</h3>
+            <ul>
+                <li><strong>Eliminated Cost Waste:</strong> 70% query cost reduction across all customers prevented millions in unnecessary cloud spend annually</li>
+                <li><strong>Accelerated Analytics:</strong> 3x performance improvement enabled faster business insights and data-driven decision-making</li>
+                <li><strong>Transformed Engineering Productivity:</strong> 85% reduction in manual optimization time freed data teams to focus on strategic initiatives instead of SQL tuning</li>
+                <li><strong>Proactive Cost Management:</strong> Shifted from reactive firefighting to proactive optimization, preventing cost overruns before they occurred</li>
+                <li><strong>Democratized Optimization:</strong> Business analysts with limited SQL expertise could now optimize queries using natural language and AI recommendations</li>
+                <li><strong>Established Best Practices:</strong> Query templates and AI suggestions created organizational standards, improving code quality across teams</li>
+                <li><strong>Scaled Across Workloads:</strong> Single platform processing millions of queries daily across multiple AWS accounts without human intervention</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Strategic Impact:</strong> OptiX AI solved an enterprise-wide cost management problem by transforming Athena query optimization from a manual, reactive process into an automated, proactive platform. By processing millions of queries and providing dual optimization approaches (automated best practices + AI-powered analysis), we enabled organizations to prevent cost waste at scale while accelerating analytics performance—fundamentally changing how enterprises manage query costs and performance.
+            </div>
+        </div>
+
+        <!-- DEMO VIDEO -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎥</span>Demo Video</h2>
+            <p>Watch OptiX AI in action - see how it identifies costly queries, provides AI-powered optimization suggestions, and delivers actionable insights:</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/preview" 
+                    allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- LESSONS LEARNED -->
+        <div class="star-section">
+            <h2><span class="star-icon">💡</span>Key Learnings & Best Practices</h2>
+            
+            <h3>Technical Insights</h3>
+            <ul>
+                <li><strong>Dual Optimization Approach:</strong> Combining automated and AI methods serves different optimization needs effectively</li>
+                <li><strong>Client-Side AWS Integration:</strong> Direct AWS SDK calls from React with temporary credentials reduces latency and backend complexity while maintaining security through scoped IAM permissions</li>
+                <li><strong>Serverless Architecture:</strong> CloudFront, Lambda, and DynamoDB provide automatic scaling, pay-per-use pricing, and global performance without infrastructure management overhead</li>
+                <li><strong>Cost Attribution Accuracy:</strong> Precise cost calculation requires deep understanding of Athena pricing model, including data scanned, compression ratios, and file formats</li>
+            </ul>
+            
+            <h3>Product & UX Insights</h3>
+            <ul>
+                <li><strong>Progressive Disclosure:</strong> Start with simple visualizations and allow users to drill down into details - don't overwhelm with complexity upfront</li>
+                <li><strong>Actionable Insights:</strong> Users need more than just identification of problems - provide clear, implementable solutions with expected outcomes</li>
+                <li><strong>Multi-Persona Design:</strong> Solution must serve both technical data engineers (who want raw data and SQL) and business analysts (who need visual insights and natural language)</li>
+                <li><strong>On-Demand AI Processing:</strong> Real-time AI recommendations provide fresh, context-aware optimizations that users can immediately apply and validate</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Basket Analysis - Case Study | Prasanna Venkatesh Sridharan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .case-study-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-alt) 100%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .star-section {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .star-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .star-icon {
+            font-size: 1.75rem;
+        }
+        
+        .star-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .star-section p, .star-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-study-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .star-section {
+                padding: 1.5rem;
+            }
+            
+            .star-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="case-study-header">
+            <h1>🛒 Market Basket Analysis</h1>
+            <p class="subtitle">AI-Powered Natural Language to SQL Analytics Platform</p>
+            <p style="font-style: italic; color: var(--text-secondary); margin-top: 1rem; font-size: 1rem;">
+                "Enabled 150+ business users to answer complex revenue and margin questions in minutes—without SQL."
+            </p>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="star-section" style="border-left: 4px solid #FF9900;">
+            <h2><span class="star-icon">⚡</span>Executive Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+                Market Basket Analysis transformed enterprise e-commerce analytics from a SQL-gated, weeks-long process into an AI-powered conversational platform. Serving merchandising, finance, and marketing teams, it delivered $4.8M+ in annual value through optimized bundling, margin expansion, and reduced returns—accelerating decision-making by 10x while freeing data teams from repetitive query work.
+            </p>
+        </div>
+
+
+        <!-- SITUATION -->
+        <div class="star-section">
+            <h2><span class="star-icon">📋</span>Situation</h2>
+            
+            <h3>The Core Problem</h3>
+            <p><strong>Analytics Access Bottleneck:</strong> 200+ SQL requests backlogged for months forced 150+ business users to wait 2–3 weeks for answers, directly delaying pricing, merchandising, and promotion decisions. Data engineers spent 60% of their time writing repetitive queries instead of building strategic capabilities.</p>
+            
+            <h3>Business Impact</h3>
+            <ul>
+                <li><strong>Revenue Leakage:</strong> Merchandising teams couldn't identify high-value product combinations fast enough to capitalize on seasonal trends</li>
+                <li><strong>Margin Erosion:</strong> Finance lacked real-time visibility into basket margins, leading to pricing decisions that eroded profitability</li>
+                <li><strong>Cost Waste:</strong> Operations couldn't analyze return patterns quickly enough to drive quality improvements and reduce reverse logistics costs</li>
+                <li><strong>Marketing Inefficiency:</strong> Promotion effectiveness analysis took weeks, leading to continued investment in low-ROI campaigns</li>
+                <li><strong>Knowledge Silos:</strong> Only 5–10 people understood the complex data model spanning products, orders, customers, returns, and promotions</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Scale of Impact:</strong> Organizations were spending millions on data infrastructure but couldn't answer basic business questions in time to act. Market basket analysis—understanding what products customers buy together—took weeks instead of minutes, directly impacting revenue, margins, and customer satisfaction.
+            </div>
+        </div>
+
+
+        <!-- TASK -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎯</span>Task</h2>
+            
+            <h3>The Challenge: Democratizing E-Commerce Analytics at Enterprise Scale</h3>
+            <p>The core challenge wasn't building a chatbot—it was solving an organizational data access problem that was costing millions in lost revenue, margin erosion, and operational inefficiency. Success required:</p>
+            
+            <ul>
+                <li><strong>Revenue Impact:</strong> Enable merchandising teams to identify and act on high-value product combinations—capturing seasonal opportunities and customer preferences before competitors</li>
+                <li><strong>Margin Optimization:</strong> Provide finance teams with real-time visibility into product and basket margins to guide pricing decisions that expand profitability instead of eroding it</li>
+                <li><strong>Cost Reduction:</strong> Empower operations teams to analyze return patterns and drive quality improvements that reduce reverse logistics costs and customer dissatisfaction</li>
+                <li><strong>Marketing Efficiency:</strong> Enable marketing teams to rapidly assess promotion effectiveness and reallocate budget from low-ROI campaigns to high-performing strategies</li>
+                <li><strong>Self-Service at Scale:</strong> Transform 150+ business analysts, merchandisers, and category managers from data requesters into data explorers—eliminating the 200+ request backlog</li>
+                <li><strong>Data Team Liberation:</strong> Free data engineering teams from repetitive SQL writing to focus on strategic capabilities that drive long-term competitive advantage</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>The Strategic Imperative:</strong> This wasn't about replacing SQL—it was about transforming analytics from a specialized, bottlenecked process into a self-service business capability. Success meant enabling every business team to answer their own questions in real-time, fundamentally changing how the organization leveraged data for competitive advantage. The solution needed to deliver measurable business value: increased revenue, expanded margins, reduced costs, and accelerated decision-making.
+            </div>
+        </div>
+
+
+        <!-- ACTION -->
+        <div class="star-section">
+            <h2><span class="star-icon">⚙️</span>Action</h2>
+            
+            <h3>The Solution Approach</h3>
+            <p>Market Basket Analysis was built as a conversational AI platform that transformed how business teams accessed e-commerce insights:</p>
+            
+            <div class="architecture-diagram">
+                <img src="architecture/market_basket_analysis_architecture.png" alt="Market Basket Analysis Architecture Diagram" />
+            </div>
+            
+            <h3>Key Solution Components</h3>
+            <ul>
+                <li><strong>Conversational Interface:</strong> Business users ask questions in plain English about products, customers, margins, returns, and promotions—no SQL knowledge required</li>
+                <li><strong>AI-Powered Analysis:</strong> Advanced AI understands business context, explores data relationships, and generates optimized queries automatically</li>
+                <li><strong>Comprehensive Data Model:</strong> Unified view combining products, orders, customers, returns, promotions, and calculated metrics (margins, costs, profitability)</li>
+                <li><strong>Real-Time Insights:</strong> Instant query execution with streaming results—users see SQL generation and insights as they're created</li>
+                <li><strong>Explainable Results:</strong> AI explains methodology, assumptions, and limitations—building trust and enabling learning</li>
+                <li><strong>Audit & Compliance:</strong> Complete history of all questions, queries, and results for reproducibility and governance</li>
+                <li><strong>Self-Service Access:</strong> Secure authentication with auto-scaling infrastructure supporting hundreds of concurrent users</li>
+            </ul>
+            
+            <h3>Key Business Capabilities Enabled</h3>
+            <ul>
+                <li><strong>Product Affinity & Bundling Optimization:</strong> $2.4M revenue impact from strategic product combinations and placement</li>
+                <li><strong>Margin & Pricing Optimization:</strong> 18% basket margin improvement through real-time profitability visibility</li>
+                <li><strong>Return Pattern Analysis:</strong> $850K cost savings from targeted quality improvements and reduced reverse logistics</li>
+                <li><strong>Customer Behavior & Segmentation:</strong> 28% repeat purchase lift through personalized journeys and product recommendations</li>
+                <li><strong>Promotion Effectiveness & ROI:</strong> $1.2M budget reallocation from low-performing to high-ROI campaigns</li>
+            </ul>
+            
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Amazon Bedrock</span>
+                <span class="tech-badge">Claude 3.5 Sonnet</span>
+                <span class="tech-badge">Amazon Athena</span>
+                <span class="tech-badge">Apache Iceberg</span>
+                <span class="tech-badge">Amazon ECS Fargate</span>
+                <span class="tech-badge">Amazon CloudFront</span>
+                <span class="tech-badge">Amazon DynamoDB</span>
+                <span class="tech-badge">AWS Glue Data Catalog</span>
+                <span class="tech-badge">Amazon S3</span>
+                <span class="tech-badge">AWS Cognito</span>
+                <span class="tech-badge">Streamlit (Python)</span>
+            </div>
+            
+            <h3>Why This Was Hard</h3>
+            <ul>
+                <li><strong>Complex Enterprise Data Model:</strong> Unified products, orders, customers, returns, promotions, and calculated margins across disparate systems while maintaining query performance</li>
+                <li><strong>AI Flexibility vs Governance:</strong> Balanced conversational exploration with audit trails, compliance requirements, and financial reporting accuracy</li>
+                <li><strong>Trust from Finance & Compliance:</strong> Gained confidence in AI-generated insights for pricing and margin decisions affecting millions in revenue</li>
+                <li><strong>Scale Without Degradation:</strong> Designed for 150+ concurrent business users with sub-5-minute response times on complex analytical queries</li>
+            </ul>
+            
+            <h3>Principal-Level Decisions</h3>
+            
+            <h4>Decision: Conversational Analytics over Semantic BI Layer</h4>
+            <p><strong>Rejected:</strong> Pre-built dashboards + metric layer (Looker/Tableau approach)</p>
+            <p><strong>Reason:</strong> Exploratory workflows required iterative questioning—dashboards would reintroduce the backlog problem. Business users needed to ask "why" and drill deeper without waiting for new reports.</p>
+            <p><strong>Tradeoff:</strong> Less standardized metrics early, mitigated via audit trails and SQL transparency that enabled governance review.</p>
+            
+            <h4>Decision: Show Generated SQL to All Users</h4>
+            <p><strong>Rejected:</strong> Black-box AI with results-only interface</p>
+            <p><strong>Reason:</strong> Finance and compliance teams wouldn't trust AI-generated insights for pricing decisions without query visibility. Transparency built organizational confidence and created learning opportunity.</p>
+            <p><strong>Tradeoff:</strong> Slightly more complex UI, but dramatically accelerated adoption and reduced validation overhead.</p>
+            
+            <h4>Decision: Unified Denormalized Table over Federated Queries</h4>
+            <p><strong>Rejected:</strong> AI querying across normalized product, order, customer, return tables</p>
+            <p><strong>Reason:</strong> Complex joins degraded AI reasoning quality and query performance. Pre-computing common metrics (margins, costs) enabled 80% of questions without joins.</p>
+            <p><strong>Tradeoff:</strong> Higher storage costs and ETL complexity, but 10x improvement in query success rate and user experience.</p>
+            
+            <h3>Key Design Decisions</h3>
+            <div class="highlight-box">
+                <p><strong>Conversational over Dashboards:</strong> Enabled exploratory workflows with iterative refinement, reducing time-to-insight from weeks to minutes.</p>
+                <p><strong>SQL Transparency:</strong> Displayed generated queries to build trust and create organizational learning.</p>
+                <p><strong>Unified Data Model:</strong> Pre-computed metrics and denormalized structure enabled 80% of questions without complex joins.</p>
+                <p><strong>Streaming Responses:</strong> Real-time SQL generation improved perceived performance and user engagement.</p>
+            </div>
+            
+        </div>
+
+
+        <!-- RESULT -->
+        <div class="star-section">
+            <h2><span class="star-icon">📊</span>Result</h2>
+            
+            <h3>Quantifiable Business Outcomes</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">$2.4M+</div>
+                    <div class="metric-label">Annual Revenue Impact from Optimized Product Bundling</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10x</div>
+                    <div class="metric-label">Faster Time-to-Insight (Weeks to Minutes)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">35%</div>
+                    <div class="metric-label">Increase in Cross-Sell Conversion Rate</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">90%</div>
+                    <div class="metric-label">Reduction in Data Team Query Requests</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">18%</div>
+                    <div class="metric-label">Improvement in Basket Margin Through Intelligent Recommendations</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$850K</div>
+                    <div class="metric-label">Annual Savings from Reduced Return Rates</div>
+                </div>
+            </div>
+            
+            <h3>Platform-Level Impact at Scale</h3>
+            <ul>
+                <li><strong>Revenue Growth:</strong> $2.4M from optimized product bundling + $1.2M from promotion reallocation</li>
+                <li><strong>Margin Expansion:</strong> 18% basket margin improvement through real-time pricing optimization</li>
+                <li><strong>Cost Reduction:</strong> $850K from reduced returns + $450K from data team productivity + $180K from tool consolidation</li>
+                <li><strong>Operational Efficiency:</strong> 10x faster insights (weeks to minutes), 90% reduction in query backlog, 150+ users enabled</li>
+                <li><strong>Customer Impact:</strong> 28% repeat purchase lift, 35% cross-sell improvement, 31% fewer complaints</li>
+            </ul>
+            
+            <h3>Customer Experience & Satisfaction</h3>
+            <ul>
+                <li><strong>Personalization Lift:</strong> Product affinity insights powered recommendation engine that increased customer satisfaction scores by 24% and checkout conversion by 19%</li>
+                <li><strong>Proactive Quality Management:</strong> Return reason analysis enabled rapid supplier engagement and quality improvements—reduced customer complaints by 31%</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Total Business Impact:</strong> Market Basket Analysis delivered $4.8M+ in measurable annual value through revenue growth ($2.4M from bundling, $1.2M from optimized promotions), cost reduction ($850K from returns, $450K from data team productivity, $180K from tool consolidation), and operational improvements (18% margin expansion, 35% cross-sell lift, 10x faster insights). The platform fundamentally transformed how the organization leveraged data—democratizing analytics access, accelerating decision-making, and enabling data-driven strategies impossible with traditional SQL-dependent approaches.
+            </div>
+        </div>
+
+
+        <!-- DEMO VIDEO -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎥</span>Demo Video</h2>
+            <p>Watch Market Basket Analysis in action - see how business users ask questions in natural language and receive instant SQL queries with actionable insights:</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/15EX1a1knVH4xdcq9FgMU6AuMOvfO3tM0/preview" 
+                    allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- KEY FEATURES -->
+        <div class="star-section">
+            <h2><span class="star-icon">✨</span>Key Capabilities</h2>
+            
+            <h3>Core Features</h3>
+            <ul>
+                <li><strong>Natural Language Queries:</strong> Ask questions in plain English—no SQL knowledge required</li>
+                <li><strong>Real-Time Insights:</strong> Instant query execution with streaming results showing SQL generation and analysis</li>
+                <li><strong>Explainable Results:</strong> AI explains methodology, assumptions, and limitations for trust and learning</li>
+                <li><strong>Audit & Compliance:</strong> Complete history of questions, queries, and results for reproducibility and governance</li>
+                <li><strong>Conversational Refinement:</strong> Ask follow-up questions to drill deeper into insights iteratively</li>
+            </ul>
+            
+            <h3>Supported Analysis Types</h3>
+            <ul>
+                <li>Product affinity and basket analysis (what's bought together)</li>
+                <li>Margin and profitability analysis for pricing optimization</li>
+                <li>Return pattern analysis by product, category, and reason</li>
+                <li>Customer behavior, segmentation, and lifetime value</li>
+                <li>Promotion effectiveness and marketing ROI assessment</li>
+            </ul>
+        </div>
+
+
+        <!-- LESSONS LEARNED -->
+        <div class="star-section">
+            <h2><span class="star-icon">💡</span>Key Learnings & Best Practices</h2>
+            
+            <h3>Business Impact Insights</h3>
+            <ul>
+                <li><strong>Self-service analytics drives revenue, not just efficiency:</strong> Democratizing data access enabled merchandising teams to identify $2.4M+ in opportunities that would have been missed with weeks-long cycles</li>
+                <li><strong>Conversational beats dashboards for exploratory workflows:</strong> Traditional BI couldn't support iterative analysis—conversational interface enabled follow-up questions without pre-built reports</li>
+                <li><strong>Measure success in business outcomes, not technical metrics:</strong> Success was measured in revenue growth, margin expansion, and cost reduction—not query performance or AI accuracy</li>
+            </ul>
+            
+            <h3>Technical Insights</h3>
+            <ul>
+                <li><strong>Showing SQL builds trust and organizational capability:</strong> Displaying generated queries built confidence while educating 80+ analysts on data model and query patterns</li>
+                <li><strong>Unified data models dramatically simplify AI reasoning:</strong> Combining products, orders, returns, and promotions into single table enabled AI to answer 80% of questions without complex joins</li>
+                <li><strong>Streaming responses improve perceived performance:</strong> Real-time SQL generation and insights kept users engaged during query execution, dramatically improving user experience</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

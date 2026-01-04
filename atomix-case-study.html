@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomix - Case Study | Prasanna Venkatesh Sridharan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .case-study-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-alt) 100%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .star-section {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .star-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .star-icon {
+            font-size: 1.75rem;
+        }
+        
+        .star-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .star-section p, .star-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .award-badge {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-study-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .star-section {
+                padding: 1.5rem;
+            }
+            
+            .star-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="case-study-header">
+            <h1>⚡ Atomix</h1>
+            <p class="subtitle">One-Click Enterprise Data Platform Framework</p>
+        </div>
+
+        <div class="award-badge">
+            🏆 Gartner 2022 Eye on Innovation Award Finalist
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="star-section" style="border-left: 4px solid #FF9900;">
+            <h2><span class="star-icon">⚡</span>Executive Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+                Atomix transformed enterprise data platform development from a 12-24 month, multi-million dollar custom engineering project into a one-click, configuration-driven deployment taking days. Designed for multi-account AWS environments, it enabled secure data mesh architectures, universal data ingestion, automated governance, and self-service analytics—delivering 80% faster deployment, 80% reduction in engineering effort, 95% faster data access, and 60% lower operational costs while supporting multiple business units at enterprise scale.
+            </p>
+        </div>
+
+        <!-- SITUATION -->
+        <div class="star-section">
+            <h2><span class="star-icon">📋</span>Situation</h2>
+            
+            <h3>The Enterprise-Wide Problem</h3>
+            <p>Enterprise data platform development was a critical bottleneck blocking every data-driven initiative across the organization. Building production-ready data platforms required 12-24 months of custom engineering across 30+ AWS services, while business teams waited weeks for data access—missing market opportunities and delaying strategic decisions. This wasn't a technology problem—it was an organizational barrier preventing enterprises from leveraging data at the speed required for competitive advantage.</p>
+            
+            <h3>The Business Challenge</h3>
+            <p>The data platform crisis manifested across the entire enterprise:</p>
+            <ul>
+                <li><strong>Time to Value Crisis:</strong> Building enterprise data platforms took 12-24 months of development effort, blocking every analytics initiative and missing market windows</li>
+                <li><strong>Technical Complexity Barrier:</strong> Required deep expertise across 30+ AWS services and data engineering best practices—expertise most organizations didn't have</li>
+                <li><strong>Data Silos Blocking Insights:</strong> Data scattered across multiple accounts with no easy way to discover or share, preventing cross-functional analytics</li>
+                <li><strong>Governance Gaps Creating Risk:</strong> No centralized control over data security, PII handling, and access policies—exposing organizations to compliance violations</li>
+                <li><strong>Cost Explosion:</strong> Manual data engineering and duplicated data across accounts drove operational costs into millions annually</li>
+                <li><strong>Data Access Bottleneck:</strong> Data requests took weeks or months to fulfill, blocking analytics initiatives and strategic decisions</li>
+                <li><strong>Scalability Limitations:</strong> Custom-built solutions couldn't scale across multiple business units, requiring complete rebuilds for each tenant</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Scale of Impact:</strong> This platform-level problem was affecting every data-driven initiative across the enterprise. Organizations were spending millions on data platform development with 12-24 month timelines, while business teams waited weeks for data access—missing critical market opportunities and delaying strategic decisions. Manual data platform development didn't scale—we needed a solution that could deploy production-ready platforms in days while supporting enterprise governance and multi-tenancy requirements.
+            </div>
+        </div>
+
+        <!-- TASK -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎯</span>Task</h2>
+            
+            <h3>The Challenge: Scaling Data Platform Delivery Across Enterprise Organizations</h3>
+            <p>The core challenge wasn't building a data lake—it was solving an organizational platform delivery problem that required:</p>
+            
+            <ul>
+                <li><strong>One-Click Deployment:</strong> Transform 12-24 months of custom development into a single-click deployment that creates production-ready platforms in days</li>
+                <li><strong>Multi-Account Architecture:</strong> Support single, two, and three-account deployment models with proper isolation and governance for different security requirements</li>
+                <li><strong>Data Mesh at Scale:</strong> Enable multiple producers to share data with multiple consumers without duplication—supporting true data mesh architectures</li>
+                <li><strong>Universal Data Ingestion:</strong> Support batch, micro-batch, near real-time, and CDC from diverse sources (flat files, RDBMS, streaming) through configuration, not code</li>
+                <li><strong>Automated Data Pipeline:</strong> Build end-to-end pipelines from landing to raw, standardized, transformed, and curated zones with automated orchestration</li>
+                <li><strong>PII Detection & Governance:</strong> Automatically identify and handle sensitive data across all datasets while maintaining centralized governance</li>
+                <li><strong>Zero-Code Configuration:</strong> Enable data engineers to configure ingestion and sharing through UI without writing custom code</li>
+                <li><strong>Multi-Tenant Support:</strong> Isolate and manage multiple business units on a shared platform with proper security boundaries</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>The Strategic Imperative:</strong> This wasn't about building another data lake—it was about transforming data platform delivery from a multi-year, high-risk engineering project into a repeatable, configuration-driven process that could support enterprise scale. Success meant enabling organizations to deploy production-ready data platforms in days instead of years, while maintaining enterprise-grade governance, security, and multi-tenancy—fundamentally changing how enterprises approached data platform development.
+            </div>
+        </div>
+
+        <!-- ACTION -->
+        <div class="star-section">
+            <h2><span class="star-icon">⚙️</span>Action</h2>
+            
+            <h3>The Solution Approach</h3>
+            <p>Atomix was built as a comprehensive, configuration-driven framework that transformed data platform delivery from custom engineering to repeatable deployment:</p>
+            
+            <h3>The Architecture</h3>
+            <p>Atomix implements a multi-account data platform architecture with clear separation of concerns:</p>
+            
+            <div class="architecture-diagram">
+                <img src="architecture/atomix_architecture.png" alt="Atomix Architecture Diagram" />
+            </div>
+            
+            <h3>Key Architecture Highlights</h3>
+            <ul>
+                <li><strong>Multi-Account Flexibility:</strong> Supports single, two, and three-account deployment models for different security and governance requirements</li>
+                <li><strong>Landing Account:</strong> Decouples data ingestion from data lake, providing buffer for inspection and governance before data enters platform</li>
+                <li><strong>Lake House Architecture:</strong> Central account with four data zones (Raw, Standardized, Transformed, Curated) supporting both data lake and warehouse patterns</li>
+                <li><strong>Data Governance Account:</strong> Centralized metadata catalog, policy management, and data sharing without duplication</li>
+                <li><strong>Producer & Consumer Accounts:</strong> Multiple producers publish data, multiple consumers access via Athena/Redshift with role-based access control</li>
+                <li><strong>Automated Data Pipeline:</strong> End-to-end orchestration from landing through curation with PII detection and format standardization</li>
+            </ul>
+            
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">AWS Lake Formation</span>
+                <span class="tech-badge">Amazon S3</span>
+                <span class="tech-badge">AWS Glue</span>
+                <span class="tech-badge">AWS Glue DataBrew</span>
+                <span class="tech-badge">Amazon Athena</span>
+                <span class="tech-badge">Amazon Redshift</span>
+                <span class="tech-badge">AWS DMS</span>
+                <span class="tech-badge">AWS DataSync</span>
+                <span class="tech-badge">Amazon Kinesis</span>
+                <span class="tech-badge">AWS Step Functions</span>
+                <span class="tech-badge">AWS Lambda</span>
+                <span class="tech-badge">Amazon DynamoDB</span>
+                <span class="tech-badge">Amazon EventBridge</span>
+                <span class="tech-badge">AWS CloudFormation</span>
+                <span class="tech-badge">AWS Amplify</span>
+                <span class="tech-badge">AWS AppSync</span>
+                <span class="tech-badge">Amazon Cognito</span>
+                <span class="tech-badge">AWS RAM</span>
+                <span class="tech-badge">AWS Organizations</span>
+            </div>
+            
+            <h3>Key Architectural Decisions</h3>
+            
+            <h4>1. Configuration-Driven Framework</h4>
+            <ul>
+                <li><strong>Zero-Code Ingestion:</strong> Data engineers configure ingestion patterns through UI without writing code</li>
+                <li><strong>Declarative Data Sharing:</strong> Configure data sharing policies and access controls through configuration</li>
+                <li><strong>Template-Based Deployment:</strong> CloudFormation templates for repeatable, consistent deployments</li>
+                <li><strong>Extensible Architecture:</strong> Framework designed to support new ingestion patterns and transformations</li>
+            </ul>
+            
+            <h4>2. Multi-Pattern Data Ingestion</h4>
+            <ul>
+                <li><strong>Batch Processing:</strong> Scheduled bulk data loads from on-prem sources via DataSync</li>
+                <li><strong>Micro-Batch:</strong> Frequent small batch loads for near real-time data</li>
+                <li><strong>Real-Time CDC:</strong> Database Migration Service for change data capture from RDBMS</li>
+                <li><strong>Streaming:</strong> Kinesis integration for real-time event streams</li>
+                <li><strong>Universal Connectivity:</strong> Support for flat files, JDBC databases, SaaS apps, SFTP, and APIs</li>
+            </ul>
+            
+            <h4>3. Automated Data Pipeline</h4>
+            <ul>
+                <li><strong>Landing to Raw:</strong> Automated CDC processing and Parquet conversion with partitioning</li>
+                <li><strong>Raw to Standardized:</strong> PII detection, data profiling, and format standardization</li>
+                <li><strong>Transformed & Curated:</strong> Business transformation and consumer-specific curation layers</li>
+                <li><strong>Orchestration:</strong> Step Functions manage end-to-end pipeline execution with error handling</li>
+            </ul>
+            
+            <h4>4. PII & Data Governance</h4>
+            <ul>
+                <li><strong>Automated PII Detection:</strong> Glue DataBrew profiles data and identifies sensitive attributes</li>
+                <li><strong>PII Standardization:</strong> Consistent handling of sensitive data across all datasets</li>
+                <li><strong>Metadata Tagging:</strong> Automatic tagging of PII attributes for governance</li>
+                <li><strong>Lake Formation Integration:</strong> Fine-grained access control at column and row level</li>
+            </ul>
+            
+            <h4>5. Data Mesh & Sharing</h4>
+            <ul>
+                <li><strong>Resource Access Manager:</strong> Cross-account data sharing without duplication</li>
+                <li><strong>S3 & Redshift Sharing:</strong> Support for both data lake and data warehouse sharing patterns</li>
+                <li><strong>Approval Workflows:</strong> Configurable approval process for data access requests</li>
+                <li><strong>Multi-Consumer Support:</strong> Single dataset shared with multiple consumer accounts</li>
+            </ul>
+            
+            <h4>6. Self-Service Portal</h4>
+            <ul>
+                <li><strong>AWS Amplify Frontend:</strong> Modern React-based UI for platform management</li>
+                <li><strong>AppSync API:</strong> GraphQL API for real-time data and operations</li>
+                <li><strong>Cognito Authentication:</strong> Secure user access with role-based permissions</li>
+                <li><strong>Operational Metrics:</strong> Real-time monitoring of ingestion jobs, data lineage, and platform health</li>
+            </ul>
+            
+            <h3>Principal-Level Architectural Decisions</h3>
+            
+            <h4>Decision: Configuration-Driven Framework over Custom Code</h4>
+            <p><strong>Rejected:</strong> Code-first approach requiring custom Glue jobs for every ingestion pattern</p>
+            <p><strong>Reason:</strong> Configuration-driven approach enabled data engineers without deep coding expertise to deploy pipelines in hours instead of weeks. Targeting 80% of use cases through configuration maximized adoption while maintaining flexibility for complex transformations.</p>
+            <p><strong>Tradeoff:</strong> Limited customization for edge cases, mitigated by allowing custom Glue jobs for the remaining 20% of complex transformations.</p>
+            
+            <h4>Decision: Multi-Account Architecture over Single Account</h4>
+            <p><strong>Rejected:</strong> Single-account deployment for operational simplicity</p>
+            <p><strong>Reason:</strong> Enterprise security and compliance requirements demanded account-level isolation between landing, processing, and governance layers. Supporting multiple deployment models (single, two, three accounts) enabled customers to choose based on their risk tolerance.</p>
+            <p><strong>Tradeoff:</strong> Increased architectural complexity and cross-account IAM management, but essential for enterprise adoption and regulatory compliance.</p>
+            
+            <h4>Decision: Parquet Standardization over Format Flexibility</h4>
+            <p><strong>Rejected:</strong> Supporting multiple file formats (CSV, JSON, Avro, Parquet) throughout pipeline</p>
+            <p><strong>Reason:</strong> Standardizing on Parquet provided 10x query performance improvement and 70% storage cost reduction through columnar compression. Converting at ingestion time simplified downstream processing and analytics.</p>
+            <p><strong>Tradeoff:</strong> Conversion overhead during ingestion (5-10% processing time increase), but massive gains in query performance and storage costs justified the investment.</p>
+            
+            <h4>Decision: Lake Formation for Access Control over IAM-Only</h4>
+            <p><strong>Rejected:</strong> IAM-only access control for simplicity</p>
+            <p><strong>Reason:</strong> Lake Formation's fine-grained access control (column and row level) was essential for true data mesh—enabling secure cross-account sharing without data duplication. IAM alone couldn't provide the granularity required for enterprise data governance.</p>
+            <p><strong>Tradeoff:</strong> Added complexity in permission management and learning curve, but enabled data democratization while maintaining security and compliance.</p>
+        </div>
+
+        <!-- RESULT -->
+        <div class="star-section">
+            <h2><span class="star-icon">📊</span>Result</h2>
+            
+            <h3>Business Outcomes</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">80%</div>
+                    <div class="metric-label">Faster Platform Deployment</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">80%</div>
+                    <div class="metric-label">Reduction in Data Engineering Effort</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-label">Faster Data Access Provisioning</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">60%</div>
+                    <div class="metric-label">Reduction in Operational Costs</div>
+                </div>
+            </div>
+            
+            <h3>The Impact</h3>
+            <ul>
+                <li><strong>Rapid Platform Deployment:</strong> Customers deployed complete data platforms in days instead of 12-24 months—80% faster time-to-production</li>
+                <li><strong>Zero-Code Configuration:</strong> Data engineers configured ingestion patterns through UI without writing custom code—80% reduction in engineering effort</li>
+                <li><strong>Accelerated Data Access:</strong> Self-service data sharing and approval workflows reduced data access time from weeks to minutes—95% faster provisioning</li>
+                <li><strong>Cost Optimization:</strong> Eliminated data duplication, reduced manual processing, and optimized storage formats—60% reduction in operational costs</li>
+                <li><strong>Enhanced Governance:</strong> Centralized PII handling and Lake Formation access control ensured compliance across the enterprise</li>
+                <li><strong>Data Democratization:</strong> Self-service data discovery and approval workflows enabled broader data-driven decision making</li>
+                <li><strong>Scalable Multi-Tenancy:</strong> Single platform supporting multiple business units with proper isolation and security</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Strategic Impact:</strong> Atomix transformed enterprise data platform development from a multi-year, high-risk engineering project into a one-click, configuration-driven deployment. Organizations achieved 80% faster platform deployment, 80% reduction in data engineering effort, and 60% lower operational costs—accelerating time-to-insight and enabling true data mesh architectures at scale.
+            </div>
+            
+            <h3>Industry Recognition</h3>
+            <div class="highlight-box" style="border-left-color: #FFD700;">
+                <strong>🏆 Gartner 2022 Eye on Innovation Award Finalist</strong>
+                <p>Recognized for innovative one-click data framework implementation at a large GFS enterprise customer, enabling fast data discovery, zero-code data availability, and near real-time secure data access.</p>
+            </div>
+        </div>
+
+        <!-- DEMO VIDEO -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎥</span>Demo Video</h2>
+            <p>Watch Atomix in action - see how it enables one-click data platform deployment, configuration-driven ingestion, and seamless data sharing:</p>
+            
+            <div style="text-align: center; padding: 3rem 2rem; background: var(--bg-secondary); border-radius: 1rem; margin: 2rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🎬</div>
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Atomix Demo</h3>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">See the complete walkthrough of Atomix features and functionality</p>
+                <a href="https://www.youtube.com/watch?v=xWIcPhimOaw" target="_blank" class="btn btn-primary" style="display: inline-block; padding: 1rem 2rem; font-size: 1.1rem;">
+                    ▶️ Watch Demo on YouTube
+                </a>
+            </div>
+        </div>
+
+        <!-- KEY FEATURES -->
+        <div class="star-section">
+            <h2><span class="star-icon">✨</span>Key Features</h2>
+            
+            <h3>Core Capabilities</h3>
+            <ul>
+                <li><strong>One-Click Platform Creation:</strong> Deploy complete data platform with single button click</li>
+                <li><strong>Multi-Tenant Support:</strong> Isolate and manage multiple business units on shared infrastructure</li>
+                <li><strong>Universal Data Ingestion:</strong> Batch, micro-batch, near real-time, and streaming from any source</li>
+                <li><strong>Automated Data Pipeline:</strong> Landing → Raw → Standardized → Transformed → Curated zones</li>
+                <li><strong>PII Detection & Handling:</strong> Automatic identification and standardization of sensitive data</li>
+                <li><strong>Data Lineage Tracking:</strong> End-to-end visibility of data flow and transformations</li>
+                <li><strong>Cross-Account Sharing:</strong> Share S3 and Redshift data without duplication</li>
+                <li><strong>Self-Service Portal:</strong> UI-driven configuration and operations</li>
+                <li><strong>One-Click Job Re-run:</strong> Easy recovery from failures</li>
+            </ul>
+            
+            <h3>Supported Data Sources</h3>
+            <ul>
+                <li>Flat files (CSV, JSON, Parquet, etc.)</li>
+                <li>Relational databases (SQL Server, Oracle, MySQL, PostgreSQL)</li>
+                <li>Real-time CDC from any RDBMS</li>
+                <li>SaaS applications (Salesforce, ServiceNow, Adobe)</li>
+                <li>Third-party market data</li>
+                <li>SFTP sources</li>
+                <li>API-based ingestion</li>
+                <li>Real-time streaming data</li>
+            </ul>
+        </div>
+
+        <!-- LESSONS LEARNED -->
+        <div class="star-section">
+            <h2><span class="star-icon">💡</span>Key Learnings & Best Practices</h2>
+            
+            <h3>Technical Insights</h3>
+            <ul>
+                <li><strong>Configuration Over Code:</strong> Configuration-driven frameworks dramatically reduce development time and enable non-developers to manage data pipelines, but require careful abstraction design</li>
+                <li><strong>Multi-Account Complexity:</strong> Supporting multiple deployment models (single, two, three accounts) adds architectural complexity but is essential for enterprise adoption with varying security requirements</li>
+                <li><strong>Parquet Standardization:</strong> Converting all data to Parquet with consistent partitioning (year/month/day/hour) provides 10x query performance improvements and significant cost savings</li>
+                <li><strong>Lake Formation for Data Mesh:</strong> Lake Formation's fine-grained access control is critical for true data mesh—enabling secure cross-account sharing without data duplication</li>
+                <li><strong>PII Automation:</strong> Automated PII detection and standardization is non-negotiable for enterprise data platforms to ensure compliance and governance at scale</li>
+            </ul>
+            
+            <h3>Product & UX Insights</h3>
+            <ul>
+                <li><strong>Self-Service is Key:</strong> Data engineers and analysts need UI-driven configuration, not just APIs or CLI—self-service portals dramatically increase adoption</li>
+                <li><strong>Data Discovery First:</strong> Easy data discovery (99.75% time reduction) is more valuable than fast ingestion—users can't use data they can't find</li>
+                <li><strong>Approval Workflows:</strong> Automated approval workflows for data access balance governance with speed—reducing access time by 90% while maintaining control</li>
+                <li><strong>Operational Visibility:</strong> Real-time metrics, data lineage, and job monitoring are essential for production data platforms—teams need to understand what's happening</li>
+                <li><strong>Start Simple, Scale Complex:</strong> Begin with single-account deployment for quick wins, then migrate to multi-account as governance requirements grow</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

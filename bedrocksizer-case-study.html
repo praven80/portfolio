@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BedrockSizer - Case Study | Prasanna Venkatesh Sridharan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .case-study-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .case-study-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-alt) 100%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .case-study-header h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-study-header .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .star-section {
+            background: var(--bg-primary);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .star-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .star-icon {
+            font-size: 1.75rem;
+        }
+        
+        .star-section h3 {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .star-section p, .star-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .star-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .star-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+        }
+        
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+        
+        .tech-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.375rem 0.75rem;
+            border-radius: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .case-study-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .case-study-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .star-section {
+                padding: 1.5rem;
+            }
+            
+            .star-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="case-study-container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="case-study-header">
+            <h1>📊 BedrockSizer</h1>
+            <p class="subtitle">Amazon Bedrock Sizing & Pricing AI Assistant</p>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="star-section" style="border-left: 4px solid #FF9900;">
+            <h2><span class="star-icon">⚡</span>Executive Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7;">
+                BedrockSizer removed the #1 barrier to enterprise Bedrock adoption by transforming capacity planning from a manual, error-prone process into a fully automated, self-service platform. Serving thousands of customers across all Bedrock model types and regions, it reduced throttling incidents by 95%, cut customer decision time from weeks to hours, eliminated over-provisioning waste, and accelerated revenue recognition across hundreds of enterprise deals—fundamentally changing how AWS enables enterprise AI at scale.
+            </p>
+        </div>
+
+        <!-- SITUATION -->
+        <div class="star-section">
+            <h2><span class="star-icon">📋</span>Situation</h2>
+            
+            <h3>The Enterprise-Wide Problem</h3>
+            <p>AWS Bedrock adoption was being blocked by a fundamental capacity planning problem affecting hundreds of enterprise customers and thousands of production workloads. Organizations couldn't accurately size their Bedrock deployments, leading to a vicious cycle: under-provisioning caused production outages, while over-provisioning wasted millions in cloud spend. This wasn't a tool problem—it was an organizational barrier to enterprise AI adoption at scale.</p>
+            
+            <h3>The Business Challenge</h3>
+            <p>The capacity planning crisis manifested across the entire customer lifecycle:</p>
+            <ul>
+                <li><strong>Pre-Sales Friction:</strong> Customers couldn't estimate costs during evaluation, stalling procurement and delaying deals by months</li>
+                <li><strong>Production Failures:</strong> 40% of initial Bedrock deployments experienced throttling within the first week, causing customer escalations and emergency capacity requests</li>
+                <li><strong>Cost Overruns:</strong> Fear of throttling led customers to request 3-5x more capacity than needed, wasting millions annually per customer</li>
+                <li><strong>Support Burden:</strong> Support teams overwhelmed with capacity-related tickets, each requiring hours of manual analysis</li>
+                <li><strong>Adoption Slowdown:</strong> Uncertainty around capacity and costs became the #1 blocker for enterprise Bedrock adoption</li>
+                <li><strong>Competitive Risk:</strong> Customers choosing competitors with simpler, more predictable pricing models</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Scale of Impact:</strong> This platform-level problem was affecting AWS's fastest-growing service, blocking hundreds of millions in potential Bedrock revenue, and threatening AWS's position in the enterprise AI market. Manual capacity planning didn't scale—we needed a solution that could serve thousands of customers simultaneously while maintaining accuracy.
+            </div>
+        </div>
+
+        <!-- TASK -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎯</span>Task</h2>
+            
+            <h3>The Challenge: Scaling Capacity Planning Across Thousands of Customers</h3>
+            <p>The core challenge wasn't building a calculator—it was solving a systemic capacity planning problem that required:</p>
+            
+            <ul>
+                <li><strong>Self-Service at Scale:</strong> Enable thousands of customers to accurately size Bedrock capacity without human intervention, reducing support burden by 90%</li>
+                <li><strong>Multi-Dimensional Complexity:</strong> Handle 5 different model types (on-demand, provisioned, embedding, image, video), each with unique pricing models, across 20+ regions</li>
+                <li><strong>Production Accuracy:</strong> Achieve 95%+ accuracy in capacity predictions to prevent both throttling (customer pain) and over-provisioning (revenue loss)</li>
+                <li><strong>Dual Persona Support:</strong> Serve both technical teams (who need precise calculations) and business stakeholders (who need guided recommendations)</li>
+                <li><strong>Real-World Workloads:</strong> Model variable traffic patterns, peak bursts, and growth projections—not just steady-state calculations</li>
+                <li><strong>Adoption Velocity:</strong> Reduce time-to-decision from weeks to minutes, accelerating Bedrock adoption and revenue recognition</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>The Strategic Imperative:</strong> This wasn't about building a tool—it was about removing the #1 barrier to enterprise AI adoption at AWS. Success meant transforming capacity planning from a manual, error-prone bottleneck into an automated, scalable process that could support AWS's AI growth trajectory. The solution needed to work for a startup with 100 users and an enterprise with 100,000 users, with the same level of accuracy.
+            </div>
+        </div>
+
+        <!-- ACTION -->
+        <div class="star-section">
+            <h2><span class="star-icon">⚙️</span>Action</h2>
+            
+            <h3>The Architecture</h3>
+            <p>BedrockSizer was built on a serverless AWS architecture designed for simplicity, scalability, and cost-efficiency:</p>
+            
+            <div class="architecture-diagram">
+                <img src="architecture/bedrocksizer_architecture.png" alt="BedrockSizer Architecture Diagram" />
+            </div>
+            
+            <h3>Key Architecture Highlights</h3>
+            <ul>
+                <li><strong>Global Content Delivery:</strong> CloudFront distribution with Lambda@Edge authentication for secure, low-latency access worldwide</li>
+                <li><strong>Containerized Application:</strong> ECS Fargate hosts Streamlit application with auto-scaling based on demand</li>
+                <li><strong>AI-Powered Sizing:</strong> Amazon Bedrock (Claude 3.5 Sonnet) provides conversational capacity recommendations</li>
+                <li><strong>Persistent Storage:</strong> DynamoDB stores conversation history and calculations for audit trails and iterative planning</li>
+                <li><strong>Dynamic Pricing Data:</strong> S3-based pricing data enables rapid updates as Bedrock pricing evolves across regions</li>
+                <li><strong>Security & Compliance:</strong> WAF protection, private subnets, IAM least privilege, and encryption at rest and in transit</li>
+            </ul>
+            
+            <h3>Technology Stack</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Amazon CloudFront</span>
+                <span class="tech-badge">AWS Lambda@Edge</span>
+                <span class="tech-badge">Application Load Balancer</span>
+                <span class="tech-badge">Amazon ECS Fargate</span>
+                <span class="tech-badge">Amazon ECR</span>
+                <span class="tech-badge">Streamlit (Python)</span>
+                <span class="tech-badge">Amazon Bedrock</span>
+                <span class="tech-badge">Claude 3.5 Sonnet</span>
+                <span class="tech-badge">Amazon DynamoDB</span>
+                <span class="tech-badge">Amazon S3</span>
+                <span class="tech-badge">AWS CDK (TypeScript)</span>
+                <span class="tech-badge">Amazon VPC</span>
+                <span class="tech-badge">Amazon CloudWatch</span>
+                <span class="tech-badge">Amazon Route 53</span>
+                <span class="tech-badge">AWS WAF</span>
+            </div>
+            
+            <h3>Key Architectural Decisions</h3>
+            
+            <h4>1. Dual Interface Approach</h4>
+            <ul>
+                <li><strong>AI Assistant:</strong> Conversational interface using Claude 3.5 Sonnet for guided discovery and capacity recommendations</li>
+                <li><strong>Manual Calculator:</strong> Comprehensive calculator with direct input for experienced users who know their requirements</li>
+                <li><strong>User Choice:</strong> Users select their preferred workflow based on familiarity with Bedrock and complexity of use case</li>
+                <li><strong>Seamless Switching:</strong> Users can switch between modes without losing context or starting over</li>
+            </ul>
+            
+            <h4>2. Conversational Capacity Sizing</h4>
+            <ul>
+                <li><strong>Discovery Questions:</strong> AI asks targeted questions about workload patterns, traffic volume, latency requirements, and usage patterns</li>
+                <li><strong>Context Understanding:</strong> Claude analyzes use case description to recommend appropriate model types and configurations</li>
+                <li><strong>Iterative Refinement:</strong> Users can adjust parameters and see updated recommendations in real-time</li>
+                <li><strong>Best Practice Guidance:</strong> AI provides recommendations based on AWS Well-Architected Framework and Bedrock best practices</li>
+            </ul>
+            
+            <h4>3. Comprehensive Cost Calculation</h4>
+            <ul>
+                <li><strong>Multi-Model Support:</strong> Accurate pricing for on-demand, provisioned throughput, embedding models, and image/video models</li>
+                <li><strong>Token-Level Granularity:</strong> Separate calculations for input tokens, output tokens, and model units</li>
+                <li><strong>Usage Patterns:</strong> Accounts for variable traffic patterns, peak hours, and batch processing scenarios</li>
+                <li><strong>Cost Breakdown:</strong> Detailed breakdown showing costs by model type, region, and usage pattern</li>
+            </ul>
+            
+            <h4>4. Capacity Specification Generation</h4>
+            <ul>
+                <li><strong>Complete Requirements:</strong> Generates all required capacity specifications including throughput and usage patterns</li>
+                <li><strong>Technical Details:</strong> Includes model ID, region, average input/output tokens, and workload characteristics</li>
+                <li><strong>Workload Analysis:</strong> Calculates both regular and peak usage scenarios for accurate capacity planning</li>
+                <li><strong>Validation:</strong> Ensures all specifications are complete and values are within acceptable ranges</li>
+            </ul>
+            
+            <h4>5. Serverless Architecture</h4>
+            <ul>
+                <li><strong>Auto-Scaling:</strong> Containerized application scales automatically based on demand without manual intervention</li>
+                <li><strong>Global Distribution:</strong> Edge-based authentication and content delivery for low-latency worldwide access</li>
+                <li><strong>Managed Services:</strong> Fully serverless stack eliminates infrastructure management overhead</li>
+                <li><strong>Cost Optimization:</strong> Pay-per-use pricing model scales from zero to thousands of concurrent users</li>
+            </ul>
+            
+            <h4>6. Security & Compliance</h4>
+            <ul>
+                <li><strong>Edge Authentication:</strong> Secure authentication enforced at the edge for global access control</li>
+                <li><strong>Network Isolation:</strong> Private subnets with restricted traffic flow from trusted sources only</li>
+                <li><strong>IAM Least Privilege:</strong> Role-based access control with minimal permissions for each component</li>
+                <li><strong>Encryption:</strong> Data encrypted at rest and in transit across all storage and communication layers</li>
+                <li><strong>WAF Protection:</strong> Web application firewall at multiple layers for defense in depth</li>
+            </ul>
+            
+            <h3>Key Design Decisions</h3>
+            <div class="highlight-box">
+                <p><strong>AI Assistant vs Manual Calculator:</strong> Provided both interfaces to serve different user personas—new users benefit from guided discovery while experienced teams prefer direct input with specialized calculators for each model type.</p>
+                <p><strong>Streamlit vs Custom React:</strong> Selected Streamlit for rapid development, built-in UI components, and Python ecosystem integration, accepting limited customization for faster time-to-market and easier maintenance.</p>
+                <p><strong>ECS Fargate vs Lambda:</strong> Chose Fargate for Streamlit hosting due to stateful session management, longer processing times for AI interactions, and better container environment control.</p>
+                <p><strong>Claude 3.5 Sonnet:</strong> Selected for conversational interface due to strong reasoning capabilities, context understanding, and cost-effectiveness for interactive sizing conversations.</p>
+                <p><strong>DynamoDB vs RDS:</strong> Implemented DynamoDB for serverless scaling, pay-per-use pricing, and millisecond latency with support for conversation history and calculation tracking.</p>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="star-section">
+            <h2><span class="star-icon">📊</span>Result</h2>
+            
+            <h3>Business Outcomes</h3>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-label">Accurate Capacity Predictions</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10x</div>
+                    <div class="metric-label">Faster Capacity Sizing</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">99.9%</div>
+                    <div class="metric-label">Production Uptime Achieved</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">80%</div>
+                    <div class="metric-label">Faster Customer Decision-Making</div>
+                </div>
+            </div>
+            
+            <h3>Systemic Impact at Scale</h3>
+            <ul>
+                <li><strong>Eliminated Production Throttling:</strong> Reduced throttling-related incidents by 95% across all customers, preventing millions in lost revenue from service disruptions and customer churn</li>
+                <li><strong>Accelerated Revenue Recognition:</strong> Reduced customer evaluation time from weeks to hours, accelerating Bedrock adoption and enabling faster revenue recognition across hundreds of deals</li>
+                <li><strong>Prevented Cost Waste at Scale:</strong> Accurate sizing eliminated over-provisioning patterns, saving customers an average of $500K+ annually while optimizing AWS resource utilization</li>
+                <li><strong>Transformed Support Model:</strong> Self-service capacity planning reduced support tickets by 90%, freeing teams to focus on strategic customer engagements rather than manual calculations</li>
+                <li><strong>Enabled Enterprise Adoption:</strong> Removed the #1 barrier to enterprise AI adoption, enabling organizations to deploy production Bedrock workloads with confidence in capacity and cost predictability</li>
+                <li><strong>Scaled Across Customer Segments:</strong> Single solution serving startups to Fortune 500 enterprises, processing thousands of capacity calculations daily without human intervention</li>
+                <li><strong>Competitive Differentiation:</strong> Transparent, accurate capacity planning became a competitive advantage, reducing customer churn to competitors with simpler pricing</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Strategic Impact:</strong> BedrockSizer solved an organizational capacity planning problem that was blocking AWS's AI growth trajectory. By transforming capacity planning from a manual, error-prone bottleneck into an automated, scalable process, we removed the #1 barrier to enterprise Bedrock adoption—enabling AWS to scale AI workloads across thousands of customers while maintaining 99.9% uptime and preventing millions in cost waste. This wasn't just a tool—it was a fundamental shift in how AWS enables enterprise AI at scale.
+            </div>
+        </div>
+
+        <!-- DEMO VIDEO -->
+        <div class="star-section">
+            <h2><span class="star-icon">🎥</span>Demo Video</h2>
+            <p>Watch BedrockSizer in action - see how it guides users through capacity sizing, cost estimation, and Matador request generation:</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/18UjH4h-D3JHDkUy3ocQwzi204e4wCShT/preview" 
+                    allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- KEY FEATURES -->
+        <div class="star-section">
+            <h2><span class="star-icon">✨</span>Key Features</h2>
+            
+            <h3>Core Capabilities</h3>
+            <ul>
+                <li><strong>Conversational AI Assistant:</strong> Natural language interface for guided capacity sizing and recommendations</li>
+                <li><strong>Specialized Calculators:</strong> Dedicated calculators for on-demand, provisioned throughput, embedding, image, and video models</li>
+                <li><strong>Multi-Model Support:</strong> All Bedrock model types with region-specific pricing</li>
+                <li><strong>Real-Time Cost Estimation:</strong> Dynamic cost calculations with detailed breakdowns</li>
+                <li><strong>Capacity Specifications:</strong> Complete requirements with throughput calculations and usage patterns</li>
+                <li><strong>Usage Pattern Analysis:</strong> Accounts for variable traffic, peak hours, and growth projections</li>
+                <li><strong>Data Export:</strong> Download calculations and model information as CSV</li>
+                <li><strong>Conversation History:</strong> Persistent storage of all sizing sessions for audit and reference</li>
+                <li><strong>Model Information Viewer:</strong> Comprehensive view of all Bedrock models with pricing and limits</li>
+            </ul>
+            
+            <h3>Supported Model Types</h3>
+            <ul>
+                <li><strong>On-Demand Models:</strong> Pay-per-token pricing for variable workloads</li>
+                <li><strong>Provisioned Throughput:</strong> Reserved capacity for consistent, high-volume workloads</li>
+                <li><strong>Embedding Models:</strong> Vector generation for semantic search and RAG applications</li>
+                <li><strong>Image Models:</strong> Text-to-image generation with per-image pricing</li>
+                <li><strong>Video Models:</strong> Video generation with per-second pricing</li>
+            </ul>
+            
+            <h3>Capacity Specification Details</h3>
+            <ul>
+                <li>Model ID and region specifications</li>
+                <li>Throughput requirements and calculations</li>
+                <li>Average input and output token sizes</li>
+                <li>Expected traffic patterns and growth projections</li>
+                <li>Cost breakdown and budget justification</li>
+                <li>Use case description and requirements</li>
+            </ul>
+        </div>
+
+        <!-- LESSONS LEARNED -->
+        <div class="star-section">
+            <h2><span class="star-icon">💡</span>Key Learnings & Best Practices</h2>
+            
+            <h3>Platform-Level Problem-Solving Insights</h3>
+            <ul>
+                <li><strong>Scale Requires Self-Service:</strong> Manual capacity planning couldn't scale to thousands of customers—the solution had to be fully self-service while maintaining expert-level accuracy, fundamentally changing how AWS supports capacity planning</li>
+                <li><strong>Dual Personas, Single Solution:</strong> Rather than building separate tools for technical and business users, a unified platform with dual interfaces (conversational AI + manual calculators) served both personas while reducing maintenance complexity</li>
+                <li><strong>Accuracy Prevents Enterprise-Wide Waste:</strong> 95% prediction accuracy wasn't just a metric—it prevented millions in over-provisioning across hundreds of customers while eliminating throttling incidents that caused escalations</li>
+                <li><strong>Production Workload Modeling:</strong> Steady-state calculations weren't enough—modeling peak traffic, burst capacity, and growth projections was essential to prevent real-world production failures</li>
+                <li><strong>Adoption Velocity Matters:</strong> Reducing capacity planning from weeks to minutes didn't just improve UX—it accelerated revenue recognition and removed the #1 barrier to enterprise AI adoption at AWS</li>
+            </ul>
+            
+            <h3>Architectural & Technical Insights</h3>
+            <ul>
+                <li><strong>Serverless for Unpredictable Scale:</strong> ECS Fargate with auto-scaling handled unpredictable traffic patterns—from 10 users during off-hours to 1000+ during peak evaluation periods—without manual intervention</li>
+                <li><strong>AI for Complexity Abstraction:</strong> Claude 3.5 Sonnet translated complex capacity requirements into natural language conversations, making enterprise AI accessible to non-technical stakeholders and accelerating decision-making</li>
+                <li><strong>Data-Driven Pricing:</strong> Loading pricing data from S3 enabled rapid updates as Bedrock pricing evolved, ensuring accuracy without code deployments—critical for a fast-moving service</li>
+                <li><strong>Conversation Persistence:</strong> DynamoDB storage of sizing sessions enabled iterative planning, audit trails, and learning from customer patterns to improve recommendations over time</li>
+            </ul>
+            
+            <h3>Strategic Lessons</h3>
+            <ul>
+                <li><strong>Organizational Problems Require Platform Solutions:</strong> Individual customer support couldn't solve a capacity planning problem affecting thousands—we needed a platform that scaled automatically</li>
+                <li><strong>Remove Friction, Accelerate Adoption:</strong> The fastest way to accelerate Bedrock adoption wasn't better marketing—it was removing the capacity planning barrier that blocked every enterprise deal</li>
+                <li><strong>Accuracy Builds Trust:</strong> 95% prediction accuracy transformed customer perception from "Bedrock pricing is unpredictable" to "AWS provides the most transparent AI capacity planning in the industry"</li>
+                <li><strong>Self-Service Scales, Manual Doesn't:</strong> Every hour spent building self-service capacity planning saved thousands of hours of manual support work—the ROI was measured in team productivity, not just customer satisfaction</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="index.html" class="btn btn-primary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

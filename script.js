@@ -33,12 +33,14 @@ const html = document.documentElement;
 const currentTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', currentTheme);
 
-themeToggle.addEventListener('click', () => {
-    const theme = html.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const theme = html.getAttribute('data-theme');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
 
 // ============================================================================
 // VIEW SWITCHING
@@ -49,6 +51,8 @@ const portfolioView = document.getElementById('portfolio-view');
 const resumeView = document.getElementById('resume-view');
 
 function switchView(viewName) {
+    if (!portfolioView || !resumeView) return;
+    
     if (viewName === 'portfolio') {
         portfolioView.classList.add('active');
         resumeView.classList.remove('active');
@@ -72,7 +76,7 @@ toggleButtons.forEach(btn => {
 });
 
 const savedView = localStorage.getItem('preferredView');
-if (savedView) {
+if (savedView && portfolioView && resumeView) {
     switchView(savedView);
 }
 
@@ -98,12 +102,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScroll = 0;
 const navbar = document.getElementById('navbar');
 
-window.addEventListener('scroll', () => {
-    if (!portfolioView.classList.contains('active')) return;
-    const currentScroll = window.pageYOffset;
-    navbar.style.boxShadow = currentScroll <= 0 ? 'var(--shadow)' : 'var(--shadow-lg)';
-    lastScroll = currentScroll;
-});
+if (navbar && portfolioView) {
+    window.addEventListener('scroll', () => {
+        if (!portfolioView.classList.contains('active')) return;
+        const currentScroll = window.pageYOffset;
+        navbar.style.boxShadow = currentScroll <= 0 ? 'var(--shadow)' : 'var(--shadow-lg)';
+        lastScroll = currentScroll;
+    });
+}
 
 // ============================================================================
 // ANIMATIONS
@@ -142,7 +148,8 @@ const projectsData = [
         type: 'Athena Query Analyzer',
         description: 'AI-powered Athena Query Analyzer deployed across multiple enterprise customers. Detects and optimizes inefficient queries with visual analytics including execution trends, data scanned, cost breakdowns, query volume, and performance-cost comparisons. Reduces query costs by up to 70% and improves execution performance by 3x.',
         tags: ['Query Analytics', 'Query Optimization', 'Cost Reduction'],
-        link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link'
+        link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link',
+        caseStudy: 'optix-ai-case-study.html'
     },
     {
         icon: '🤖',
@@ -150,7 +157,8 @@ const projectsData = [
         type: 'AI Solution Architect',
         description: 'AI-powered solution architect transforming conversational inputs or whiteboard drawings into production-ready AWS solutions with full architecture diagrams, complete cost analysis, IaC deployment code, and comprehensive documentation. Enables interactive refinement and single-click deployment to AWS accounts. Reduces architecture time by 80%.',
         tags: ['AI Architect', 'Solution Automation', 'Cost Prediction'],
-        link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder'
+        link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder',
+        caseStudy: 'devgenius-case-study.html'
     },
     {
         icon: '⚡',
@@ -158,7 +166,8 @@ const projectsData = [
         type: 'OneClick Data Framework',
         description: 'Low-code/no-code data platform with marketplace experience for one-click data ingestion, data quality, transformations, and data sharing to multiple accounts enabling data mesh architecture. Complete end-to-end automation to create enterprise data platforms on cloud within minutes. Finalist in 2022 Gartner Eye on Innovation Award.',
         tags: ['Data Platform', 'Automation', 'Award Winner'],
-        link: 'https://www.youtube.com/watch?v=xWIcPhimOaw'
+        link: 'https://www.youtube.com/watch?v=xWIcPhimOaw',
+        caseStudy: 'atomix-case-study.html'
     },
     {
         icon: '💡',
@@ -166,7 +175,8 @@ const projectsData = [
         type: 'Capacity & Cost Planning Tool',
         description: 'Interactive tool for Amazon Bedrock capacity and cost estimation through conversational guidance. Includes calculator for all model types with technical details for capacity requests. Serving 3,000+ SAs across multiple customers with 20,000+ conversations, ensuring optimal planning to avoid throttling and maintain 24/7 availability.',
         tags: ['Capacity Planning', 'Cost Estimation', 'AI Scaling'],
-        link: ''
+        link: '',
+        caseStudy: 'bedrocksizer-case-study.html'
     },
     {
         icon: '🚀',
@@ -182,7 +192,8 @@ const projectsData = [
         type: 'Customer & Profitability Analytics',
         description: 'AI-powered solution analyzing customer purchasing behavior and product associations to drive strategic decision-making. Enables precise profitability analysis and provides actionable insights for marketing and inventory optimization. Deployed at a top pet food company, empowering CEO-level insights on margins, directly influencing strategy.',
         tags: ['Customer Analytics', 'Profitability Analysis', 'Decision Support'],
-        link: 'https://github.com/praven80/market_basket_analysis_ai'
+        link: 'https://github.com/praven80/market_basket_analysis_ai',
+        caseStudy: 'market-basket-analysis-case-study.html'
     },
     {
         icon: '👥',
@@ -372,24 +383,36 @@ let currentProjectPage = 1;
 function renderProjects() {
     const container = document.getElementById('projects-container');
     if (!container) {
-        console.error('Projects container not found');
-        return;
+        return; // Silently return if container doesn't exist (e.g., on case study pages)
     }
     
     const startIndex = (currentProjectPage - 1) * PROJECTS_PER_PAGE;
     const endIndex = startIndex + PROJECTS_PER_PAGE;
     const projectsToShow = projectsData.slice(startIndex, endIndex);
     
-    container.innerHTML = projectsToShow.map(project => `
+    container.innerHTML = projectsToShow.map(project => {
+        const linkTarget = project.isExternal === false ? '_self' : '_blank';
+        const linkHtml = project.link ? `<a href="${project.link}" target="${linkTarget}">${project.title}</a>` : project.title;
+        
+        // Add case study button aligned with title for OptiX AI
+        const caseStudyButton = project.caseStudy ? 
+            `<a href="${project.caseStudy}" class="case-study-btn-inline" title="View Case Study">📖</a>` : '';
+        
+        return `
         <div class="project-card">
-            <h3><span class="project-icon">${project.icon}</span>${project.link ? `<a href="${project.link}" target="_blank">${project.title}</a>` : project.title}</h3>
+            <h3 style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="display: flex; align-items: center;">
+                    <span class="project-icon">${project.icon}</span>${linkHtml}
+                </span>
+                ${caseStudyButton}
+            </h3>
             <p class="project-type">${project.type}</p>
             <p>${project.description}</p>
             <div class="project-tags">
                 ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
             </div>
         </div>
-    `).join('');
+    `}).join('');
     
     updateProjectsPagination();
 }
@@ -399,8 +422,7 @@ function updateProjectsPagination() {
     const controls = document.querySelector('.projects-pagination-controls');
     
     if (!controls) {
-        console.error('Pagination controls container not found');
-        return;
+        return; // Silently return if controls don't exist (e.g., on case study pages)
     }
     
     controls.innerHTML = `
