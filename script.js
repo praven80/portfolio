@@ -1,6 +1,8 @@
-// Print function with instructions
+// ============================================================================
+// UTILITY FUNCTIONS
+// ============================================================================
+
 function printResume() {
-    // Show alert with instructions
     const userAgent = navigator.userAgent.toLowerCase();
     let instructions = '';
     
@@ -14,32 +16,34 @@ function printResume() {
         instructions = 'In the print dialog, please disable "Headers and footers" option before saving.';
     }
     
-    // Open print dialog
     window.print();
-    
-    // Show instructions after a brief delay
-    setTimeout(() => {
-        console.log('Print Instructions:', instructions);
-    }, 100);
+    setTimeout(() => console.log('Print Instructions:', instructions), 100);
 }
 
-// Theme Toggle
+function switchToResume() {
+    switchView('resume');
+}
+
+// ============================================================================
+// THEME MANAGEMENT
+// ============================================================================
+
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
-
-// Check for saved theme preference or default to 'light'
 const currentTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', currentTheme);
 
 themeToggle.addEventListener('click', () => {
     const theme = html.getAttribute('data-theme');
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 });
 
-// View Switching
+// ============================================================================
+// VIEW SWITCHING
+// ============================================================================
+
 const toggleButtons = document.querySelectorAll('.toggle-btn');
 const portfolioView = document.getElementById('portfolio-view');
 const resumeView = document.getElementById('resume-view');
@@ -50,27 +54,16 @@ function switchView(viewName) {
         resumeView.classList.remove('active');
         toggleButtons[0].classList.add('active');
         toggleButtons[1].classList.remove('active');
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (viewName === 'resume') {
         portfolioView.classList.remove('active');
         resumeView.classList.add('active');
         toggleButtons[0].classList.remove('active');
         toggleButtons[1].classList.add('active');
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
-    // Save preference
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     localStorage.setItem('preferredView', viewName);
 }
 
-// Global function for button onclick
-function switchToResume() {
-    switchView('resume');
-}
-
-// Toggle button click handlers
 toggleButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const view = btn.getAttribute('data-view');
@@ -78,19 +71,21 @@ toggleButtons.forEach(btn => {
     });
 });
 
-// Load saved view preference
 const savedView = localStorage.getItem('preferredView');
 if (savedView) {
     switchView(savedView);
 }
 
-// Smooth scroll for navigation links (portfolio view only)
+// ============================================================================
+// NAVIGATION
+// ============================================================================
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 80; // Account for fixed navbar
+            const offset = 80;
             const targetPosition = target.offsetTop - offset;
             window.scrollTo({
                 top: targetPosition,
@@ -100,25 +95,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar scroll effect (portfolio view only)
 let lastScroll = 0;
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
     if (!portfolioView.classList.contains('active')) return;
-    
     const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        navbar.style.boxShadow = 'var(--shadow)';
-    } else {
-        navbar.style.boxShadow = 'var(--shadow-lg)';
-    }
-    
+    navbar.style.boxShadow = currentScroll <= 0 ? 'var(--shadow)' : 'var(--shadow-lg)';
     lastScroll = currentScroll;
 });
 
-// Intersection Observer for fade-in animations (portfolio view only)
+// ============================================================================
+// ANIMATIONS
+// ============================================================================
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -133,7 +123,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and cards in portfolio view
 document.querySelectorAll('#portfolio-view .section, #portfolio-view .project-card, #portfolio-view .impact-card, #portfolio-view .skill-category, #portfolio-view .leadership-category').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -142,9 +131,11 @@ document.querySelectorAll('#portfolio-view .section, #portfolio-view .project-ca
 });
 
 
-// Projects Data
+// ============================================================================
+// PROJECTS DATA
+// ============================================================================
+
 const projectsData = [
-    // Original 6 projects - Page 1
     {
         icon: '🔍',
         title: 'OptiX AI',
@@ -216,8 +207,12 @@ const projectsData = [
         description: 'AI-powered car rental demand prediction platform built on Amazon Bedrock AgentCore. Analyzes and predicts rental demand by integrating real-time data from multiple sources: fleet inventory, local events, national holidays, weather forecasts, and airline schedules. Enables optimal fleet allocation and resource planning for rental companies.',
         tags: ['Demand Forecasting', 'Fleet Optimization', 'Predictive Analytics'],
         link: 'https://github.com/praven80/fleet_management_ai'
-    },
-    // Additional projects from user's list
+    }
+];
+
+
+// Additional projects will be added here - continuing the array
+const additionalProjects = [
     {
         icon: '🎯',
         title: 'Ground Truth Generator',
@@ -306,7 +301,6 @@ const projectsData = [
         tags: ['Multi-Modal AI', 'Content Generation', 'Amazon Nova'],
         link: 'https://github.com/praven80/nova_multimodal_ai'
     },
-
     {
         icon: '🖼️',
         title: 'Image Insights AI',
@@ -315,7 +309,6 @@ const projectsData = [
         tags: ['Image Analysis', 'Visual Intelligence', 'Automated Classification'],
         link: 'https://github.com/praven80/image_insights'
     },
-
     {
         icon: '📄',
         title: 'Document Data Extractor AI',
@@ -356,7 +349,6 @@ const projectsData = [
         tags: ['RAG Optimization', 'Reranking Models', 'Retrieval Enhancement'],
         link: 'https://github.com/praven80/bedrock_rerank'
     },
-
     {
         icon: '🤖',
         title: 'DeepSeek AI',
@@ -364,15 +356,19 @@ const projectsData = [
         description: 'AI model deployment tool providing scripts for deploying and interacting with DeepSeek-R1-Distill-Llama-8B using Amazon SageMaker and Amazon Bedrock. SageMaker script enables model deployment with RESTful API inference. Bedrock notebook guides through cloning from Hugging Face, S3 upload, and model import. Simplifies model deployment workflow.',
         tags: ['Model Deployment', 'SageMaker', 'Amazon Bedrock'],
         link: 'https://github.com/praven80/deepseek_ai'
-    },
-
+    }
 ];
 
-// Pagination settings
+// Merge all projects
+projectsData.push(...additionalProjects);
+
+// ============================================================================
+// PROJECTS RENDERING & PAGINATION
+// ============================================================================
+
 const PROJECTS_PER_PAGE = 9;
 let currentProjectPage = 1;
 
-// Render projects
 function renderProjects() {
     const container = document.getElementById('projects-container');
     if (!container) {
@@ -398,7 +394,6 @@ function renderProjects() {
     updateProjectsPagination();
 }
 
-// Update pagination controls
 function updateProjectsPagination() {
     const totalPages = Math.ceil(projectsData.length / PROJECTS_PER_PAGE);
     const controls = document.querySelector('.projects-pagination-controls');
@@ -419,7 +414,6 @@ function updateProjectsPagination() {
     `;
 }
 
-// Change page
 function changeProjectPage(direction) {
     const totalPages = Math.ceil(projectsData.length / PROJECTS_PER_PAGE);
     currentProjectPage += direction;
@@ -428,12 +422,13 @@ function changeProjectPage(direction) {
     if (currentProjectPage > totalPages) currentProjectPage = totalPages;
     
     renderProjects();
-    
-    // Scroll to projects section
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Initialize projects on page load
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
+
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
 });
