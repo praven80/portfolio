@@ -249,7 +249,7 @@ const additionalProjects = [
         icon: '🚗',
         title: 'Windshield Inspector',
         type: 'AI-Powered Damage Assessment',
-        description: 'AI-powered application using Amazon Bedrock to assess windshield damage in real-time. Provides instant classification (Good/Damaged) with confidence scores and detailed explanations. Ideal for insurance companies and auto repair shops to streamline claims processing. Accelerates damage assessment while improving inspection accuracy.',
+        description: 'AI-powered application using Amazon Bedrock to assess windshield damage in real-time. Provides instant classification (Good/Damaged) with confidence scores and detailed explanations. Ideal for insurance companies and auto repair shops to streamline claims processing. Accelerates damage assessment while improving accuracy.',
         tags: ['Image Analysis', 'Damage Detection', 'Real-time Classification'],
         link: 'https://github.com/praven80/windshield_inspector'
     },
