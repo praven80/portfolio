@@ -230,7 +230,7 @@
         <div class="star-section" style="border-left: 4px solid #FF9900;">
             <h2><span class="star-icon">⚡</span>Executive Summary</h2>
             <p style="font-size: 1.05rem; line-height: 1.7;">
-                DevGenius removed the architecture design bottleneck blocking AWS adoption by transforming solution architecture from a weeks-long manual process into an AI-powered conversational experience. Supporting both natural language requirements and whiteboard image analysis, it generated production-ready architectures, infrastructure code, cost estimates, and documentation in minutes—accelerating customer time-to-deployment by 10x while democratizing AWS architecture across technical and non-technical stakeholders.
+                DevGenius removed the architecture design bottleneck blocking AWS adoption by transforming solution architecture from a weeks-long manual process into an AI-powered conversational experience. Supporting both natural language requirements and whiteboard image analysis, it generated production-ready architectures, infrastructure code, cost estimates, and documentation in minutes. accelerating customer time-to-deployment by 10x while democratizing AWS architecture across technical and non-technical stakeholders.
             </p>
         </div>
 
@@ -239,7 +239,7 @@
             <h2><span class="star-icon">📋</span>Situation</h2>
             
             <h3>The Enterprise-Wide Problem</h3>
-            <p>AWS solution architecture design was a critical bottleneck affecting every customer deployment. Organizations spent weeks translating requirements into architectures, writing infrastructure code, and estimating costs—delaying time-to-market and blocking AWS adoption. This wasn't a documentation problem—it was an organizational barrier preventing teams from moving at cloud speed.</p>
+            <p>AWS solution architecture design was a critical bottleneck affecting every customer deployment. Organizations spent weeks translating requirements into architectures, writing infrastructure code, and estimating costs. delaying time-to-market and blocking AWS adoption. This wasn't a documentation problem. it was an organizational barrier preventing teams from moving at cloud speed.</p>
             
             <h3>The Business Challenge</h3>
             <p>The architecture design bottleneck manifested across the entire customer journey:</p>
@@ -253,7 +253,7 @@
             </ul>
             
             <div class="highlight-box">
-                <strong>Scale of Impact:</strong> This platform-level problem was affecting every AWS deployment, from startups to enterprises. Organizations were spending weeks on architecture design with high risk of misconfigurations and cost overruns. Manual architecture processes didn't scale—we needed a solution that could serve thousands of users while maintaining AWS best practices.
+                <strong>Scale of Impact:</strong> This platform-level problem was affecting every AWS deployment, from startups to enterprises. Organizations were spending weeks on architecture design with high risk of misconfigurations and cost overruns. Manual architecture processes didn't scale. we needed a solution that could serve thousands of users while maintaining AWS best practices.
             </div>
         </div>
 
@@ -262,7 +262,7 @@
             <h2><span class="star-icon">🎯</span>Task</h2>
             
             <h3>The Challenge: Scaling Architecture Design Across All Skill Levels</h3>
-            <p>The core challenge wasn't building a diagram tool—it was solving an organizational architecture bottleneck that required:</p>
+            <p>The core challenge wasn't building a diagram tool. it was solving an organizational architecture bottleneck that required:</p>
             
             <ul>
                 <li><strong>Dual Input Methods:</strong> Support both conversational requirements and whiteboard image analysis to match different workflows</li>
@@ -274,7 +274,7 @@
             </ul>
             
             <div class="highlight-box">
-                <strong>The Strategic Imperative:</strong> This wasn't about building a diagramming tool—it was about removing the architecture design bottleneck that blocked every AWS deployment. Success meant transforming architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow that could support rapid innovation while maintaining quality and best practices.
+                <strong>The Strategic Imperative:</strong> This wasn't about building a diagramming tool. it was about removing the architecture design bottleneck that blocked every AWS deployment. Success meant transforming architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow that could support rapid innovation while maintaining quality and best practices.
             </div>
         </div>
 
@@ -362,7 +362,7 @@
             
             <h3>Key Design Decisions</h3>
             <div class="highlight-box">
-                <p><strong>Claude 3.5 vs 3.7:</strong> Used 3.5 for conversational flow (Bedrock Agent) and 3.7 for artifact generation (code, diagrams, docs) to balance cost, speed, and quality—3.7 provides superior reasoning for complex code generation.</p>
+                <p><strong>Claude 3.5 vs 3.7:</strong> Used 3.5 for conversational flow (Bedrock Agent) and 3.7 for artifact generation (code, diagrams, docs) to balance cost, speed, and quality. 3.7 provides superior reasoning for complex code generation.</p>
                 <p><strong>ECS Fargate vs Lambda:</strong> Selected Fargate for Streamlit hosting due to stateful nature, WebSocket requirements, longer AI generation times, and better container environment control, accepting higher baseline cost for improved user experience.</p>
                 <p><strong>Web Crawler Knowledge Base:</strong> Automatically ingests latest AWS documentation without manual updates, trading longer initial ingestion time for always-current information and reduced maintenance overhead.</p>
                 <p><strong>Streaming vs Batch:</strong> Chose streaming responses for better UX showing real-time generation progress, implementing continuation prompts to handle max token limits while maintaining context.</p>
@@ -397,17 +397,17 @@
             
             <h3>Platform-Level Impact at Scale</h3>
             <ul>
-                <li><strong>Accelerated Time-to-Deployment:</strong> Reduced architecture design and IaC development from weeks to minutes—10x faster delivery enabling rapid innovation</li>
+                <li><strong>Accelerated Time-to-Deployment:</strong> Reduced architecture design and IaC development from weeks to minutes. 10x faster delivery enabling rapid innovation</li>
                 <li><strong>Democratized Architecture:</strong> Non-technical stakeholders could participate through natural language, removing the AWS expertise barrier and accelerating decision-making</li>
                 <li><strong>Prevented Cost Overruns:</strong> Upfront cost estimates enabled budget planning and approval before deployment, preventing millions in unexpected cloud spend</li>
                 <li><strong>Improved Quality at Scale:</strong> AI-enforced Well-Architected Framework reduced misconfigurations by 80% and eliminated common security issues across all deployments</li>
-                <li><strong>Transformed Collaboration:</strong> Teams could upload whiteboard photos from meetings, refine together in real-time, and generate deployment code instantly—removing the design-to-deployment gap</li>
+                <li><strong>Transformed Collaboration:</strong> Teams could upload whiteboard photos from meetings, refine together in real-time, and generate deployment code instantly. removing the design-to-deployment gap</li>
                 <li><strong>Enabled Knowledge Transfer:</strong> Generated documentation and production-ready code served as learning material for teams new to AWS, accelerating skill development</li>
                 <li><strong>Scaled Across Use Cases:</strong> Single platform supporting everything from simple web apps to complex microservices architectures, serving diverse customer needs</li>
             </ul>
             
             <div class="highlight-box">
-                <strong>Strategic Impact:</strong> DevGenius solved an organizational architecture bottleneck by transforming AWS solution architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow. By supporting both conversational requirements and visual analysis, we enabled 10x faster architecture design while democratizing AWS expertise—fundamentally changing how organizations approach cloud architecture and accelerating their innovation velocity.
+                <strong>Strategic Impact:</strong> DevGenius solved an organizational architecture bottleneck by transforming AWS solution architecture from a specialized, time-intensive process into an accessible, AI-assisted workflow. By supporting both conversational requirements and visual analysis, we enabled 10x faster architecture design while democratizing AWS expertise. fundamentally changing how organizations approach cloud architecture and accelerating their innovation velocity.
             </div>
         </div>
 
@@ -431,8 +431,8 @@
             
             <h3>Technical Insights</h3>
             <ul>
-                <li><strong>Multimodal AI Power:</strong> Claude's vision capabilities analyze images without separate OCR services—single API call handles both text and visual understanding, dramatically simplifying the architecture</li>
-                <li><strong>Streaming UX Impact:</strong> Real-time token streaming improves perceived performance by 10x—users see progress immediately rather than waiting minutes for complete responses</li>
+                <li><strong>Multimodal AI Power:</strong> Claude's vision capabilities analyze images without separate OCR services. single API call handles both text and visual understanding, dramatically simplifying the architecture</li>
+                <li><strong>Streaming UX Impact:</strong> Real-time token streaming improves perceived performance by 10x. users see progress immediately rather than waiting minutes for complete responses</li>
                 <li><strong>Knowledge Base RAG:</strong> Vector search with OpenSearch Serverless provides more accurate, up-to-date AWS recommendations than relying solely on model training data</li>
                 <li><strong>Custom Resource Patterns:</strong> Lambda functions enable provisioning services not yet supported by CDK (web crawler data sources, OpenSearch Serverless indices with specific configurations)</li>
                 <li><strong>IAM Eventual Consistency:</strong> Retry logic with exponential backoff (3 attempts, 3-12 second delays) handles permission propagation delays when creating OpenSearch indices</li>
@@ -440,12 +440,12 @@
             
             <h3>Product & UX Insights</h3>
             <ul>
-                <li><strong>Progressive Disclosure:</strong> Two-tab interface separates conversational design from image upload—don't overwhelm users with all options upfront, let them choose their preferred workflow</li>
+                <li><strong>Progressive Disclosure:</strong> Two-tab interface separates conversational design from image upload. don't overwhelm users with all options upfront, let them choose their preferred workflow</li>
                 <li><strong>User Control Over AI:</strong> Checkboxes for artifact generation give users control over what they need, reducing unnecessary API calls and costs while respecting user agency</li>
-                <li><strong>Retry Buttons:</strong> Each artifact includes retry button for regeneration—acknowledges AI non-determinism and gives users multiple attempts to get desired results</li>
-                <li><strong>Visual + Conversational:</strong> Combining diagram visualization with conversational refinement provides the best of both worlds—users can see and discuss architecture simultaneously</li>
+                <li><strong>Retry Buttons:</strong> Each artifact includes retry button for regeneration. acknowledges AI non-determinism and gives users multiple attempts to get desired results</li>
+                <li><strong>Visual + Conversational:</strong> Combining diagram visualization with conversational refinement provides the best of both worlds. users can see and discuss architecture simultaneously</li>
                 <li><strong>Feedback Loop:</strong> Thumbs up/down with mandatory explanations enables continuous improvement and identifies problematic patterns for model fine-tuning</li>
-                <li><strong>Download All:</strong> Single button creates ZIP with all artifacts—users don't need to save each artifact individually, reducing friction in workflow</li>
+                <li><strong>Download All:</strong> Single button creates ZIP with all artifacts. users don't need to save each artifact individually, reducing friction in workflow</li>
                 <li><strong>Deployment Safety:</strong> CloudFormation launch links open in AWS Console (not automated deployment) so users can review parameters, costs, and resources before clicking "Create Stack"</li>
             </ul>
         </div>
