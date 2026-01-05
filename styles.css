@@ -1445,13 +1445,14 @@ footer p {
         top: 60px;
         left: 0;
         right: 0;
-        background: var(--bg-color);
+        background: var(--bg-primary);
         flex-direction: column;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-height: calc(100vh - 60px);
+        padding: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        max-height: calc(100vh - 140px);
         overflow-y: auto;
         z-index: 999;
+        border-bottom: 1px solid var(--border-color);
     }
     
     .nav-links.active {
@@ -1461,6 +1462,11 @@ footer p {
     .nav-links a {
         padding: 1rem;
         border-bottom: 1px solid var(--border-color);
+        background: var(--bg-primary);
+    }
+    
+    .nav-links a:hover {
+        background: var(--bg-alt);
     }
     
     .nav-dropdown {
@@ -1471,7 +1477,13 @@ footer p {
         position: static;
         display: none;
         box-shadow: none;
-        padding-left: 1rem;
+        padding-left: 0;
+        background: var(--bg-primary);
+    }
+    
+    .nav-dropdown-menu a {
+        padding-left: 2rem;
+        background: var(--bg-primary);
     }
     
     .nav-dropdown.active .nav-dropdown-menu {
@@ -1579,10 +1591,15 @@ footer p {
         top: auto;
         bottom: 0.5rem;
         right: 0.5rem;
+        z-index: 50;
     }
     
     .nav-links {
-        max-height: calc(100vh - 60px);
+        max-height: calc(100vh - 140px);
+    }
+    
+    .mobile-menu-toggle {
+        display: flex !important;
     }
 }
 
