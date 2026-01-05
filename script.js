@@ -3,18 +3,79 @@
 // ============================================================================
 
 function printResume() {
-    const isMobile = /iphone|ipad|ipod|android|mobile/i.test(navigator.userAgent.toLowerCase());
-    
-    if (isMobile) {
-        document.body.classList.add('mobile-print');
+    // Create and show print options modal
+    showPrintModal();
+}
+
+function showPrintModal() {
+    // Create modal if it doesn't exist
+    let modal = document.getElementById('print-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'print-modal';
+        modal.className = 'print-modal';
+        modal.innerHTML = `
+            <div class="print-modal-content">
+                <h3>Print Options</h3>
+                <p>Select page format:</p>
+                <div class="print-options">
+                    <label class="print-option">
+                        <input type="radio" name="pageCount" value="1">
+                        <span>1 Page (Compact)</span>
+                    </label>
+                    <label class="print-option">
+                        <input type="radio" name="pageCount" value="2" checked>
+                        <span>2 Pages (Readable)</span>
+                    </label>
+                </div>
+                <div class="print-modal-buttons">
+                    <button class="btn-print-ok" onclick="executePrint()">Print</button>
+                    <button class="btn-print-cancel" onclick="closePrintModal()">Cancel</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
     }
     
-    window.print();
+    modal.classList.add('active');
+}
+
+function closePrintModal() {
+    const modal = document.getElementById('print-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+}
+
+function executePrint() {
+    const isMobile = /iphone|ipad|ipod|android|mobile/i.test(navigator.userAgent.toLowerCase());
+    const selectedOption = document.querySelector('input[name="pageCount"]:checked');
+    const pageCount = selectedOption ? selectedOption.value : '2';
     
-    // Remove class after print dialog closes
+    closePrintModal();
+    
+    // Remove any existing print classes
+    document.body.classList.remove('print-two-page');
+    document.body.classList.remove('mobile-print');
+    
+    if (pageCount === '1') {
+        // 1-page uses base styles (already compact)
+        if (isMobile) {
+            document.body.classList.add('mobile-print');
+        }
+    } else {
+        // 2-page uses relaxed styles
+        document.body.classList.add('print-two-page');
+    }
+    
     setTimeout(() => {
-        document.body.classList.remove('mobile-print');
-    }, 1000);
+        window.print();
+        
+        setTimeout(() => {
+            document.body.classList.remove('mobile-print');
+            document.body.classList.remove('print-two-page');
+        }, 1000);
+    }, 100);
 }
 
 function switchToResume() {
