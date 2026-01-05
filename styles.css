@@ -1827,3 +1827,11 @@ footer p {
         display: block !important;
     }
 }
+
+/* Fix Case Studies font size in mobile */
+@media screen and (max-width: 768px), screen and (orientation: landscape) and (max-width: 1024px) {
+    .nav-dropdown-toggle {
+        font-size: 1rem !important;
+        white-space: normal !important;
+    }
+}
