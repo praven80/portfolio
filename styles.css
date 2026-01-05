@@ -1488,6 +1488,16 @@ footer p {
         background: var(--bg-primary) !important;
     }
     
+    
+    .nav-dropdown-toggle {
+        font-size: 1rem !important;
+        padding: 0.15rem 1rem !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        background: var(--bg-primary) !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
     .nav-dropdown.active .nav-dropdown-menu {
         display: block;
     }
@@ -1823,6 +1833,16 @@ footer p {
         background: var(--bg-primary) !important;
     }
     
+    
+    .nav-dropdown-toggle {
+        font-size: 1rem !important;
+        padding: 0.15rem 1rem !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        background: var(--bg-primary) !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
     .nav-dropdown.active .nav-dropdown-menu {
         display: block !important;
     }
