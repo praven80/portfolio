@@ -511,7 +511,7 @@ body:not([data-theme]) .moon-icon {
 
 .achievement {
     background-color: var(--bg-alt);
-    padding: 0.15rem 1rem;
+    padding: 0.1rem 1rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
     font-weight: 500;
@@ -1462,7 +1462,7 @@ footer p {
     }
     
     .nav-links a {
-        padding: 0.15rem 1rem;
+        padding: 0.1rem 1rem;
         border-bottom: 1px solid var(--border-color);
         background: var(--bg-primary) !important;
     }
@@ -1486,14 +1486,14 @@ footer p {
     }
     
     .nav-dropdown-menu a {
-        padding: 0.15rem 1rem 0.15rem 2rem;
+        padding: 0.1rem 1rem 0.1rem 2rem;
         background: var(--bg-primary) !important;
     }
     
     
     .nav-dropdown-toggle {
         font-size: 1rem !important;
-        padding: 0.15rem 1rem !important;
+        padding: 0.1rem 1rem !important;
         border-bottom: 1px solid var(--border-color) !important;
         background: var(--bg-primary) !important;
         display: block !important;
@@ -1556,7 +1556,7 @@ footer p {
     }
     
     .resume-container {
-        padding: 0.15rem 1rem;
+        padding: 0.1rem 1rem;
     }
     
     .resume-header h1 {
@@ -1586,7 +1586,7 @@ footer p {
     }
     
     .nav-container {
-        padding: 0.15rem 1rem;
+        padding: 0.1rem 1rem;
         display: flex !important;
         justify-content: space-between;
         align-items: center;
@@ -1770,7 +1770,7 @@ footer p {
     }
     
     .nav-links a {
-        padding: 0.15rem 1rem !important;
+        padding: 0.1rem 1rem !important;
         border-bottom: 1px solid var(--border-color) !important;
         background: var(--bg-primary) !important;
     }
@@ -1860,7 +1860,7 @@ footer p {
     
     .nav-links .nav-dropdown .nav-dropdown-toggle {
         font-size: 1rem !important;
-        padding: 0.15rem 1rem !important;
+        padding: 0.1rem 1rem !important;
         border-bottom: 1px solid var(--border-color) !important;
         background: var(--bg-primary) !important;
         display: block !important;
