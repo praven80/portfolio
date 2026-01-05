@@ -293,7 +293,7 @@
             <ul>
                 <li><strong>Global Content Delivery:</strong> CloudFront distribution with Lambda@Edge authentication for secure, low-latency access worldwide</li>
                 <li><strong>Containerized Application:</strong> ECS Fargate hosts Streamlit application with auto-scaling based on demand</li>
-                <li><strong>AI-Powered Sizing:</strong> Amazon Bedrock (Claude 3.5 Sonnet) provides conversational capacity recommendations</li>
+                <li><strong>AI-Powered Sizing:</strong> Amazon Bedrock (Claude Sonnet) provides conversational capacity recommendations</li>
                 <li><strong>Persistent Storage:</strong> DynamoDB stores conversation history and calculations for audit trails and iterative planning</li>
                 <li><strong>Dynamic Pricing Data:</strong> S3-based pricing data enables rapid updates as Bedrock pricing evolves across regions</li>
                 <li><strong>Security & Compliance:</strong> WAF protection, private subnets, IAM least privilege, and encryption at rest and in transit</li>
@@ -308,7 +308,7 @@
                 <span class="tech-badge">Amazon ECR</span>
                 <span class="tech-badge">Streamlit (Python)</span>
                 <span class="tech-badge">Amazon Bedrock</span>
-                <span class="tech-badge">Claude 3.5 Sonnet</span>
+                <span class="tech-badge">Claude Sonnet</span>
                 <span class="tech-badge">Amazon DynamoDB</span>
                 <span class="tech-badge">Amazon S3</span>
                 <span class="tech-badge">AWS CDK (TypeScript)</span>
@@ -322,7 +322,7 @@
             
             <h4>1. Dual Interface Approach</h4>
             <ul>
-                <li><strong>AI Assistant:</strong> Conversational interface using Claude 3.5 Sonnet for guided discovery and capacity recommendations</li>
+                <li><strong>AI Assistant:</strong> Conversational interface using Claude Sonnet for guided discovery and capacity recommendations</li>
                 <li><strong>Manual Calculator:</strong> Comprehensive calculator with direct input for experienced users who know their requirements</li>
                 <li><strong>User Choice:</strong> Users select their preferred workflow based on familiarity with Bedrock and complexity of use case</li>
                 <li><strong>Seamless Switching:</strong> Users can switch between modes without losing context or starting over</li>
@@ -331,7 +331,7 @@
             <h4>2. Conversational Capacity Sizing</h4>
             <ul>
                 <li><strong>Discovery Questions:</strong> AI asks targeted questions about workload patterns, traffic volume, latency requirements, and usage patterns</li>
-                <li><strong>Context Understanding:</strong> Claude analyzes use case description to recommend appropriate model types and configurations</li>
+                <li><strong>Context Understanding:</strong> The model analyzes use case description to recommend appropriate model types and configurations</li>
                 <li><strong>Iterative Refinement:</strong> Users can adjust parameters and see updated recommendations in real-time</li>
                 <li><strong>Best Practice Guidance:</strong> AI provides recommendations based on AWS Well-Architected Framework and Bedrock best practices</li>
             </ul>
@@ -374,7 +374,7 @@
                 <p><strong>AI Assistant vs Manual Calculator:</strong> Provided both interfaces to serve different user personas. new users benefit from guided discovery while experienced teams prefer direct input with specialized calculators for each model type.</p>
                 <p><strong>Streamlit vs Custom React:</strong> Selected Streamlit for rapid development, built-in UI components, and Python ecosystem integration, accepting limited customization for faster time-to-market and easier maintenance.</p>
                 <p><strong>ECS Fargate vs Lambda:</strong> Chose Fargate for Streamlit hosting due to stateful session management, longer processing times for AI interactions, and better container environment control.</p>
-                <p><strong>Claude 3.5 Sonnet:</strong> Selected for conversational interface due to strong reasoning capabilities, context understanding, and cost-effectiveness for interactive sizing conversations.</p>
+                <p><strong>Claude Sonnet:</strong> Selected for conversational interface due to strong reasoning capabilities, context understanding, and cost-effectiveness for interactive sizing conversations.</p>
                 <p><strong>DynamoDB vs RDS:</strong> Implemented DynamoDB for serverless scaling, pay-per-use pricing, and millisecond latency with support for conversation history and calculation tracking.</p>
             </div>
         </div>
@@ -487,7 +487,7 @@
             <h3>Architectural & Technical Insights</h3>
             <ul>
                 <li><strong>Serverless for Unpredictable Scale:</strong> ECS Fargate with auto-scaling handled unpredictable traffic patterns. from 10 users during off-hours to 1000+ during peak evaluation periods. without manual intervention</li>
-                <li><strong>AI for Complexity Abstraction:</strong> Claude 3.5 Sonnet translated complex capacity requirements into natural language conversations, making enterprise AI accessible to non-technical stakeholders and accelerating decision-making</li>
+                <li><strong>AI for Complexity Abstraction:</strong> Claude Sonnet translated complex capacity requirements into natural language conversations, making enterprise AI accessible to non-technical stakeholders and accelerating decision-making</li>
                 <li><strong>Data-Driven Pricing:</strong> Loading pricing data from S3 enabled rapid updates as Bedrock pricing evolved, ensuring accuracy without code deployments. critical for a fast-moving service</li>
                 <li><strong>Conversation Persistence:</strong> DynamoDB storage of sizing sessions enabled iterative planning, audit trails, and learning from customer patterns to improve recommendations over time</li>
             </ul>

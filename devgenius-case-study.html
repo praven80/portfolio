@@ -293,10 +293,10 @@
             <ul>
                 <li><strong>Global Content Delivery:</strong> CloudFront with Lambda@Edge authentication for secure, low-latency access worldwide</li>
                 <li><strong>Containerized Application:</strong> ECS Fargate hosts Streamlit application with auto-scaling based on demand</li>
-                <li><strong>AI Orchestration:</strong> Bedrock Agent (Claude 3.5 Sonnet) handles conversational flow with custom discovery questions</li>
+                <li><strong>AI Orchestration:</strong> Bedrock Agent (Claude Sonnet) handles conversational flow with custom discovery questions</li>
                 <li><strong>Knowledge Base RAG:</strong> OpenSearch Serverless provides context from AWS documentation and whitepapers via web crawler</li>
-                <li><strong>Multi-Artifact Generation:</strong> Claude 3.7 Sonnet generates diagrams, CDK code, CloudFormation templates, and documentation with streaming</li>
-                <li><strong>Image Analysis:</strong> Claude 3.5 Sonnet vision capabilities analyze uploaded whiteboard drawings and existing diagrams</li>
+                <li><strong>Multi-Artifact Generation:</strong> Claude Sonnet generates diagrams, CDK code, CloudFormation templates, and documentation with streaming</li>
+                <li><strong>Image Analysis:</strong> Claude Sonnet vision capabilities analyze uploaded whiteboard drawings and existing diagrams</li>
                 <li><strong>Persistent Storage:</strong> DynamoDB stores conversation history and S3 stores generated artifacts for audit and retrieval</li>
             </ul>
             
@@ -308,7 +308,7 @@
                 <span class="tech-badge">Amazon ECS Fargate</span>
                 <span class="tech-badge">Streamlit (Python)</span>
                 <span class="tech-badge">Amazon Bedrock Agent</span>
-                <span class="tech-badge">Claude 3.5 & 3.7 Sonnet</span>
+                <span class="tech-badge">Claude Sonnet</span>
                 <span class="tech-badge">Amazon OpenSearch Serverless</span>
                 <span class="tech-badge">Amazon S3</span>
                 <span class="tech-badge">Amazon DynamoDB</span>
@@ -321,7 +321,7 @@
             
             <h4>1. Conversational Architecture Building</h4>
             <ul>
-                <li><strong>Bedrock Agent:</strong> Claude 3.5 Sonnet handles natural language understanding with custom orchestration prompts</li>
+                <li><strong>Bedrock Agent:</strong> Claude Sonnet handles natural language understanding with custom orchestration prompts</li>
                 <li><strong>Discovery Flow:</strong> Agent asks 3-5 targeted questions about requirements before generating solutions</li>
                 <li><strong>Knowledge Base RAG:</strong> OpenSearch Serverless provides context from AWS documentation and whitepapers</li>
                 <li><strong>Context Management:</strong> DynamoDB stores conversation history for iterative refinement</li>
@@ -329,7 +329,7 @@
             
             <h4>2. Image-to-Architecture Pipeline</h4>
             <ul>
-                <li><strong>Vision AI:</strong> Claude 3.5 Sonnet analyzes uploaded images to extract components and relationships</li>
+                <li><strong>Vision AI:</strong> Claude Sonnet analyzes uploaded images to extract components and relationships</li>
                 <li><strong>Image Preprocessing:</strong> Automatic resizing/compression for files exceeding 5MB</li>
                 <li><strong>Component Recognition:</strong> Identifies AWS services, connections, and data flows from diagrams</li>
                 <li><strong>Conversational Refinement:</strong> Users review and adjust AI interpretation through chat</li>
@@ -337,7 +337,7 @@
             
             <h4>3. Multi-Artifact Generation</h4>
             <ul>
-                <li><strong>Architecture Diagrams:</strong> Claude 3.7 Sonnet creates draw.io XML diagrams with AWS architecture icons</li>
+                <li><strong>Architecture Diagrams:</strong> Claude Sonnet creates draw.io XML diagrams with AWS architecture icons</li>
                 <li><strong>Dual IaC Templates:</strong> Generates both AWS CDK (TypeScript) and CloudFormation (YAML)</li>
                 <li><strong>Cost Estimation:</strong> AI analyzes architecture and calculates monthly costs using AWS pricing data</li>
                 <li><strong>Technical Documentation:</strong> Comprehensive markdown documentation with deployment guides</li>
@@ -362,7 +362,7 @@
             
             <h3>Key Design Decisions</h3>
             <div class="highlight-box">
-                <p><strong>Claude 3.5 vs 3.7:</strong> Used 3.5 for conversational flow (Bedrock Agent) and 3.7 for artifact generation (code, diagrams, docs) to balance cost, speed, and quality. 3.7 provides superior reasoning for complex code generation.</p>
+                <p><strong>Claude Sonnet:</strong> Selected for both conversational flow (Bedrock Agent) and artifact generation (code, diagrams, docs) to balance cost, speed, and quality, providing superior reasoning for complex code generation.</p>
                 <p><strong>ECS Fargate vs Lambda:</strong> Selected Fargate for Streamlit hosting due to stateful nature, WebSocket requirements, longer AI generation times, and better container environment control, accepting higher baseline cost for improved user experience.</p>
                 <p><strong>Web Crawler Knowledge Base:</strong> Automatically ingests latest AWS documentation without manual updates, trading longer initial ingestion time for always-current information and reduced maintenance overhead.</p>
                 <p><strong>Streaming vs Batch:</strong> Chose streaming responses for better UX showing real-time generation progress, implementing continuation prompts to handle max token limits while maintaining context.</p>
@@ -431,7 +431,7 @@
             
             <h3>Technical Insights</h3>
             <ul>
-                <li><strong>Multimodal AI Power:</strong> Claude's vision capabilities analyze images without separate OCR services. single API call handles both text and visual understanding, dramatically simplifying the architecture</li>
+                <li><strong>Multimodal AI Power:</strong> Vision capabilities analyze images without separate OCR services. single API call handles both text and visual understanding, dramatically simplifying the architecture</li>
                 <li><strong>Streaming UX Impact:</strong> Real-time token streaming improves perceived performance by 10x. users see progress immediately rather than waiting minutes for complete responses</li>
                 <li><strong>Knowledge Base RAG:</strong> Vector search with OpenSearch Serverless provides more accurate, up-to-date AWS recommendations than relying solely on model training data</li>
                 <li><strong>Custom Resource Patterns:</strong> Lambda functions enable provisioning services not yet supported by CDK (web crawler data sources, OpenSearch Serverless indices with specific configurations)</li>
