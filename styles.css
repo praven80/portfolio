@@ -1223,7 +1223,7 @@ footer p {
         background: white;
         height: auto;
         overflow: visible;
-        font-size: 8.85pt;
+        font-size: 8.7pt;
     }
     
     .view-toggle {
@@ -1407,7 +1407,7 @@ footer p {
     }
     
     @page {
-        margin: 0.35in;
+        margin: 0.3in;
         size: letter;
     }
     
