@@ -50,7 +50,11 @@ if (mobileMenuToggle) {
     const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
     if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
+            const isPortraitMobile = window.innerWidth <= 768;
+            const isLandscapeMobile = window.matchMedia('(orientation: landscape) and (max-width: 1024px)').matches || 
+                                     window.matchMedia('(orientation: landscape) and (max-height: 600px)').matches;
+            
+            if (isPortraitMobile || isLandscapeMobile) {
                 e.preventDefault();
                 const dropdown = dropdownToggle.closest('.nav-dropdown');
                 dropdown.classList.toggle('active');
