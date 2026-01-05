@@ -4,20 +4,45 @@
 
 function printResume() {
     const userAgent = navigator.userAgent.toLowerCase();
-    let instructions = '';
+    const isMobile = /iphone|ipad|ipod|android|mobile/i.test(userAgent);
     
-    if (userAgent.indexOf('chrome') > -1 || userAgent.indexOf('edge') > -1) {
-        instructions = 'In the print dialog:\n1. Click "More settings"\n2. Uncheck "Headers and footers"\n3. Click "Save" or "Print"';
-    } else if (userAgent.indexOf('firefox') > -1) {
-        instructions = 'In the print dialog:\n1. Uncheck "Print headers and footers"\n2. Click "Save" or "Print"';
-    } else if (userAgent.indexOf('safari') > -1) {
-        instructions = 'In the print dialog:\n1. Click "Show Details"\n2. Uncheck "Print headers and footers"\n3. Click "Save as PDF" or "Print"';
+    if (isMobile) {
+        // On mobile, show instructions since print functionality is limited
+        const mobileMessage = 'To save as PDF on mobile:\n\n' +
+            '📱 iPhone/iPad:\n' +
+            '1. Tap the Share button\n' +
+            '2. Select "Print"\n' +
+            '3. Pinch outward on the preview to create PDF\n\n' +
+            '📱 Android:\n' +
+            '1. Tap the menu (⋮)\n' +
+            '2. Select "Share" or "Print"\n' +
+            '3. Choose "Save as PDF"\n\n' +
+            'For best results, use a desktop browser.';
+        alert(mobileMessage);
+        
+        // Still try to trigger print on mobile
+        try {
+            window.print();
+        } catch (e) {
+            console.log('Print not supported on this device');
+        }
     } else {
-        instructions = 'In the print dialog, please disable "Headers and footers" option before saving.';
+        // Desktop print
+        let instructions = '';
+        
+        if (userAgent.indexOf('chrome') > -1 || userAgent.indexOf('edge') > -1) {
+            instructions = 'In the print dialog:\n1. Click "More settings"\n2. Uncheck "Headers and footers"\n3. Click "Save" or "Print"';
+        } else if (userAgent.indexOf('firefox') > -1) {
+            instructions = 'In the print dialog:\n1. Uncheck "Print headers and footers"\n2. Click "Save" or "Print"';
+        } else if (userAgent.indexOf('safari') > -1) {
+            instructions = 'In the print dialog:\n1. Click "Show Details"\n2. Uncheck "Print headers and footers"\n3. Click "Save as PDF" or "Print"';
+        } else {
+            instructions = 'In the print dialog, please disable "Headers and footers" option before saving.';
+        }
+        
+        window.print();
+        setTimeout(() => console.log('Print Instructions:', instructions), 100);
     }
-    
-    window.print();
-    setTimeout(() => console.log('Print Instructions:', instructions), 100);
 }
 
 function switchToResume() {
