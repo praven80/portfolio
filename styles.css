@@ -1892,3 +1892,22 @@ footer p {
         font-size: 1rem !important;
     }
 }
+
+/* GitHub button styling */
+.github-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.github-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.github-btn:hover svg {
+    fill: var(--primary-color);
+    transform: scale(1.2);
+}
