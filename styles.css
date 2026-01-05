@@ -952,23 +952,24 @@ footer p {
 .resume-header {
     position: relative;
     text-align: center;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.3rem;
     border-bottom: 2px solid var(--primary-color);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.3rem;
 }
 
 .resume-header h1 {
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
 }
 
 .title {
     font-size: 0.95rem;
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-top: -0.2rem;
+    margin-bottom: 0.25rem;
 }
 
 .contact-info {
@@ -1009,15 +1010,15 @@ footer p {
 }
 
 .resume-section {
-    margin-bottom: 0.42rem;
+    margin-bottom: 0.3rem;
 }
 
 .resume-section h2 {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.2rem;
-    padding-bottom: 0.08rem;
+    margin-bottom: 0.15rem;
+    padding-bottom: 0.05rem;
     border-bottom: 1.5px solid var(--border-color);
 }
 
@@ -1025,7 +1026,7 @@ footer p {
     color: var(--text-secondary);
     font-size: 0.8rem;
     text-align: justify;
-    line-height: 1.23;
+    line-height: 1.2;
 }
 
 .resume-section ul {
@@ -1035,8 +1036,8 @@ footer p {
 }
 
 .resume-section li {
-    margin-bottom: 0.12rem;
-    line-height: 1.23;
+    margin-bottom: 0.08rem;
+    line-height: 1.18;
 }
 
 .achievements-grid {
@@ -1069,7 +1070,7 @@ footer p {
 }
 
 .experience-item {
-    margin-top: 0.2rem;
+    margin-top: 0.12rem;
 }
 
 .experience-item h3 {
