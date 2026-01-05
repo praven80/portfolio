@@ -1472,6 +1472,8 @@ footer p {
     }
     
     .nav-dropdown {
+        display: block !important;
+        font-size: 1rem !important;
         width: 100%;
     }
     
@@ -1737,7 +1739,10 @@ footer p {
 /* Mobile Landscape Mode - Force Mobile Menu */
 @media screen and (orientation: landscape) and (max-width: 1024px), screen and (orientation: landscape) and (max-height: 600px) {
     /* Hide desktop nav-links, show mobile version */
-    .nav-links, .nav-links *, .nav-links a, .nav-links .nav-dropdown-toggle {
+    .nav-links, .nav-links *, .nav-links a, .nav-links .nav-dropdown-toggle, .nav-dropdown, .nav-dropdown a {
+        -webkit-text-size-adjust: 100% !important;
+        -moz-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
         font-size: 1rem !important;
     }
     
@@ -1816,7 +1821,10 @@ footer p {
         order: 2 !important;
     }
     
-    .nav-links, .nav-links *, .nav-links a, .nav-links .nav-dropdown-toggle {
+    .nav-links, .nav-links *, .nav-links a, .nav-links .nav-dropdown-toggle, .nav-dropdown, .nav-dropdown a {
+        -webkit-text-size-adjust: 100% !important;
+        -moz-text-size-adjust: 100% !important;
+        text-size-adjust: 100% !important;
         font-size: 1rem !important;
     }
     
@@ -1825,6 +1833,8 @@ footer p {
     }
     
     .nav-dropdown {
+        display: block !important;
+        font-size: 1rem !important;
         width: 100% !important;
     }
     
@@ -1843,6 +1853,8 @@ footer p {
     
     
     .nav-dropdown {
+        display: block !important;
+        font-size: 1rem !important;
         font-size: 1rem !important;
     }
     
