@@ -254,7 +254,8 @@ const projectsData = [
 <p>Organizations can significantly <strong>enhance query efficiency</strong>, <strong>reduce costs by up to 70%</strong>, and <strong>improve performance by 3x</strong> with confidence.</p>
 `,
         tags: ['Query Analytics', 'Query Optimization', 'Cost Reduction'],
-        link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=drive_link',
+        link: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/144VkVw2vttyF2HvBteWjPcRtKtbQVcvo/view?usp=sharing',
         caseStudy: 'optix-ai-case-study.html'
     },
     {
@@ -302,7 +303,9 @@ const projectsData = [
 <p>Reduces architecture time by <strong>80%</strong>, enabling rapid prototyping and deployment of AWS solutions.</p>
 `,
         tags: ['AI Architect', 'Solution Automation', 'Cost Prediction'],
-        link: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder',
+        link: 'https://drive.google.com/file/d/1rF6Uy53xWc63ziZLmKqEGhS3zusnO6-0/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/1rF6Uy53xWc63ziZLmKqEGhS3zusnO6-0/view?usp=sharing',
+        github: 'https://github.com/aws-samples/sample-devgenius-aws-solution-builder',
         caseStudy: 'devgenius-case-study.html'
     },
     {
@@ -342,6 +345,7 @@ const projectsData = [
 `,
         tags: ['Data Platform', 'Automation', 'Award Winner'],
         link: 'https://www.youtube.com/watch?v=xWIcPhimOaw',
+        demo: 'https://www.youtube.com/watch?v=xWIcPhimOaw',
         caseStudy: 'atomix-case-study.html'
     },
     {
@@ -377,7 +381,8 @@ const projectsData = [
 </ul>
 `,
         tags: ['Capacity Planning', 'Cost Estimation', 'AI Scaling'],
-        link: '',
+        link: 'https://drive.google.com/file/d/18UjH4h-D3JHDkUy3ocQwzi204e4wCShT/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/18UjH4h-D3JHDkUy3ocQwzi204e4wCShT/view?usp=sharing',
         caseStudy: 'bedrocksizer-case-study.html'
     },
     {
@@ -447,7 +452,9 @@ const projectsData = [
 <p>Helps businesses make <strong>smarter, data-backed decisions</strong>, positioning them for more effective and profitable outcomes in a competitive market.</p>
 `,
         tags: ['Customer Analytics', 'Profitability Analysis', 'Decision Support'],
-        link: 'https://github.com/praven80/market_basket_analysis_ai',
+        link: 'https://drive.google.com/file/d/15EX1a1knVH4xdcq9FgMU6AuMOvfO3tM0/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/15EX1a1knVH4xdcq9FgMU6AuMOvfO3tM0/view?usp=sharing',
+        github: 'https://github.com/praven80/market_basket_analysis_ai',
         caseStudy: 'market-basket-analysis-case-study.html'
     },
     {
@@ -491,7 +498,9 @@ const projectsData = [
 <p>Reduces employee support ticket volume by <strong>60%</strong> while improving response accuracy.</p>
 `,
         tags: ['Multi-Agent System', 'Enterprise Assistant', 'Knowledge Retrieval'],
-        link: 'https://github.com/aws-solutions-library-samples/guidance-for-multi-agent-employee-virtual-assistant-on-aws'
+        link: 'https://drive.google.com/file/d/1cx83GnaQm_0tLa8pFO_gjOyN6QghIno4/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/1cx83GnaQm_0tLa8pFO_gjOyN6QghIno4/view?usp=sharing',
+        github: 'https://github.com/aws-solutions-library-samples/guidance-for-multi-agent-employee-virtual-assistant-on-aws'
     },
     {
         icon: '🏨',
@@ -595,7 +604,9 @@ const additionalProjects = [
 <p><strong>Review, Edit, and Approve</strong> generated Q&A pairs before use!</p>
 `,
         tags: ['Q&A Generation', 'Data Validation', 'Model Evaluation'],
-        link: 'https://github.com/praven80/ground_truth_generator_ai'
+        link: 'https://drive.google.com/file/d/1OUHV8Kzh90cWi_NGb8wqiqjugcqOL5TZ/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/1OUHV8Kzh90cWi_NGb8wqiqjugcqOL5TZ/view?usp=sharing',
+        github: 'https://github.com/praven80/ground_truth_generator_ai'
     },
     {
         icon: '💻',
@@ -627,7 +638,9 @@ const additionalProjects = [
 <p>Reduces codebase understanding time by <strong>75%</strong>, making complex codebases faster and easier to understand.</p>
 `,
         tags: ['Code Analysis', 'Developer Tools', 'Repository Intelligence'],
-        link: 'https://github.com/praven80/ai_github'
+        link: 'https://drive.google.com/file/d/1K6a7FTKzqb_s1tYIPs4rFboa56OIDecb/view?usp=sharing',
+        demo: 'https://drive.google.com/file/d/1K6a7FTKzqb_s1tYIPs4rFboa56OIDecb/view?usp=sharing',
+        github: 'https://github.com/praven80/ai_github'
     },
     {
         icon: '📈',
@@ -1164,17 +1177,22 @@ function renderProjects() {
         const linkTarget = project.isExternal === false ? '_self' : '_blank';
         const linkHtml = project.link ? `<a href="${project.link}" target="${linkTarget}">${project.title}</a>` : project.title;
         
+        // Add info button if detailed description exists
+        const infoButton = project.detailedDescription ? 
+            `<button class="case-study-btn-inline info-btn" title="More Info" onclick="showProjectModal('${project.title}')">ℹ️</button>` : '';
+        
+        // Add demo button if demo link exists
+        const demoButton = project.demo ? 
+            `<a href="${project.demo}" target="_blank" class="case-study-btn-inline demo-btn" title="Watch Demo">🎬</a>` : '';
+        
         // Add case study button aligned with title
         const caseStudyButton = project.caseStudy ? 
             `<a href="${project.caseStudy}" class="case-study-btn-inline" title="View Case Study">📖</a>` : '';
         
-        // Add GitHub button if link is a GitHub repo
-        const githubButton = project.link && project.link.includes('github.com') ? 
-            `<a href="${project.link}" target="_blank" class="case-study-btn-inline github-btn" title="View GitHub Repo"><svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>` : '';
-        
-        // Add info button if detailed description exists
-        const infoButton = project.detailedDescription ? 
-            `<button class="case-study-btn-inline info-btn" title="More Info" onclick="showProjectModal('${project.title}')">ℹ️</button>` : '';
+        // Add GitHub button if link is a GitHub repo OR if separate github field exists
+        const githubUrl = project.github || (project.link && project.link.includes('github.com') ? project.link : null);
+        const githubButton = githubUrl ? 
+            `<a href="${githubUrl}" target="_blank" class="case-study-btn-inline github-btn" title="View GitHub Repo"><svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>` : '';
         
         return `
         <div class="project-card">
@@ -1182,8 +1200,8 @@ function renderProjects() {
                 <span style="display: flex; align-items: center;">
                     <span class="project-icon">${project.icon}</span>${linkHtml}
                 </span>
-                <span style="display: flex; gap: 0.25rem;">
-                    ${infoButton}${caseStudyButton}${githubButton}
+                <span style="display: flex; align-items: center; gap: 0.75rem;">
+                    ${infoButton}${demoButton}${caseStudyButton}${githubButton}
                 </span>
             </h3>
             <p class="project-type">${project.type}</p>
