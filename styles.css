@@ -1375,16 +1375,20 @@ footer p {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .view-toggle {
-        top: 0.5rem;
+        top: 70px;
         right: 0.5rem;
         flex-direction: column;
         padding: 0.25rem;
-        z-index: 10001;
+        z-index: 50;
     }
     
     .toggle-btn {
         padding: 0.5rem 1rem;
         font-size: 0.75rem;
+    }
+    
+    #navbar {
+        z-index: 1000;
     }
     
     .mobile-menu-toggle {
@@ -1434,6 +1438,7 @@ footer p {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         max-height: calc(100vh - 60px);
         overflow-y: auto;
+        z-index: 999;
     }
     
     .nav-links.active {
@@ -1543,6 +1548,10 @@ footer p {
     
     .nav-container {
         padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: none;
     }
     
     .nav-brand {
