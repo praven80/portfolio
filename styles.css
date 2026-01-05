@@ -1377,7 +1377,8 @@ footer p {
 @media screen and (max-width: 768px) {
     .view-toggle {
         top: 70px;
-        right: 0.5rem;
+        right: auto;
+        left: 0.5rem;
         flex-direction: column;
         padding: 0.25rem;
         z-index: 50;
