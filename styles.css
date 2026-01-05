@@ -1,4 +1,4 @@
-/* Mobile Menu Fix - Version 2.2 - Clear your browser cache! */
+/* Mobile Menu Fix - Version 3.0 - Landscape Fix - Clear your browser cache! */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -511,7 +511,7 @@ body:not([data-theme]) .moon-icon {
 
 .achievement {
     background-color: var(--bg-alt);
-    padding: 0.4rem 1rem;
+    padding: 0.25rem 1rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
     font-weight: 500;
@@ -1462,7 +1462,7 @@ footer p {
     }
     
     .nav-links a {
-        padding: 0.4rem 1rem;
+        padding: 0.25rem 1rem;
         border-bottom: 1px solid var(--border-color);
         background: var(--bg-primary) !important;
     }
@@ -1484,7 +1484,7 @@ footer p {
     }
     
     .nav-dropdown-menu a {
-        padding: 0.4rem 1rem 0.4rem 2rem;
+        padding: 0.25rem 1rem 0.25rem 2rem;
         background: var(--bg-primary) !important;
     }
     
@@ -1544,7 +1544,7 @@ footer p {
     }
     
     .resume-container {
-        padding: 0.4rem 1rem;
+        padding: 0.25rem 1rem;
     }
     
     .resume-header h1 {
@@ -1574,7 +1574,7 @@ footer p {
     }
     
     .nav-container {
-        padding: 0.4rem 1rem;
+        padding: 0.25rem 1rem;
         display: flex !important;
         justify-content: space-between;
         align-items: center;
@@ -1587,47 +1587,6 @@ footer p {
     }
 }
 
-/* Mobile Landscape Mode */
-@media screen and (max-height: 500px) and (orientation: landscape), screen and (max-width: 926px) and (orientation: landscape) {
-    .view-toggle {
-        top: auto;
-        bottom: 0.5rem;
-        right: 0.5rem;
-        z-index: 50;
-    }
-    
-    .nav-links {
-        max-height: calc(100vh - 140px);
-        display: none;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .mobile-menu-toggle {
-        visibility: visible !important;
-        display: flex !important;
-    }
-    
-    .nav-brand {
-        display: block !important;
-        order: 1;
-    }
-    
-    .mobile-menu-toggle {
-        order: 2;
-    }
-    
-    .nav-links {
-        order: 3;
-    }
-    
-    .nav-container {
-        display: flex !important;
-        justify-content: space-between;
-    }
-}
 
 /* Projects Pagination */
 .projects-pagination-controls {
@@ -1761,5 +1720,51 @@ footer p {
     
     .projects-pagination-controls {
         gap: 1rem;
+    }
+}
+
+/* Mobile Landscape Mode - UPDATED */
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+    .view-toggle {
+        top: auto !important;
+        bottom: 0.5rem !important;
+        right: 0.5rem !important;
+        z-index: 50 !important;
+    }
+    
+    .nav-links {
+        max-height: calc(100vh - 140px) !important;
+        display: none !important;
+    }
+    
+    .nav-links.active {
+        display: flex !important;
+    }
+    
+    .mobile-menu-toggle {
+        visibility: visible !important;
+        display: flex !important;
+        width: 40px !important;
+        height: 40px !important;
+        z-index: 1001 !important;
+    }
+    
+    .nav-brand {
+        display: block !important;
+        order: 1 !important;
+    }
+    
+    .mobile-menu-toggle {
+        order: 2 !important;
+    }
+    
+    .nav-links {
+        order: 3 !important;
+    }
+    
+    .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 }
