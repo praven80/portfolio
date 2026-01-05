@@ -1377,11 +1377,16 @@ footer p {
 @media screen and (max-width: 768px) {
     .view-toggle {
         top: 70px;
-        right: auto;
-        left: 0.5rem;
+        right: 0.5rem;
+        left: auto;
         flex-direction: column;
         padding: 0.25rem;
         z-index: 50;
+    }
+    
+    .view-toggle.resume-active {
+        right: auto;
+        left: 0.5rem;
     }
     
     .toggle-btn {

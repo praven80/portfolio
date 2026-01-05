@@ -96,16 +96,20 @@ const resumeView = document.getElementById('resume-view');
 function switchView(viewName) {
     if (!portfolioView || !resumeView) return;
     
+    const viewToggle = document.getElementById('view-toggle');
+    
     if (viewName === 'portfolio') {
         portfolioView.classList.add('active');
         resumeView.classList.remove('active');
         toggleButtons[0].classList.add('active');
         toggleButtons[1].classList.remove('active');
+        if (viewToggle) viewToggle.classList.remove('resume-active');
     } else if (viewName === 'resume') {
         portfolioView.classList.remove('active');
         resumeView.classList.add('active');
         toggleButtons[0].classList.remove('active');
         toggleButtons[1].classList.add('active');
+        if (viewToggle) viewToggle.classList.add('resume-active');
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
     localStorage.setItem('preferredView', viewName);
