@@ -1,3 +1,4 @@
+/* Mobile Menu Fix - Version 2.0 - Clear your browser cache! */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -59,7 +60,7 @@ body {
     z-index: 1000;
     display: flex;
     gap: 0.25rem;
-    background: var(--bg-primary);
+    background: var(--bg-primary) !important;
     padding: 0.375rem;
     border-radius: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -214,7 +215,7 @@ body:not([data-theme]) .moon-icon {
     position: absolute;
     top: calc(100% + 0.25rem);
     left: 0;
-    background: var(--bg-primary);
+    background: var(--bg-primary) !important;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     box-shadow: var(--shadow-lg);
@@ -947,7 +948,7 @@ footer p {
 .resume-container {
     max-width: 8.5in;
     margin: 0 auto;
-    background: var(--bg-primary);
+    background: var(--bg-primary) !important;
     padding: 0.75in;
     box-shadow: var(--shadow-lg);
     border-radius: 0.5rem;
@@ -1445,7 +1446,7 @@ footer p {
         top: 60px;
         left: 0;
         right: 0;
-        background: var(--bg-primary);
+        background: var(--bg-primary) !important;
         flex-direction: column;
         padding: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -1453,6 +1454,7 @@ footer p {
         overflow-y: auto;
         z-index: 999;
         border-bottom: 1px solid var(--border-color);
+        opacity: 1;
     }
     
     .nav-links.active {
@@ -1462,7 +1464,7 @@ footer p {
     .nav-links a {
         padding: 1rem;
         border-bottom: 1px solid var(--border-color);
-        background: var(--bg-primary);
+        background: var(--bg-primary) !important;
     }
     
     .nav-links a:hover {
@@ -1478,12 +1480,12 @@ footer p {
         display: none;
         box-shadow: none;
         padding-left: 0;
-        background: var(--bg-primary);
+        background: var(--bg-primary) !important;
     }
     
     .nav-dropdown-menu a {
         padding-left: 2rem;
-        background: var(--bg-primary);
+        background: var(--bg-primary) !important;
     }
     
     .nav-dropdown.active .nav-dropdown-menu {
@@ -1586,7 +1588,7 @@ footer p {
 }
 
 /* Mobile Landscape Mode */
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-height: 500px) and (orientation: landscape), screen and (max-width: 926px) and (orientation: landscape) {
     .view-toggle {
         top: auto;
         bottom: 0.5rem;
