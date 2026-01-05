@@ -1423,6 +1423,110 @@ footer p {
             color: #6b7280;
         }
     }
+    
+    /* Mobile-specific print styles - tighter to fit on 1 page */
+    body.mobile-print {
+        font-size: 7.5pt !important;
+    }
+    
+    body.mobile-print .resume-header {
+        margin-bottom: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+    
+    body.mobile-print .resume-header h1 {
+        font-size: 1.1rem;
+    }
+    
+    body.mobile-print .resume-header .title {
+        font-size: 0.55rem;
+    }
+    
+    body.mobile-print .contact-info {
+        font-size: 0.4rem !important;
+        gap: 0.2rem !important;
+    }
+    
+    body.mobile-print .resume-section {
+        margin-bottom: 0.2rem;
+    }
+    
+    body.mobile-print .resume-section h2 {
+        font-size: 0.68rem;
+        margin-bottom: 0.12rem;
+    }
+    
+    body.mobile-print .resume-section p {
+        font-size: 0.48rem;
+        line-height: 1.15;
+    }
+    
+    body.mobile-print .experience-item {
+        margin-top: 0.12rem;
+        margin-bottom: 0.12rem;
+    }
+    
+    body.mobile-print .experience-item h3 {
+        font-size: 0.55rem;
+    }
+    
+    body.mobile-print .experience-item li {
+        font-size: 0.45rem;
+        line-height: 1.12;
+        margin-bottom: 0.03rem;
+    }
+    
+    body.mobile-print .resume-role {
+        font-size: 0.45rem !important;
+    }
+    
+    body.mobile-print .achievement-item {
+        padding: 0.12rem;
+    }
+    
+    body.mobile-print .achievement-item strong {
+        font-size: 0.45rem;
+    }
+    
+    body.mobile-print .achievement-item p {
+        font-size: 0.4rem;
+    }
+    
+    body.mobile-print .project-compact {
+        padding: 0.15rem;
+    }
+    
+    body.mobile-print .project-compact h4 {
+        font-size: 0.45rem;
+    }
+    
+    body.mobile-print .project-compact p {
+        font-size: 0.38rem;
+    }
+    
+    body.mobile-print .skill-group {
+        padding: 0.12rem;
+    }
+    
+    body.mobile-print .skill-group h4 {
+        font-size: 0.45rem;
+    }
+    
+    body.mobile-print .skill-group p {
+        font-size: 0.4rem;
+    }
+    
+    body.mobile-print .achievements-grid {
+        gap: 0.1rem;
+    }
+    
+    body.mobile-print .projects-compact {
+        gap: 0.12rem;
+    }
+    
+    body.mobile-print .two-column {
+        gap: 0.25rem;
+    }
 }
 
 /* Responsive Design */

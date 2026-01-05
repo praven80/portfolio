@@ -3,7 +3,18 @@
 // ============================================================================
 
 function printResume() {
+    const isMobile = /iphone|ipad|ipod|android|mobile/i.test(navigator.userAgent.toLowerCase());
+    
+    if (isMobile) {
+        document.body.classList.add('mobile-print');
+    }
+    
     window.print();
+    
+    // Remove class after print dialog closes
+    setTimeout(() => {
+        document.body.classList.remove('mobile-print');
+    }, 1000);
 }
 
 function switchToResume() {
