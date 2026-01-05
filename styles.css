@@ -1,4 +1,4 @@
-/* Mobile Menu Fix - Version 2.1 - Clear your browser cache! */
+/* Mobile Menu Fix - Version 2.2 - Clear your browser cache! */
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
@@ -511,7 +511,7 @@ body:not([data-theme]) .moon-icon {
 
 .achievement {
     background-color: var(--bg-alt);
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
     font-weight: 500;
@@ -1462,7 +1462,7 @@ footer p {
     }
     
     .nav-links a {
-        padding: 0.6rem 1rem;
+        padding: 0.4rem 1rem;
         border-bottom: 1px solid var(--border-color);
         background: var(--bg-primary) !important;
     }
@@ -1484,7 +1484,7 @@ footer p {
     }
     
     .nav-dropdown-menu a {
-        padding: 0.6rem 1rem 0.6rem 2rem;
+        padding: 0.4rem 1rem 0.4rem 2rem;
         background: var(--bg-primary) !important;
     }
     
@@ -1544,7 +1544,7 @@ footer p {
     }
     
     .resume-container {
-        padding: 0.6rem 1rem;
+        padding: 0.4rem 1rem;
     }
     
     .resume-header h1 {
@@ -1574,7 +1574,7 @@ footer p {
     }
     
     .nav-container {
-        padding: 0.6rem 1rem;
+        padding: 0.4rem 1rem;
         display: flex !important;
         justify-content: space-between;
         align-items: center;
@@ -1606,7 +1606,21 @@ footer p {
     }
     
     .mobile-menu-toggle {
+        visibility: visible !important;
         display: flex !important;
+    }
+    
+    .nav-brand {
+        display: block !important;
+        order: 1;
+    }
+    
+    .mobile-menu-toggle {
+        order: 2;
+    }
+    
+    .nav-links {
+        order: 3;
     }
     
     .nav-container {
