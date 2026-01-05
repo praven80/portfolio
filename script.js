@@ -25,6 +25,41 @@ function switchToResume() {
 }
 
 // ============================================================================
+// MOBILE MENU
+// ============================================================================
+
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Handle dropdown toggle on mobile
+    const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const dropdown = dropdownToggle.closest('.nav-dropdown');
+                dropdown.classList.toggle('active');
+            }
+        });
+    }
+}
+
+// ============================================================================
 // THEME MANAGEMENT
 // ============================================================================
 
