@@ -1828,10 +1828,17 @@ footer p {
     }
 }
 
-/* Fix Case Studies font size in mobile */
-@media screen and (max-width: 768px), screen and (orientation: landscape) and (max-width: 1024px) {
+
+/* Fix Case Studies font size in landscape mode */
+@media screen and (orientation: landscape) and (max-width: 1024px), screen and (orientation: landscape) and (max-height: 600px) {
     .nav-dropdown-toggle {
         font-size: 1rem !important;
+        font-weight: 500 !important;
         white-space: normal !important;
+        line-height: 1.5 !important;
+    }
+    
+    .nav-links a {
+        font-size: 1rem !important;
     }
 }
