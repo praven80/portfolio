@@ -1394,6 +1394,22 @@ footer p {
         font-size: 0.5rem;
     }
     
+    .two-column h4 {
+        font-size: 0.56rem;
+    }
+    
+    .two-column li {
+        font-size: 0.6rem;
+    }
+    
+    .resume-education h4 {
+        font-size: 0.56rem;
+    }
+    
+    .resume-education p {
+        font-size: 0.6rem;
+    }
+    
     .awards-list {
         margin-top: 0.18rem;
         margin-bottom: 0;
@@ -1403,6 +1419,7 @@ footer p {
     }
     
     .award-badge {
+        font-size: 0.6rem;
         margin-bottom: 0;
     }
     
