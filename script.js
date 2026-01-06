@@ -416,7 +416,7 @@ const projectsData = [
 <p><strong>Bedrock Sizing & Pricing AI Assistant</strong> is an interactive tool designed to help you accurately assess Amazon Bedrock capacity requirements and estimate overall costs for your use case.</p>
 
 <h3>💬 Conversational Guidance</h3>
-<p>Simply describe your use case in a conversational manner, and the assistant guides you through appropriate sizing of Bedrock models-ensuring optimal performance and cost-efficiency.</p>
+<p>Simply describe your use case in a conversational manner, and the assistant guides you through appropriate sizing of Bedrock models, ensuring optimal performance and cost-efficiency.</p>
 
 <h3>🧮 Comprehensive Calculator</h3>
 <p>The app includes a manual calculator covering all model types:</p>
